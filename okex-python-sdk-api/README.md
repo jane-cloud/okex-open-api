@@ -2,13 +2,9 @@
 
 强烈建议用户使用前阅读 Read before use.txt
 
-第一步：下载代码 & 版本要求
-
-1.1 下载代码：
-
-    git clone https://github.com/qinglin-919/okex-python-sdk-api.git
+第一步：下载代码版本要求
     
-1.2 python版本需3.5+  使用 websockets 需要Python≥3.6.1
+1.1 python版本需3.5+  使用 websockets 需要Python≥3.6.1
 
 第二步：配置自己的API key
 
