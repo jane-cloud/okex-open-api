@@ -212,4 +212,11 @@ public interface FuturesTradeAPIService {
                                  String after,
                                  String before,
                                  String limit);
+
+
+    /**
+     *
+     * @return
+     */
+    String getTradeFee();
 }

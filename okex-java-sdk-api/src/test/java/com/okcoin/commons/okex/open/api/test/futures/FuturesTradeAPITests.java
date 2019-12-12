@@ -440,4 +440,16 @@ public class FuturesTradeAPITests extends FuturesAPIBaseTests {
         toResultString(LOG, "Get-FuturesOrders", result);
 
     }
+
+    /**
+     *获取当前手续费费率
+     * 获取您当前账户交易等级对应的手续费费率，母账户下的子账户的费率和母账户一致。每天凌晨0点更新一次
+     * 限速规则：1次/10s
+     * GET /api/futures/v3/trade_fee
+     */
+    @Test
+    public void getTradeFee(){
+        String result = tradeAPIService.getTradeFee();
+        toResultString(LOG,"getTradeFee",result);
+    }
 }

@@ -62,5 +62,6 @@ public interface SpotAccountAPI {
                                          @Query("after") String after,
                                          @Query("limit") String limit,
                                          @Query("type") String type);
-
+    @GET("/api/spot/v3/trade_fee")
+    Call<String> getTradeFee();
 }

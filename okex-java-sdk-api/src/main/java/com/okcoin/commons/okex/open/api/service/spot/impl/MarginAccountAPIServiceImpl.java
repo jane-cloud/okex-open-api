@@ -1,5 +1,7 @@
 package com.okcoin.commons.okex.open.api.service.spot.impl;
 
+import com.alibaba.fastjson.JSONArray;
+import com.okcoin.commons.okex.open.api.bean.spot.param.SpotMarginLeverage;
 import com.okcoin.commons.okex.open.api.bean.spot.result.*;
 import com.okcoin.commons.okex.open.api.client.APIClient;
 import com.okcoin.commons.okex.open.api.config.APIConfiguration;
@@ -66,4 +68,15 @@ public class MarginAccountAPIServiceImpl implements MarginAccountAPIService {
     public RepaymentResult repayment_1(final RepaymentRequestDto order) {
         return this.client.executeSync(this.api.repayment_1(order));
     }
+
+    @Override
+    public String getSpotMarginLeverage(String instrument_id,SpotMarginLeverage spotMarginLeverage) {
+        return this.client.executeSync(this.api.getSpotMarginLeverage(instrument_id,spotMarginLeverage));
+    }
+
+    @Override
+    public String getMarginLeverage(String instrument_id) {
+        return this.client.executeSync(this.api.getMarginLeverage(instrument_id));
+    }
+
 }
