@@ -1,10 +1,13 @@
 package com.okcoin.commons.okex.open.api.test.spot;
 
+import com.alibaba.fastjson.JSONArray;
+import com.okcoin.commons.okex.open.api.bean.spot.param.SpotMarginLeverage;
 import com.okcoin.commons.okex.open.api.bean.spot.result.*;
 import com.okcoin.commons.okex.open.api.service.spot.MarginAccountAPIService;
 import com.okcoin.commons.okex.open.api.service.spot.impl.MarginAccountAPIServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
+import org.omg.PortableServer.THREAD_POLICY_ID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -141,6 +144,26 @@ public class MarginAccountAPITest extends SpotAPIBaseTests {
         dto.setInstrument_id("ltc-usdt");
         final RepaymentResult result = this.marginAccountAPIService.repayment_1(dto);
         this.toResultString(MarginAccountAPITest.LOG, "result", result);
+    }
+
+    /**
+     * 设置杠杆倍数
+     * 设置币币杠杆账户币对杠杆倍数。
+     * 限速规则：5次/2s
+     * POST /api/margin/v3/accounts/<instrument_id>/leverage
+     */
+    @Test
+    public void getSpotMarginLeverage(){
+        SpotMarginLeverage spotMarginLeverage=new SpotMarginLeverage();
+        spotMarginLeverage.setLeverage("10");
+        String result = this.marginAccountAPIService.getSpotMarginLeverage("BTC-USDT",spotMarginLeverage);
+        this.toResultString(MarginAccountAPITest.LOG,"result",result);
+    }
+
+    @Test
+    public void getMarginLeverage(){
+        String result = this.marginAccountAPIService.getMarginLeverage("BTC-USDT");
+        this.toResultString(MarginAccountAPITest.LOG,"result",result);
     }
 
 }

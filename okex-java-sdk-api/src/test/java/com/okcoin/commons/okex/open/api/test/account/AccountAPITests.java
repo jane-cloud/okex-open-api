@@ -10,8 +10,10 @@ import com.okcoin.commons.okex.open.api.bean.account.result.Wallet;
 import com.okcoin.commons.okex.open.api.bean.account.result.WithdrawFee;
 import com.okcoin.commons.okex.open.api.service.account.AccountAPIService;
 import com.okcoin.commons.okex.open.api.service.account.impl.AccountAPIServiceImpl;
+import org.checkerframework.checker.units.qual.A;
 import org.junit.Before;
 import org.junit.Test;
+import org.omg.CORBA.ACTIVITY_COMPLETED;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -188,5 +190,29 @@ public class AccountAPITests extends  AccountAPIBaseTests {
         this.toResultString(AccountAPITests.LOG, "result", result);*/
         JSONArray result2 = this.accountAPIService.getWithdrawalHistory("btc");
         this.toResultString(AccountAPITests.LOG, "result", result2);
+    }
+
+    /**
+     * 获取子账户余额信息
+     * 母账户获取子账户的各个账户里的资金余额信息。
+     * 限速规则：1次/20s
+     * GET /api/account/v3/sub-account
+     */
+    @Test
+    public void getSubAccount(){
+        String result = this.accountAPIService.getSubAccount("xylon1");
+        this.toResultString(AccountAPITests.LOG,"result",result);
+    }
+
+    /**
+     *获取账户资产估值
+     * 按照btc或法币计价单位，获取账户总资产的估值
+     * 限速规则：1次/20s
+     * GET /api/account/v3/asset-valuation
+     */
+    @Test
+    public void getAssetValuation(){
+        String result = this.accountAPIService.getAssetValuation("","");
+        this.toResultString(AccountAPITests.LOG,"result",result);
     }
 }

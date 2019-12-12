@@ -136,5 +136,4 @@ public interface SpotOrderAPIServive {
     String  getAlgoOrder(String instrument_id, String order_type, String status, String algo_id, String before, String after, String limit);
 
 
-
 }

@@ -101,3 +101,10 @@ class LeverAPI(Client):
     def get_fills(self, instrument_id, order_id='', after='', to='', limit=''):
         params = {'instrument_id': instrument_id, 'order_id': order_id, 'after': after, 'to': to, 'limit': limit}
         return self._request_with_params(GET, LEVER_FILLS, params, cursor=True)
+
+    def get_leverage(self, instrument_id):
+        return self._request_without_params(GET, LEVER_LEDGER_RECORD + str(instrument_id) + '/leverage')
+
+    def set_leverage(self, instrument_id, leverage):
+        params = {'leverage': leverage}
+        return self._request_with_params(POST, LEVER_LEDGER_RECORD + str(instrument_id) + '/leverage', params)

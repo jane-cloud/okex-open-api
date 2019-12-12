@@ -1,5 +1,7 @@
 package com.okcoin.commons.okex.open.api.service.spot;
 
+import com.alibaba.fastjson.JSONArray;
+import com.okcoin.commons.okex.open.api.bean.spot.param.SpotMarginLeverage;
 import com.okcoin.commons.okex.open.api.bean.spot.result.*;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -102,4 +104,15 @@ public interface MarginAccountAPIService {
      * @return
      */
     RepaymentResult repayment_1(RepaymentRequestDto order);
+
+    /**
+     * 设定杠杆倍数
+     * @param spotMarginLeverage
+     * @param instrument_id
+     * @return
+     */
+    String getSpotMarginLeverage(String instrument_id,SpotMarginLeverage spotMarginLeverage);
+
+
+    String getMarginLeverage(String instrument_id);
 }

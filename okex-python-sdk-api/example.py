@@ -4,6 +4,7 @@ import okex.lever_api as lever
 import okex.spot_api as spot
 import okex.swap_api as swap
 import okex.index_api as index
+import okex.option_api as option
 import json
 import logging
 import datetime
@@ -39,15 +40,19 @@ if __name__ == '__main__':
     # 获取资金账户信息 （20次/2s）
     # result = accountAPI.get_wallet()
     # 获取单一币种账户信息 （20次/2s）
-    # result = accountAPI.get_currency('xrp')
+    # result = accountAPI.get_currency('usdt')
     # 资金划转  1次/2s（每个币种）
-    # result = accountAPI.coin_transfer('btc', 0.01, '1', '3')
+    # result = accountAPI.coin_transfer('ltc', '0.17', '1', '3', to_instrument_id='')
     # 提币 （20次/2s）
     # result = accountAPI.coin_withdraw('XRP', 1, 4, '17DKe3kkkkiiiiTvAKKi2vMPbm1Bz3CMKw', "123456", 0.0005)
     # 账单流水查询 （可查询最近一个月）（20次/2s）
     # result = accountAPI.get_ledger_record('okb')
     # 获取充值地址 （20次/2s）
     # result = accountAPI.get_top_up_address('xrp')
+    # 获取账户资产估值 （1次/20s）
+    # result = accountAPI.get_asset_valuation()
+    # 获取子账户余额信息 （1次/20s）
+    # result = accountAPI.get_sub_account('')
     # 查询所有币种的提币记录 （最近100条记录）（20次/2s）
     # result = accountAPI.get_coins_withdraw_record()
     # 查询单个币种提币记录 （20次/2s）
@@ -70,11 +75,11 @@ if __name__ == '__main__':
     # 获取币币账户信息 （20次/2s）
     # result = spotAPI.get_account_info()
     # 获取单一币种账户信息 （20次/2s）
-    # result = spotAPI.get_coin_account_info('okb')
+    # result = spotAPI.get_coin_account_info('usdt')
     # 账单流水查询 最近3个月 （最近3个月的数据）（20次/2s）
     # result = spotAPI.get_ledger_record('XRP')
     # 下单 （100次/2s）
-    # result = spotAPI.take_order('xrp-usdt', 'buy', client_oid='', type='limit', price='0.2266', size='1')
+    # result = spotAPI.take_order('xrp-usdt', 'sell', client_oid='', type='market', price='0.2266', notional='', size='5')
 
     # take orders
     # params = [
@@ -105,6 +110,8 @@ if __name__ == '__main__':
     # result = spotAPI.take_order_algo('XRP-USDT', '1', '1', '1', 'buy', trigger_price='0.2893', algo_price='0.2894')
     # 委托策略撤单 （每次最多可撤6（冰山/时间）/10（计划/跟踪）个）（20 次/2s）
     # result = spotAPI.cancel_algos('XRP-USDT', ['377553'], '1')
+    # 获取当前账户费率 （1次/10s）
+    # result = spotAPI.get_trade_fee()
     # 获取委托单列表 （20次/2s）
     # result = spotAPI.get_order_algos('XRP-USDT', '1', status='3')
     # 公共-获取币对信息 （20次/2s）
@@ -174,6 +181,10 @@ if __name__ == '__main__':
     # result = levelAPI.get_order_pending('xrp-usdt')
     # 获取成交明细 （最近3个月的数据）（20次/2s）
     # result = levelAPI.get_fills('XRP-USDT')
+    # 获取杠杆倍数 （5次/2s）
+    # result = levelAPI.get_leverage('BTC-USDT')
+    # 设置杠杆倍数 （5次/2s）
+    # result = levelAPI.set_leverage('BTC-USDT', '7')
 
     # print(time + json.dumps(result))
     # logging.info("result:" + json.dumps(result))
@@ -184,22 +195,22 @@ if __name__ == '__main__':
     # 所有合约持仓信息 （5次/2s）（根据userid限速）
     # result = futureAPI.get_position()
     # 单个合约持仓信息 （20次/2s）（根据underlying，分别限速）
-    # result = futureAPI.get_specific_position('XRP-USD-191227')
+    # result = futureAPI.get_specific_position('LTC-USD-191213')
     # 所有币种合约账户信息 （1次/10s）（根据userid限速）
     # result = futureAPI.get_accounts()
     # 单个币种合约账户信息（币本位保证金合约的传参值为BTC-USD，USDT保证金合约的传参值为BTC-USDT）（20次/2s）（根据underlying，分别限速）
-    # result = futureAPI.get_coin_account('XRP-USD')
+    # result = futureAPI.get_coin_account('LTC-USD')
     # 获取合约币种杠杆倍数 （5次/2s）（根据underlying，分别限速）
-    # result = futureAPI.get_leverage('BTC-USDT')
+    # result = futureAPI.get_leverage('xrp-usd')
     # 设定合约币种杠杆倍数 （5次/2s）（根据underlying，分别限速）
     # 全仓
-    # result = futureAPI.set_leverage('XRP-USD', '10')
+    # result = futureAPI.set_leverage('XRP-USD', '30')
     # 逐仓
-    # result = futureAPI.set_leverage('XRP-USD', '10', 'XRP-USD-191227', 'long')
+    # result = futureAPI.set_leverage('XRP-USD', '30', 'XRP-USD-191213', 'short')
     # 账单流水查询 （最近2天的数据）（5次/2s）（根据underlying，分别限速）
     # result = futureAPI.get_ledger('XRP-USD')
     # 下单 （40次/2s）（根据underlying，分别限速）
-    # result = futureAPI.take_order('XRP-USD-191227', '2', '0.2219', '1', match_price='0')
+    # result = futureAPI.take_order('LTC-USD-191213', '1', '0.2243', '1', match_price='0')
 
     # take orders
     # 批量下单 （每个合约可批量下10个单）（20次/2s）（根据underlying，分别限速）
@@ -210,17 +221,17 @@ if __name__ == '__main__':
     # orders_data = json.dumps(orders)
     # result = futureAPI.take_orders('XRP-USD-191227', orders_data=orders_data)
     # 撤销指定订单 （40次/2s）（根据underlying，分别限速）
-    # result = futureAPI.revoke_order('XRP-USD-191227', '3933278497446913')
+    # result = futureAPI.revoke_order('XRP-USD-191227', '3995388789797889')
     # 批量撤销订单 （每次最多可撤10个单）（20 次/2s）（根据underlying，分别限速）
     # result = futureAPI.revoke_orders('XRP-USD-191227', order_ids=["3853889302246401", "3853889302246403"])
     # 获取订单列表 （最近7天的数据）（20 次/2s）（根据underlying，分别限速）
     # result = futureAPI.get_order_list('XRP-USD-191227', '0')
     # 获取订单信息 （已撤销的未成交单只保留2个小时）（40次/2s）（根据underlying，分别限速）
-    # result = futureAPI.get_order_info('XRP-USD-191227', '3926536385152001')
+    # result = futureAPI.get_order_info('XRP-USD-191227', '3995388789797889')
     # 获取成交明细 （最近7天的数据）（20 次/2s）（根据underlying，分别限速）
     # result = futureAPI.get_fills('XRP-USD-191227')
     # 设置合约币种账户模式 （5次/2s）（根据underlying，分别限速）
-    # result = futureAPI.set_margin_mode('XRP-USD', 'crossed')
+    # result = futureAPI.set_margin_mode('LTC-USD', 'crossed')
     # 市价全平 （5次/2s）（根据underlying，分别限速）
     # result = futureAPI.close_position('XRP-USD-191227', 'long')
     # 撤销所有平仓挂单 （5次/2s）（根据underlying，分别限速）
@@ -228,11 +239,13 @@ if __name__ == '__main__':
     # 获取合约挂单冻结数量 （5次/2s）（根据underlying，分别限速）
     # result = futureAPI.get_holds_amount('XRP-USD-191227')
     # 委托策略下单 （40次/2s）（根据underlying，分别限速）
-    # result = futureAPI.take_order_algo('XRP-USD-191227', '3', '1', '1', trigger_price='0.2094', algo_price='0.2092')
+    # result = futureAPI.take_order_algo('XRP-USD-191227', '1', '1', '1', trigger_price='0.2094', algo_price='0.2092')
     # 委托策略撤单 （每次最多可撤6（冰山/时间）/10（计划/跟踪）个）（20 次/2s）（根据underlying，分别限速）
     # result = futureAPI.cancel_algos('XRP-USD-191227', ['1907026'], '1')
     # 获取委托单列表 （20次/2s）（根据underlying，分别限速）
-    # result = futureAPI.get_order_algos('XRP-USD-191227', '1', status='1')
+    # result = futureAPI.get_order_algos('XRP-USD-191227', '1', status='2')
+    # 获取当前手续费费率 （1次/10s）
+    # result = futureAPI.get_trade_fee()
     # 公共-获取合约信息 （20次/2s）（根据ip限速）
     # result = futureAPI.get_products()
     # 公共-获取深度数据 （20次/2s）（根据underlying，分别限速）
@@ -282,7 +295,7 @@ if __name__ == '__main__':
     # 账单流水查询 （流水会分页，每页100条数据，并且按照时间倒序排序和存储，最新的排在最前面）（可查询最近7天的数据）（5次/2s）
     # result = swapAPI.get_ledger('XRP-USD-SWAP')
     # 下单 （40次/2s）
-    # result = swapAPI.take_order('XRP-USD-SWAP', '3', '1', '0.2608', match_price='1')
+    # result = swapAPI.take_order('BTC-USDT-SWAP', '1', '3', '0.2608', match_price='0')
     # 批量下单 （每个合约可批量下10个单）（20次/2s）
     # result = swapAPI.take_orders('XRP-USD-SWAP', [
     #         {"type": "1", "price": "0.2600", "size": "1"},
@@ -343,6 +356,57 @@ if __name__ == '__main__':
     # 公共-获取指数成分 （20次/2s）
     # result = indexAPI.get_index_constituents('BTC-USD')
 
+# 期权合约API
+    # option api test
+    optionAPI = option.OptionAPI(api_key, seceret_key, passphrase, True)
+    # 单个标的指数持仓信息 （20次/2s）
+    # result = optionAPI.get_specific_position('TBTC-USD')
+    # 单个标的物账户信息 （20次/2s）
+    # result = optionAPI.get_underlying_account('TBTC-USD')
+    # 下单 （40次/2s）
+    # result = optionAPI.take_order('TBTC-USD-191213-7000-C', 'buy', '', '1', match_price='1')
+    # 批量下单 （每个标的指数最多可批量下10个单）（20次/2s）
+    # result = optionAPI.take_orders('TBTC-USD', [
+    #         {"instrument_id": "TBTC-USD-191213-6000-C", "side": "buy", "price": "0.1835", "size": "1", "order_type": "0", "match_price": "0"},
+    #         {"instrument_id": "TBTC-USD-191213-7000-P", "side": "buy", "price": "0.0126", "size": "1", "order_type": "0", "match_price": "0"}
+    #     ])
+    # 撤单 （40次/2s）
+    # result = optionAPI.revoke_order('TBTC-USD', order_id='125259570520055808')
+    # 批量撤单 （每个标的指数最多可批量撤10个单）（20次/2s）
+    # result = optionAPI.revoke_orders('TBTC-USD', order_ids=["155801767097874432", "155803099442657280"])
+    # 修改订单 （每个标的指数最多可批量修改10个单）（40次/2s）
+    # result = optionAPI.amend_order('TBTC-USD', order_id='155801767097874432', new_price='0.0311', new_size='5')
+    # 批量修改订单 （20次/2s）
+    # result = optionAPI.amend_batch_orders('BTC-USD', [
+    #         {"order_id": "oktoption12", "new_size": "2"},
+    #         {"client_oid": "oktoption14", "request_id": "okoptionBTCUSDmod002", "new_size": "1"}
+    #     ])
+    # 获取单个订单状态 （已撤销的未成交单只保留2个小时）（40次/2s）
+    # result = optionAPI.get_order_info('TBTC-USD', order_id='158641967489658880')
+    # 获取订单列表 （可查询7天内数据）（20次/2s）
+    # result = optionAPI.get_order_list('TBTC-USD', '0')
+    # 获取成交明细 （可查询7天内数据）（20次/2s）
+    # result = optionAPI.get_fills('TBTC-USD')
+    # 获取账单流水 （可查询7天内数据）（5次/2s）
+    # result = optionAPI.get_ledger('TBTC-USD')
+    # 获取手续费费率 （1次/10s）
+    # result = optionAPI.get_trade_fee()
+    # 公共-获取标的指数 （20次/2s）
+    # result = optionAPI.get_index()
+    # 公共-获取期权合约 （20次/2s）
+    # result = optionAPI.get_instruments('TBTC-USD')
+    # 公共-获取期权合约详细定价 （20次/2s）
+    # result = optionAPI.get_instruments_summary('TBTC-USD')
+    # 公共-获取单个期权合约详细定价 （20次/2s）
+    # result = optionAPI.get_option_instruments_summary('TBTC-USD', 'TBTC-USD-191213-7500-C')
+    # 公共-获取深度数据 （20次/2s）
+    # result = optionAPI.get_depth('TBTC-USD-191213-7500-C')
+    # 公共-获取成交数据 （20次/2s）
+    # result = optionAPI.get_trades('TBTC-USD-191213-7500-C')
+    # 公共-获取某个Ticker信息 （20次/2s）
+    # result = optionAPI.get_specific_ticker('TBTC-USD-191213-7500-C')
+    # 公共-获取K线数据 （20次/2s）
+    # result = optionAPI.get_kline('TBTC-USD-191213-7500-C')
 
     print(time + json.dumps(result))
     logging.info("result:" + json.dumps(result))

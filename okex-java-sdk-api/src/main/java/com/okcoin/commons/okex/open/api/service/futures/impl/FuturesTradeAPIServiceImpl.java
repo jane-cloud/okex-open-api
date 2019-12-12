@@ -175,4 +175,9 @@ public class FuturesTradeAPIServiceImpl implements FuturesTradeAPIService {
     public String findFuturesOrder(String instrument_id, String order_type, String status, String algo_id, String after, String before, String limit) {
         return this.client.executeSync(this.api.findFuturesOrder(instrument_id,order_type,status,algo_id,after,before,limit));
     }
+
+    @Override
+    public String getTradeFee() {
+        return this.client.executeSync(this.api.getTradeFee());
+    }
 }

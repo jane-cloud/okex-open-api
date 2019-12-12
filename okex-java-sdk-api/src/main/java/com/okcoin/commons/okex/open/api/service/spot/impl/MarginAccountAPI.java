@@ -1,11 +1,14 @@
 package com.okcoin.commons.okex.open.api.service.spot.impl;
 
+import com.alibaba.fastjson.JSONArray;
+import com.okcoin.commons.okex.open.api.bean.spot.param.SpotMarginLeverage;
 import com.okcoin.commons.okex.open.api.bean.spot.result.*;
 import retrofit2.Call;
 import retrofit2.http.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.jar.JarEntry;
 
 /**
  * 杠杆账号测试
@@ -110,5 +113,10 @@ public interface MarginAccountAPI {
      */
     @POST("/api/margin/v3/accounts/repayment")
     Call<RepaymentResult> repayment_1(@Body RepaymentRequestDto param);
+
+    @POST("/api/margin/v3/accounts/{instrument_id}/leverage")
+    Call<String> getSpotMarginLeverage(@Path("instrument_id") String instrument_id, @Body SpotMarginLeverage spotMarginLeverage);
+    @GET("/api/margin/v3/accounts/{underlying}/leverage")
+    Call<String> getMarginLeverage(@Path("underlying") String instrument_id);
 
 }

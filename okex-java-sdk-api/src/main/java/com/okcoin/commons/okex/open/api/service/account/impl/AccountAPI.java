@@ -67,4 +67,8 @@ public interface AccountAPI {
     //查看单个提币记录
     @GET("/api/account/v3/withdrawal/history/{currency}")
     Call<JSONArray> getWithdrawalHistory(@Path("currency") String currency);
+    @GET("/api/account/v3/sub-account")
+    Call<String> getSubAccount(@Query("sub-account") String subaccount);
+    @GET("/api/account/v3/asset-valuation")
+    Call<String> getAssetValuation(@Query("account_type") String account_type,@Query("valuation_currency")String valuation_currency);
 }

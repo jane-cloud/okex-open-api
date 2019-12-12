@@ -6,7 +6,6 @@ public class Fills {
     private Long ledger_id;
     // 币种 id
     private String instrument_id;
-    private String product_id;
     // 价格
     private String price;
     // 数量
@@ -23,100 +22,101 @@ public class Fills {
     private String fee;
     // buy、sell
     private String side;
+    private String currency;
 
     public Long getLedger_id() {
-        return this.ledger_id;
+        return ledger_id;
     }
 
-    public void setLedger_id(final Long ledger_id) {
+    public void setLedger_id(Long ledger_id) {
         this.ledger_id = ledger_id;
     }
 
     public String getInstrument_id() {
-        return this.instrument_id;
+        return instrument_id;
     }
 
-    public void setInstrument_id(final String instrument_id) {
+    public void setInstrument_id(String instrument_id) {
         this.instrument_id = instrument_id;
     }
 
-    public String getProduct_id() {
-        return this.product_id;
-    }
-
-    public void setProduct_id(final String product_id) {
-        this.product_id = product_id;
-    }
-
     public String getPrice() {
-        return this.price;
+        return price;
     }
 
-    public void setPrice(final String price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
     public String getSize() {
-        return this.size;
+        return size;
     }
 
-    public void setSize(final String size) {
+    public void setSize(String size) {
         this.size = size;
     }
 
     public Long getOrder_id() {
-        return this.order_id;
+        return order_id;
     }
 
-    public void setOrder_id(final Long order_id) {
+    public void setOrder_id(Long order_id) {
         this.order_id = order_id;
     }
 
     public String getTimestamp() {
-        return this.timestamp;
+        return timestamp;
     }
 
-    public void setTimestamp(final String timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 
     public String getCreated_at() {
-        return this.created_at;
+        return created_at;
     }
 
-    public void setCreated_at(final String created_at) {
+    public void setCreated_at(String created_at) {
         this.created_at = created_at;
     }
 
     public String getLiquidity() {
-        return this.liquidity;
+        return liquidity;
     }
 
-    public void setLiquidity(final String liquidity) {
+    public void setLiquidity(String liquidity) {
         this.liquidity = liquidity;
     }
 
     public String getExec_type() {
-        return this.exec_type;
+        return exec_type;
     }
 
-    public void setExec_type(final String exec_type) {
+    public void setExec_type(String exec_type) {
         this.exec_type = exec_type;
     }
 
     public String getFee() {
-        return this.fee;
+        return fee;
     }
 
-    public void setFee(final String fee) {
+    public void setFee(String fee) {
         this.fee = fee;
     }
 
     public String getSide() {
-        return this.side;
+        return side;
     }
 
-    public void setSide(final String side) {
+    public void setSide(String side) {
         this.side = side;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 }

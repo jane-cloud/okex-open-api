@@ -45,4 +45,9 @@ public class SpotAccountAPIServiceImpl implements SpotAccountAPIService {
     public Account getAccountByCurrency(final String currency) {
         return this.client.executeSync(this.api.getAccountByCurrency(currency));
     }
+
+    @Override
+    public String getTradeFee() {
+        return this.client.executeSync(this.api.getTradeFee());
+    }
 }

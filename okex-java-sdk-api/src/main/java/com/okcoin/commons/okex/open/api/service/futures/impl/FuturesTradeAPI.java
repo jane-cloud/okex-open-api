@@ -110,4 +110,7 @@ interface FuturesTradeAPI {
                                                   @Query("after") String after,
                                                   @Query("before") String before,
                                                   @Query("limit") String limit);
+
+    @GET("/api/futures/v3/trade_fee")
+    Call<String> getTradeFee();
 }

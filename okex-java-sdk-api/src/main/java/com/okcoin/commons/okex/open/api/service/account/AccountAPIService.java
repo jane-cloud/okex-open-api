@@ -44,5 +44,9 @@ public interface AccountAPIService {
     JSONArray getWithdrawalHistory();
     //查看单个提币记录
     JSONArray getWithdrawalHistory(String currency);
+    //获取子账户余额信息
+    String getSubAccount(String subaccount);
+    //获取账户资产估值
+    String getAssetValuation(String account_type,String valuation_currency);
 
 }

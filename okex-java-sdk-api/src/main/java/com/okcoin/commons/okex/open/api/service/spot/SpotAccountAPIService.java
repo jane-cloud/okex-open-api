@@ -54,4 +54,10 @@ public interface SpotAccountAPIService {
      * @return
      */
     Account getAccountByCurrency(final String currency);
+
+    /**
+     * 获取当前账户费率
+     * @return
+     */
+    String getTradeFee();
 }

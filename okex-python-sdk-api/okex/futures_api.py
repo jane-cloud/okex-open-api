@@ -163,6 +163,9 @@ class FutureAPI(Client):
             params['limit'] = limit
         return self._request_with_params(GET, FUTURE_GET_ORDER_ALGOS + str(instrument_id), params)
 
+    def get_trade_fee(self):
+        return self._request_without_params(GET, FUTURE_TRADE_FEE)
+
     # get products info
     def get_products(self):
         return self._request_without_params(GET, FUTURE_PRODUCTS_INFO)

@@ -96,7 +96,7 @@ public interface MarginOrderAPIService {
      *
      * @param orderId
      * @param instrumentId
-     * @param from
+     * @param after
      * @param to
      * @param limit
      * @return

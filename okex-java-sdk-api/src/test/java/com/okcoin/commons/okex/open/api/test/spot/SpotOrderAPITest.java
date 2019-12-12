@@ -232,7 +232,7 @@ public class SpotOrderAPITest extends SpotAPIBaseTests {
      */
     @Test
     public void getFills() {
-        final List<Fills> fillsList = this.spotOrderAPIServive.getFills("3927237510176768", "BTC-USDT", "", "", "");
+        final List<Fills> fillsList = this.spotOrderAPIServive.getFills("", "BTC-USDT", "", "", "");
         this.toResultString(SpotOrderAPITest.LOG, "fillsList", fillsList);
     }
 
