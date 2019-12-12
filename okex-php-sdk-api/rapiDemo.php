@@ -14,6 +14,7 @@ use okv3\AccountApi;
 use okv3\Config;
 use okv3\FuturesApi;
 use okv3\MarginApi;
+use okv3\OptionsApi;
 use okv3\SpotApi;
 use okv3\SwapApi;
 use Workerman\Connection\AsyncTcpConnection;
@@ -39,7 +40,7 @@ $coin = "XMR";
 // 查询所有币种的提币记录
 //$res = $obj -> getWithdrawalHistory();
 // 查询单个币种的提币记录
-$res = $obj -> getCoinWithdrawalHistory($coin);
+//$res = $obj -> getCoinWithdrawalHistory($coin);
 // 获取所有币种的充值记录
 //$res = $obj -> getDepositHistory();
 // 查询单个币种的充值记录
@@ -192,7 +193,7 @@ $obj = new FuturesApi(Config::$config);
 //$res = $obj -> cancelAll($instrumentId, "long");
 
 
-// 永续合约-Ticker
+// 永续合约
 $instrumentId = "EOS-USD-SWAP";
 $currency = "EOS";
 $obj = new SwapApi(Config::$config);
@@ -259,7 +260,53 @@ $obj = new SwapApi(Config::$config);
 //$res = $obj -> revokeAlgoOrders($instrumentId,["375065465116119040"], "1");
 // 获取委托单列表-止盈止损
 //$res = $obj -> getAlgoList($instrumentId, "1", '',"375065465116119040",'','','');
-$res = $obj -> getTradeFee();
+//$res = $obj -> getTradeFee();
+
+
+// 期权
+$instrumentId = "TBTC-USD-191213-7500-C";
+$underlying = "TBTC-USD";
+$obj = new OptionsApi(Config::$config);
+// 单个标的指数持仓信息
+//$res = $obj -> getSpecificPosition($underlying);
+// 单个标的物账户信息
+//$res = $obj -> getSpecificAccounts($underlying);
+// 下单
+//$res = $obj -> takeOrder('',$instrumentId,'buy','0.001','1','','');
+// 撤单
+//$res = $obj -> revokeOrder($underlying,'125240402932457472');
+// 修改订单
+//$res = $obj -> amendOrder($underlying,'125245684311965696','','3','');
+// 获取单个订单状态
+//$res = $obj -> getOrderInfo('125245684311965696', $underlying);
+// 获取订单列表
+//$res = $obj -> getOrderList('2', $underlying);
+// 获取成交明细
+//$res = $obj -> getFills('125249091227729920', $underlying);
+// 获取账单流水
+//$res = $obj -> getLedger($underlying);
+// 获取手续费费率
+//$res = $obj -> getRateFee();
+// 公共-获取标的指数
+//$res = $obj -> getIndex();
+// 公共-获取期权合约
+//$res = $obj -> getInstruments($underlying);
+// 公共-获取期权合约详细定价
+//$res = $obj -> getInstrumentsSummary($underlying);
+// 公共-获取单个期权合约详细定价
+//$res = $obj -> getSpecificInstrumentSummary($underlying, $instrumentId);
+// 获取深度
+//$res = $obj->getDepth($instrumentId,1);
+// 公共-获取全部ticker信息
+//$res = $obj->getTicker();
+// 公共-获取成交数据
+//$res = $obj->getTrades($instrumentId);
+// 公共-获取某个ticker信息
+$res = $obj->getSpecificTicker($instrumentId);
+// 公共-获取K线数据
+//$res = $obj->getKline($instrumentId,"60");
 
 // 指数
 //$res = $obj->getHistoricalFundingRate($instrumentId);
+
+print_r($res);
