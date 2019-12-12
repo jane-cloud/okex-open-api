@@ -295,5 +295,26 @@ namespace OKExSDK
                 return JObject.Parse(contentStr);
             }
         }
+        public async Task<string> getsub_accountAsync(string sub_account)
+        {
+            var url = $"{this.BASEURL}{this.ACCOUNT_SEGMENT}/sub-account?sub-account={sub_account}";
+            using (var client = new HttpClient(new HttpInterceptor(this._apiKey, this._secret, this._passPhrase, null)))
+            {
+                var res = await client.GetAsync(url);
+                var contentStr = await res.Content.ReadAsStringAsync();
+                return contentStr;
+            }
+        }
+        public async Task<string> getAsset_ValuationAsync()
+        {
+            var url = $"{this.BASEURL}{this.ACCOUNT_SEGMENT}/asset-valuation";
+            using (var client = new HttpClient(new HttpInterceptor(this._apiKey, this._secret, this._passPhrase, null)))
+            {
+                var res = await client.GetAsync(url);
+                var contentStr = await res.Content.ReadAsStringAsync();
+                return contentStr;
+            }
+        }
+        
     }
 }

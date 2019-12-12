@@ -102,26 +102,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OKExSDKLibrary.dll" size="276480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OKExSDKLibrary.dll" size="309248">
       <assemblyIdentity name="OKExSDKLibrary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DIqK/QbHLhZQ15hFk2juMmcVUolZuIKKONCLPHAIWHQ=</dsig:DigestValue>
+        <dsig:DigestValue>Ed0ioZ+TJ+UOskZKiMbxEzrFNtMgkPwLZ+7HnAasQ7Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SampleCS.exe" size="224256">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SampleCS.exe" size="273408">
       <assemblyIdentity name="SampleCS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UuHrG4E0l/FauxFmRmm2woj2DcHSDQEsnugk/m4AeN4=</dsig:DigestValue>
+        <dsig:DigestValue>V0cfGvaVYDD7JuQFgfhDjCTI+uCV3rjfZMiHx4D43u4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

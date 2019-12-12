@@ -39,6 +39,8 @@
                             <Button Content="获取充值地址" HorizontalAlignment="Left" Margin="124,32,0,0" VerticalAlignment="Top" Width="109" Click="btnGetDepositAddress"/>
                             <Button Content="获取所有币种充值记录" HorizontalAlignment="Left" Margin="238,32,0,0" VerticalAlignment="Top" Width="133" Click="btnGetDepositHistory"/>
                             <Button Content="获取单个币种充值记录" HorizontalAlignment="Left" Margin="376,32,0,0" VerticalAlignment="Top" Width="133" Click="btnGetDepositHistoryByCurrency"/>
+                            <Button Content="获取子账户余额信息" HorizontalAlignment="Left" Margin="511,32,0,0" VerticalAlignment="Top" Width="133" Click="btnAccount_GetSub_AccountAsync"/>
+                            <Button Content="获取账户总资产" HorizontalAlignment="Left" Margin="650,32,0,0" VerticalAlignment="Top" Width="133" Click="btngetAsset_ValuationAsync"/>
                         </Grid>
                         <GroupBox Header="搜索参数" Width="811">
                             <StackPanel Orientation="Horizontal">
@@ -359,6 +361,7 @@
                             <Button Content="获取委托单列表" HorizontalAlignment="Left" Margin="205,32,0,0" VerticalAlignment="Top" Width="133" Click="btnGetOrder_algoSpot" Grid.Column="3"/>
                             <Button Content="委托策略下单" HorizontalAlignment="Left" Margin="343,32,0,0" VerticalAlignment="Top" Width="133" Click="btnOrder_algoSpot" Grid.Column="3"/>
                             <Button Content="委托策略撤单" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Width="133" Click="btncancel_batch_algosSpot"/>
+                            <Button Content="获取当前账户费率" HorizontalAlignment="Left" Margin="124,61,0,0" VerticalAlignment="Top" Width="109" Click="btnSpot_GetTrade_fee"/>
 
                         </Grid>
                         <GroupBox Header="搜索参数" Width="811">
@@ -441,7 +444,9 @@
                             <Button Content="某账户借币记录" HorizontalAlignment="Left" Margin="614,8,0,0" VerticalAlignment="Top" Width="133" Click="btnGetBorrowByInstrument"/>
                             <Button Content="获取订单列表" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" Width="109" Click="btnGetMarginOrders"/>
                             <Button Content="获取所有未成交订单" HorizontalAlignment="Left" Margin="124,32,0,0" VerticalAlignment="Top" Width="124" Click="btnGetMarginPendingOrder"/>
-                       
+
+                            <Button Content="查询杠杆倍数" HorizontalAlignment="Left" Margin="255,32,0,0" VerticalAlignment="Top" Width="124" Click="btnMargin_GetLeverage"/>
+                            <Button Content="设置杠杆倍数" HorizontalAlignment="Left" Margin="385,32,0,0" VerticalAlignment="Top" Width="124" Click="btnMargin_SetLeverage"/>
 
                         </Grid>
                         <GroupBox Header="借币" Width="811">
@@ -564,7 +569,9 @@
                             <Button Content="获取委托单列表" HorizontalAlignment="Left" Margin="0,124,0,0" VerticalAlignment="Top" Width="130" Click="order_algo" Grid.Column="3"/>
                             <Button Content="获取标记价格" HorizontalAlignment="Left" Margin="0,124,0,0" VerticalAlignment="Top" Width="130" Click="mark_price" Grid.Column="3"/>
                             <Button Content="委托策略下单" HorizontalAlignment="Left" Margin="135,124,0,0" VerticalAlignment="Top" Width="130" Click="order_algo_futures" Grid.Column="3"/>
-                            <Button Content="委托策略撤单" HorizontalAlignment="Left" Margin="270,125,0,0" VerticalAlignment="Top" Width="130" Click="cancel_algos_futures" Grid.Column="3"/>
+                            <Button Content="委托策略撤单" HorizontalAlignment="Left" Margin="270,125,0,0" VerticalAlignment="Top" Width="100" Click="cancel_algos_futures" Grid.Column="3"/>
+
+                            <Button Content="获取当前手续费费率" HorizontalAlignment="Left" Margin="375,125,0,0" VerticalAlignment="Top" Width="130" Click="btnFutures_GetTrade_fee" Grid.Column="3"/>
 
                         </Grid>
                         <GroupBox Header="设置逐仓合约杠杆倍数">
@@ -880,6 +887,7 @@
                                                         <ComboBoxItem>BSV-USDT</ComboBoxItem>
                                                         <ComboBoxItem>TRX-USDT</ComboBoxItem>
                                                         <ComboBoxItem>EOS-BTC</ComboBoxItem>
+                                                        <ComboBoxItem>ETC-BTC</ComboBoxItem>
                                                     </ComboBox>
                                                     <Label Height="26" Content="币种："></Label>
                                                     <ComboBox Name="currency_spot" Width="100" SelectedIndex="0" Margin="10">
@@ -1185,6 +1193,7 @@
                                                         <ComboBoxItem>futures/account(用户账户信息频道【需登录】)</ComboBoxItem>
                                                         <ComboBoxItem>futures/position(用户持仓信息频道【需登录】)</ComboBoxItem>
                                                         <ComboBoxItem>futures/order(用户交易数据频道【需登录】)</ComboBoxItem>
+                                                        <ComboBoxItem>futures/instruments(公共-全量合约信息频道)</ComboBoxItem>
                                                     </ComboBox>
                                                     <Label Height="26" Content="合约ID："></Label>
                                                     <TextBox Name="contract_futures" Width="138" Height="25"></TextBox>
@@ -1236,6 +1245,8 @@
                                                         <ComboBoxItem>swap/depth(深度数据频道，首次200档，后续有更改的数据。)</ComboBoxItem>
                                                         <ComboBoxItem>swap/depth5(深度数据频道，每次返回前5档。)</ComboBoxItem>
                                                         <ComboBoxItem>swap/mark_price(标记价格频道)</ComboBoxItem>
+                                                        <ComboBoxItem>swap/order_algo(用户委托策略频道)</ComboBoxItem>
+                                                        <ComboBoxItem>swap/funding_rate(公共-资金费率频道)</ComboBoxItem>
                                                         <ComboBoxItem>swap/account(用户账户信息频道【需登录】)</ComboBoxItem>
                                                         <ComboBoxItem>swap/position(用户持仓信息频道【需登录】)</ComboBoxItem>
                                                         <ComboBoxItem>swap/order(用户交易数据频道【需登录】)</ComboBoxItem>
@@ -1305,11 +1316,179 @@
                                         </GroupBox>
                                     </StackPanel>
                                 </TabItem>
+                                <TabItem Header="期权" >
+                                    <ScrollViewer>
+                                        <StackPanel Orientation="Vertical">
+                                            <Grid Height="62">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="107*"/>
+                                                    <ColumnDefinition Width="678*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Button Content="订阅(option)" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="76" Click="btnSubscribe"/>
+                                                <Button Content="取消订阅(option)" HorizontalAlignment="Left" Margin="91,8,0,0" VerticalAlignment="Top" Width="76" Click="btnUnSubscribe" Grid.ColumnSpan="2"/>
+                                                <Button Content="登录" HorizontalAlignment="Left" Margin="65,8,0,0" VerticalAlignment="Top" Width="76" Click="btnLogin" Grid.Column="1"/>
+                                            </Grid>
+                                            <GroupBox Header="搜索参数" Width="811">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Label Height="26" Content="频道说明："></Label>
+                                                    <ComboBox Name="channel_option" Width="100" SelectedIndex="0" Margin="10">
+                                                        <ComboBoxItem >请选择频道</ComboBoxItem>
+                                                        <ComboBoxItem>option/instruments(合约信息频道)</ComboBoxItem>
+                                                        <ComboBoxItem>option/candle(K线数据频道)</ComboBoxItem>
+                                                        <ComboBoxItem>option/summary(期权详细定价频道)</ComboBoxItem>
+                                                        <ComboBoxItem>option/trade(最新成交频道)</ComboBoxItem>
+                                                        <ComboBoxItem>option/depth5(深度数据频道，每次返回前5档)</ComboBoxItem>
+                                                        <ComboBoxItem>option/depth(深度数据频道)</ComboBoxItem>
+                                                        <ComboBoxItem>option/account(用户账户频道)</ComboBoxItem>
+                                                        <ComboBoxItem>option/position(用户持仓频道)</ComboBoxItem>
+                                                        <ComboBoxItem>option/order(用户交易频道)</ComboBoxItem>
+                                                        <ComboBoxItem>option/ticker(公共ticker频道)</ComboBoxItem>
+                                                    </ComboBox>
+                                                    <Label Height="26" Content="合约ID："></Label>
+                                                    <TextBox Name="contract_option" Width="138" Height="24"></TextBox>
+
+                                                    <Label Height="26" Content="K线时间粒度："></Label>
+                                                    <ComboBox Name="candle_option" Width="100" SelectedIndex="0" Margin="10">
+                                                        <ComboBoxItem >请选择时间粒度</ComboBoxItem>
+                                                        <ComboBoxItem >60(1分钟)</ComboBoxItem>
+                                                        <ComboBoxItem>180(3分钟)</ComboBoxItem>
+                                                        <ComboBoxItem>300(5分钟)</ComboBoxItem>
+                                                        <ComboBoxItem>900(15分钟)</ComboBoxItem>
+                                                        <ComboBoxItem>1800(30分钟)</ComboBoxItem>
+                                                        <ComboBoxItem>3600(1小时)</ComboBoxItem>
+                                                        <ComboBoxItem>7200(2小时)</ComboBoxItem>
+                                                        <ComboBoxItem>14400(4小时)</ComboBoxItem>
+                                                        <ComboBoxItem>21600(6小时)</ComboBoxItem>
+                                                        <ComboBoxItem>43200(12小时)</ComboBoxItem>
+                                                        <ComboBoxItem>86400(1day)</ComboBoxItem>
+                                                        <ComboBoxItem>604800(1week)</ComboBoxItem>
+                                                    </ComboBox>
+                                                </StackPanel>
+                                            </GroupBox>
+                                        </StackPanel>
+                                    </ScrollViewer>
+                                </TabItem>
                             </TabControl>
                         </Grid>
                         <RichTextBox Name="msgBox" Height="500"></RichTextBox>
                     </StackPanel>
                 </ScrollViewer>
+            </TabItem>
+            <TabItem Header="期权">
+                <GroupBox>
+                    <StackPanel Orientation="Vertical">
+                        <Grid Height="396">
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,8,0,0" Width="83">underlying:</Label>
+                            <TextBox Name="option_underlying" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,13,0,0" Width="161"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,9,0,0" Width="83">order_id:</Label>
+                            <TextBox Name="option_order_id" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="357,13,0,0" Width="165"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="543,8,0,0" Width="83">client_oid:</Label>
+                            <TextBox  Name="option_client_oid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="629,13,0,0" Width="165" RenderTransformOrigin="2.48,0.412"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,35,0,0" Width="83">instrument_id:</Label>
+                            <TextBox Name="option_instrument_id" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,40,0,0" Width="161"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,35,0,0" Width="83">request_id:</Label>
+                            <TextBox Name="option_request_id" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="357,40,0,0" Width="165"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="543,35,0,0" Width="83">new_size:</Label>
+                            <TextBox Name="option_new_size" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="629,40,0,0" Width="165" RenderTransformOrigin="2.48,0.412"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,62,0,0" Width="83">new_price:</Label>
+                            <TextBox Name="option_new_price" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,67,0,0" Width="161"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,62,0,0" Width="83">size:</Label>
+                            <TextBox Name="option_size" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="357,67,0,0" Width="165"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="543,62,0,0" Width="83">delivery:</Label>
+                            <TextBox Name="option_delivery" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="629,67,0,0" Width="165" RenderTransformOrigin="2.48,0.412"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,89,0,0" Width="83">after:</Label>
+                            <TextBox Name="option_after" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,94,0,0" Width="161"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,89,0,0" Width="83">before:</Label>
+                            <TextBox Name="option_before" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="357,94,0,0" Width="165"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="543,89,0,0" Width="83">limit:</Label>
+                            <TextBox Name="option_limit" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="629,94,0,0" Width="165" RenderTransformOrigin="2.48,0.412"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,116,0,0" Width="83">start:</Label>
+                            <TextBox Name="option_start" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,121,0,0" Width="161"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,116,0,0" Width="83">end:</Label>
+                            <TextBox Name="option_end" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="357,121,0,0" Width="165"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="543,116,0,0" Width="83">granularity:</Label>
+                            <TextBox Name="option_granularity" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="629,121,0,0" Width="165" RenderTransformOrigin="2.48,0.412"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,143,0,0" Width="83">state:</Label>
+                            <TextBox Name="option_state" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,148,0,0" Width="161"></TextBox>
+                            <Label  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,143,0,0" Width="83">side:</Label>
+                            <TextBox Name="option_side" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="357,148,0,0" Width="165"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="543,143,0,0" Width="83">order_type:</Label>
+                            <TextBox Name="option_order_type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="629,148,0,0" Width="165" RenderTransformOrigin="2.48,0.412"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,170,0,0" Width="83">price:</Label>
+                            <TextBox Name="option_price" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,175,0,0" Width="161"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,170,0,0" Width="83">match_pirce:</Label>
+                            <TextBox Name="option_match_price" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="357,175,0,0" Width="165"></TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,197,0,0" Width="135">order_ids(client_oids)</Label>
+                            <TextBox Name="option_order_ids" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="145,202,0,0" Width="649" >
+                                <TextBox.Resources>
+                                    <VisualBrush x:Key="HintText" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
+                                        <VisualBrush.Visual>
+                                            <TextBlock FontStyle="Italic" Text="不同订单之间用英文状态的逗号分隔，单个订单之间参数用|分隔，参数顺序不能颠倒。"/>
+                                        </VisualBrush.Visual>
+                                    </VisualBrush>
+                                </TextBox.Resources>
+                                <TextBox.Style>
+                                    <Style TargetType="TextBox">
+                                        <Style.Triggers>
+                                            <Trigger Property="Text" Value="{x:Null}">
+                                                <Setter Property="Background" Value="{StaticResource HintText}"/>
+                                            </Trigger>
+                                            <Trigger Property="Text" Value="">
+                                                <Setter Property="Background" Value="{StaticResource HintText}"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBox.Style>
+                            </TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,215,0,0" Width="795" FontStyle="Italic">示例: order_id1|new_size1,order_id2|new_size2或者client_oid1|request_id1|new_size1,client_oid2|request_id2|new_size2</Label>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,235,0,0" Width="100">order_data</Label>
+                            <TextBox Name="option_order_data" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,240,0,0" Width="694" >
+                                <TextBox.Resources>
+                                    <VisualBrush x:Key="HintText" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
+                                        <VisualBrush.Visual>
+                                            <TextBlock FontStyle="Italic" Text="不同订单之间用英文状态的逗号分隔，单个订单之间参数用|分隔，参数顺序不能颠倒。"/>
+                                        </VisualBrush.Visual>
+                                    </VisualBrush>
+                                </TextBox.Resources>
+                                <TextBox.Style>
+                                    <Style TargetType="TextBox">
+                                        <Style.Triggers>
+                                            <Trigger Property="Text" Value="{x:Null}">
+                                                <Setter Property="Background" Value="{StaticResource HintText}"/>
+                                            </Trigger>
+                                            <Trigger Property="Text" Value="">
+                                                <Setter Property="Background" Value="{StaticResource HintText}"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBox.Style>
+                            </TextBox>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,255,0,0" Width="795" FontStyle="Italic" >示例: instrument_id1|size1|price1|side1|order_type1|match_price1,instrument_id2|size2|price2|side2|order_type2|match_price2</Label>
+
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,290,0,0" Width="135" Click="btngetOptionAccountsAsync">获取单个标的物账户信息</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,290,0,0" Width="135" Click="btnAmend_batch_orders">批量修改未完成订单</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="290,290,0,0" Width="135" Click="btnAmend_order">修改未完成订单</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="430,290,0,0" Width="135" Click="btngetOptionBook">获取期权合约的深度数据</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="570,290,0,0" Width="115" Click="btnCancel_Batch_Orders">批量撤销未完成订单</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="690,290,0,0" Width="100" Click="btnCancel_Order">撤销未完成订单</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,316,0,0" Width="135" Click="btngetOptionDeal_data">获取期权合约成交记录</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,316,0,0" Width="135" Click="btngetOptionFills">获取最近成交明细</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="290,316,0,0" Width="135" Click="btngetOptionInstrument_summary_byinis">获取某个合约详细定价</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="430,316,0,0" Width="135" Click="btngetOptionInstrument_summary">获取同一标的下所有合约详细定价</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="570,316,0,0" Width="115" Click="btngetOptionInstrument">获取可用合约列表</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="690,316,0,0" Width="100" Click="btngetOptionLedgert">列出账户资产流水</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,341,0,0" Width="135" Click="btngetOptionLine">获取期权合约的K线数据</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,341,0,0" Width="135" Click="btngetOrder_information">查询单个订单状态</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="290,341,0,0" Width="135" Click="btngetOrder_list">获取当前所有的订单列表</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="430,341,0,0" Width="135" Click="btngetOrder">下单</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="570,341,0,0" Width="115" Click="btngetOrders">批量下单</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="690,341,0,0" Width="100" Click="btngetPosition">获取某个标的下的持仓信息</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,366,0,0" Width="135" Click="btngetTicker">获取某个期权合约的ticker信息</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,366,0,0" Width="135" Click="btngetTrade_fee">获取手续费率</Button>
+                            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="290,366,0,0" Width="135" Click="btngetUnderlying">获取期权交易已支持的标的指数列表</Button>
+                        </Grid>
+                    </StackPanel>
+                </GroupBox>
             </TabItem>
         </TabControl>
     </Grid>

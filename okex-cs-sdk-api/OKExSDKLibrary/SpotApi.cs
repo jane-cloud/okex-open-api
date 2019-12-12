@@ -288,7 +288,7 @@ namespace OKExSDK
         /// <param name="to">请求此页码之前的分页内容（举例页码为：1，2，3，4，5。from 4 只返回第5页，to 4只返回第3页）</param>
         /// <param name="limit">分页返回的结果集数量，默认为100，最大为100，按时间顺序排列，越早下单的在前面</param>
         /// <returns></returns>
-        public async Task<JContainer> getFillsAsync(long order_id, string instrument_id, int? from, int? to, int? limit)
+        public async Task<string> getFillsAsync(long order_id, string instrument_id, int? from, int? to, int? limit)
         {
             var url = $"{this.BASEURL}{this.SPOT_SEGMENT}/fills";
             using (var client = new HttpClient(new HttpInterceptor(this._apiKey, this._secret, this._passPhrase, null)))
@@ -312,11 +312,7 @@ namespace OKExSDK
                 var paramsStr = await encodedContent.ReadAsStringAsync();
                 var res = await client.GetAsync($"{url}?{paramsStr}");
                 var contentStr = await res.Content.ReadAsStringAsync();
-                if (contentStr[0] == '[')
-                {
-                    return JArray.Parse(contentStr);
-                }
-                return JObject.Parse(contentStr);
+                return contentStr;
             }
         }
 
@@ -556,6 +552,16 @@ namespace OKExSDK
                 var res = await client.PostAsync(url, new StringContent(bodyStr, Encoding.UTF8, "application/json"));
                 var contentStr = await res.Content.ReadAsStringAsync();
                 return contentStr;
+            }
+        }
+        public async Task<string> getTrade_fee()
+        {
+            string url = $"{this.BASEURL}{this.SPOT_SEGMENT}/trade_fee";
+            using (HttpClient client = new HttpClient(new HttpInterceptor(this._apiKey, this._secret, this._passPhrase, null)))
+            {
+                var res = await client.GetAsync(url);
+                string content =await  res.Content.ReadAsStringAsync();
+                return content;
             }
         }
     }

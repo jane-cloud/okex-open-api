@@ -754,5 +754,15 @@ namespace OKExSDK
                 return contentStr;
             }
         }
+        public async Task<string> getTrade_fee()
+        {
+            string url = $"{this.BASEURL}{this.FUTURES_SEGMENT}/trade_fee";
+            using (HttpClient client = new HttpClient(new HttpInterceptor(this._apiKey, this._secret, this._passPhrase, null)))
+            {
+                var res = await client.GetAsync(url);
+                string content = await res.Content.ReadAsStringAsync();
+                return content;
+            }
+        }
     }
 }

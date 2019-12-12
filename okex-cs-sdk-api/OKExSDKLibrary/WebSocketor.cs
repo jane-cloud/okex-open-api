@@ -100,8 +100,6 @@ namespace OKExSDK
             else if (ws.State == WebSocketState.CloseReceived || ws.State == WebSocketState.Closed || ws.State == WebSocketState.Aborted)
             {
                 args.ForEach(channel =>
-
-
                 {
                     channels.Add(channel);
                 });
@@ -128,7 +126,7 @@ namespace OKExSDK
                 };
                 var messageStr = JsonConvert.SerializeObject(message);
                 byte[] buffer = Encoding.UTF8.GetBytes(messageStr);
-                await ws.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Binary, true, CancellationToken.None);
+                await ws.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
                 closeCheckTimer.Interval = 31000;
             }
             else if (ws.State == WebSocketState.CloseReceived || ws.State == WebSocketState.Closed || ws.State == WebSocketState.Aborted)
@@ -174,7 +172,7 @@ namespace OKExSDK
               {
                   while (ws.State == WebSocketState.Open)
                   {
-                      byte[] buffer = new byte[102400000];
+                      byte[] buffer = new byte[1024*1024];
                       var result = await ws.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
                       if (result.MessageType == WebSocketMessageType.Binary)
                       {
@@ -204,11 +202,11 @@ namespace OKExSDK
                                   List<string> list_bidContents = bids.Split(new[] { "],[" }, StringSplitOptions.None).ToList();
                                   combineIncrementalData(list_askContents, "asks");
                                   combineIncrementalData(list_bidContents, "bids");
-                                  if (list_askContents.Count != 200)
+                                  if (list_askContents.Count != 200 && (!list_askContents.Contains("partial")))
                                   {
                                       var obj = buildStr_checksum_asks_bids();
                                       int crc32 = getCRC32(obj.Item1);
-                                      resultStr = "增量数据：" + resultStr + "\n" + "crc32值：" + crc32.ToString() + "\n" + "checksum值：" + obj.Item1 + "\n" + "合并后的" + beforeAsks + obj.Item2 + "],\"bids\":[" + obj.Item3 + afterBids + "\n";
+                                      resultStr = "增量数据：" + resultStr + "\n" + "checksum值：" + crc32.ToString() + "\n" + "合并后的" + beforeAsks + obj.Item2 + "],\"bids\":[" + obj.Item3 + afterBids + "\n\n";
                                   }
                               }
                           }

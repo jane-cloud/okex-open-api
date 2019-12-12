@@ -197,6 +197,7 @@
     <Compile Include="Models\Swap\Rate.cs" />
     <Compile Include="Models\Swap\Ticker.cs" />
     <Compile Include="Models\Swap\Trade.cs" />
+    <Compile Include="OptionApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SdkApi.cs" />
     <Compile Include="SpotApi.cs" />

@@ -486,5 +486,25 @@ namespace OKExSDK
                 return JObject.Parse(contentStr);
             }
         }
+        public async Task<string> getLeverage(string instrument_id)
+        {
+            var url = $"{this.BASEURL}{this.MARGIN_SEGMENT}/accounts/{instrument_id}/leverage";
+            using (var client = new HttpClient(new HttpInterceptor(this._apiKey, this._secret, this._passPhrase, null)))
+            {
+                var res = await client.GetAsync(url);
+                var contentStr = await res.Content.ReadAsStringAsync();
+                return contentStr;
+            }
+        }
+        public async Task<string> SetLeverage(string instument_id,string bodystr)
+        {
+            var url = $"{this.BASEURL}{this.MARGIN_SEGMENT}/accounts/{instument_id}/leverage";
+            using (var client = new HttpClient(new HttpInterceptor(this._apiKey, this._secret, this._passPhrase, bodystr)))
+            {
+                var res = await client.PostAsync(url, new StringContent(bodystr, Encoding.UTF8, "application/json"));
+                var contentStr = await res.Content.ReadAsStringAsync();
+                return contentStr;
+            }
+        }
     }
 }
