@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B850F1E4-7037-4429-A0BD-36E1BDC2E4E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OKExSDK</RootNamespace>
+    <AssemblyName>OKExSDKLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.13.4.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.13.4\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountApi.cs" />
+    <Compile Include="Encryptor.cs" />
+    <Compile Include="EttApi.cs" />
+    <Compile Include="FuturesApi.cs" />
+    <Compile Include="GeneralApi.cs" />
+    <Compile Include="HttpInterceptor.cs" />
+    <Compile Include="MarginApi.cs" />
+    <Compile Include="Models\Account\AccountLedger.cs" />
+    <Compile Include="Models\Account\Currency.cs" />
+    <Compile Include="Models\Account\DepositAddress.cs" />
+    <Compile Include="Models\Account\DepositHistory.cs" />
+    <Compile Include="Models\Account\Transfer.cs" />
+    <Compile Include="Models\Account\TransferResult.cs" />
+    <Compile Include="Models\Account\Wallet.cs" />
+    <Compile Include="Models\Account\WithDrawal.cs" />
+    <Compile Include="Models\Account\WithdrawalFee.cs" />
+    <Compile Include="Models\Account\WithDrawalHistory.cs" />
+    <Compile Include="Models\Account\WithDrawalResult.cs" />
+    <Compile Include="Models\ErrorResult.cs" />
+    <Compile Include="Models\Ett\Constituents.cs" />
+    <Compile Include="Models\Ett\ConstituentsDetail.cs" />
+    <Compile Include="Models\Ett\DefinePrice.cs" />
+    <Compile Include="Models\Ett\EttAccount.cs" />
+    <Compile Include="Models\Ett\EttAccountSingle.cs" />
+    <Compile Include="Models\Ett\EttLedger.cs" />
+    <Compile Include="Models\Ett\EttLedgerDetail.cs" />
+    <Compile Include="Models\Ett\EttOrder.cs" />
+    <Compile Include="Models\Ett\EttOrderFullInfo.cs" />
+    <Compile Include="Models\Ett\EttOrderResult.cs" />
+    <Compile Include="Models\Futures\AccountCrossed.cs" />
+    <Compile Include="Models\Futures\AccountFixed.cs" />
+    <Compile Include="Models\Futures\Book.cs" />
+    <Compile Include="Models\Futures\CancelOrderBatchResult.cs" />
+    <Compile Include="Models\Futures\CancelOrderResult.cs" />
+    <Compile Include="Models\Futures\Contract.cs" />
+    <Compile Include="Models\Futures\EstimatedPrice.cs" />
+    <Compile Include="Models\Futures\Fill.cs" />
+    <Compile Include="Models\Futures\Hold.cs" />
+    <Compile Include="Models\Futures\Index.cs" />
+    <Compile Include="Models\Futures\Instrument.cs" />
+    <Compile Include="Models\Futures\Ledger.cs" />
+    <Compile Include="Models\Futures\LedgerDetails.cs" />
+    <Compile Include="Models\Futures\Leverage.cs" />
+    <Compile Include="Models\Futures\LeverageCrossed.cs" />
+    <Compile Include="Models\Futures\LeverageFixed.cs" />
+    <Compile Include="Models\Futures\Liquidation.cs" />
+    <Compile Include="Models\Futures\OpenInterest.cs" />
+    <Compile Include="Models\Futures\Order.cs" />
+    <Compile Include="Models\Futures\OrderBatch.cs" />
+    <Compile Include="Models\Futures\OrderBatchDetail.cs" />
+    <Compile Include="Models\Futures\OrderBatchResult.cs" />
+    <Compile Include="Models\Futures\OrderBatchResultDetail.cs" />
+    <Compile Include="Models\Futures\OrderListResult.cs" />
+    <Compile Include="Models\Futures\OrderResultSingle.cs" />
+    <Compile Include="Models\Futures\OrderSingle.cs" />
+    <Compile Include="Models\Futures\Position.cs" />
+    <Compile Include="Models\Futures\PositionCrossed.cs" />
+    <Compile Include="Models\Futures\PositionFixed.cs" />
+    <Compile Include="Models\Futures\PositionResult.cs" />
+    <Compile Include="Models\Futures\PriceLimit.cs" />
+    <Compile Include="Models\Futures\Rate.cs" />
+    <Compile Include="Models\Futures\SetCrossedLeverageResult.cs" />
+    <Compile Include="Models\Futures\SetFixedLeverageResult.cs" />
+    <Compile Include="Models\Futures\Ticker.cs" />
+    <Compile Include="Models\Futures\Trade.cs" />
+    <Compile Include="Models\General\ServerTime.cs" />
+    <Compile Include="Models\Margin\Borrow.cs" />
+    <Compile Include="Models\Margin\Borrowed.cs" />
+    <Compile Include="Models\Margin\BorrowResult.cs" />
+    <Compile Include="Models\Margin\MarginAccount.cs" />
+    <Compile Include="Models\Margin\MarginAvailable.cs" />
+    <Compile Include="Models\Margin\MarginCancelOrderBatch.cs" />
+    <Compile Include="Models\Margin\MarginFill.cs" />
+    <Compile Include="Models\Margin\MarginLedger.cs" />
+    <Compile Include="Models\Margin\MarginLedgerDetail.cs" />
+    <Compile Include="Models\Margin\MarginOrder.cs" />
+    <Compile Include="Models\Margin\MarginOrderFullInfo.cs" />
+    <Compile Include="Models\Margin\MarginOrderLimit.cs" />
+    <Compile Include="Models\Margin\MarginOrderMarket.cs" />
+    <Compile Include="Models\Margin\MarginOrderResult.cs" />
+    <Compile Include="Models\Margin\Repayment.cs" />
+    <Compile Include="Models\Margin\RepaymentResult.cs" />
+    <Compile Include="Models\Spot\CancelOrderBatch.cs" />
+    <Compile Include="Models\Spot\OrderFullInfo.cs" />
+    <Compile Include="Models\Spot\SpotAccount.cs" />
+    <Compile Include="Models\Spot\SpotBook.cs" />
+    <Compile Include="Models\Spot\SpotCandle.cs" />
+    <Compile Include="Models\Spot\SpotFill.cs" />
+    <Compile Include="Models\Spot\SpotInstrument.cs" />
+    <Compile Include="Models\Spot\SpotLedger.cs" />
+    <Compile Include="Models\Spot\SpotLedgerDetail.cs" />
+    <Compile Include="Models\Spot\SpotOrder.cs" />
+    <Compile Include="Models\Spot\SpotOrderLimit.cs" />
+    <Compile Include="Models\Spot\SpotOrderMarket.cs" />
+    <Compile Include="Models\Spot\SpotOrderResult.cs" />
+    <Compile Include="Models\Spot\SpotTicker.cs" />
+    <Compile Include="Models\Spot\SpotTrade.cs" />
+    <Compile Include="Models\Swap\Account.cs" />
+    <Compile Include="Models\Swap\AccountResult.cs" />
+    <Compile Include="Models\Swap\AccountsResult.cs" />
+    <Compile Include="Models\Swap\Depth.cs" />
+    <Compile Include="Models\Swap\CancelOrderBatchResult.cs" />
+    <Compile Include="Models\Swap\CancelOrderResult.cs" />
+    <Compile Include="Models\Swap\Fill.cs" />
+    <Compile Include="Models\Swap\FundingTime.cs" />
+    <Compile Include="Models\Swap\HistoricalFundingRate.cs" />
+    <Compile Include="Models\Swap\Hold.cs" />
+    <Compile Include="Models\Swap\Index.cs" />
+    <Compile Include="Models\Swap\Instrument.cs" />
+    <Compile Include="Models\Swap\Ledger.cs" />
+    <Compile Include="Models\Swap\Leverage.cs" />
+    <Compile Include="Models\Swap\Liquidation.cs" />
+    <Compile Include="Models\Swap\MarkPrice.cs" />
+    <Compile Include="Models\Swap\OpenInterest.cs" />
+    <Compile Include="Models\Swap\Order.cs" />
+    <Compile Include="Models\Swap\OrderBatch.cs" />
+    <Compile Include="Models\Swap\OrderBatchDetail.cs" />
+    <Compile Include="Models\Swap\OrderBatchResult.cs" />
+    <Compile Include="Models\Swap\OrderBatchResultDetail.cs" />
+    <Compile Include="Models\Swap\OrderListResult.cs" />
+    <Compile Include="Models\Swap\OrderResultSingle.cs" />
+    <Compile Include="Models\Swap\OrderSingle.cs" />
+    <Compile Include="Models\Swap\Position.cs" />
+    <Compile Include="Models\Swap\PositionResult.cs" />
+    <Compile Include="Models\Swap\PriceLimit.cs" />
+    <Compile Include="Models\Swap\Rate.cs" />
+    <Compile Include="Models\Swap\Ticker.cs" />
+    <Compile Include="Models\Swap\Trade.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SdkApi.cs" />
+    <Compile Include="SpotApi.cs" />
+    <Compile Include="SwapApi.cs" />
+    <Compile Include="WebSocketor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,8 @@
+D:\ProgramData\Project\ok-open-api\okex-cs-sdk-api\OKExSDK\bin\Debug\netstandard2.0\OKExSDK.deps.json
+D:\ProgramData\Project\ok-open-api\okex-cs-sdk-api\OKExSDK\bin\Debug\netstandard2.0\OKExSDK.dll
+D:\ProgramData\Project\ok-open-api\okex-cs-sdk-api\OKExSDK\bin\Debug\netstandard2.0\OKExSDK.pdb
+D:\ProgramData\Project\ok-open-api\okex-cs-sdk-api\OKExSDK\obj\Debug\netstandard2.0\OKExSDK.csprojAssemblyReference.cache
+D:\ProgramData\Project\ok-open-api\okex-cs-sdk-api\OKExSDK\obj\Debug\netstandard2.0\OKExSDK.AssemblyInfoInputs.cache
+D:\ProgramData\Project\ok-open-api\okex-cs-sdk-api\OKExSDK\obj\Debug\netstandard2.0\OKExSDK.AssemblyInfo.cs
+D:\ProgramData\Project\ok-open-api\okex-cs-sdk-api\OKExSDK\obj\Debug\netstandard2.0\OKExSDK.dll
+D:\ProgramData\Project\ok-open-api\okex-cs-sdk-api\OKExSDK\obj\Debug\netstandard2.0\OKExSDK.pdb

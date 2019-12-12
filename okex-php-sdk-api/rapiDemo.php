@@ -75,7 +75,7 @@ $obj = new SpotApi(Config::$config);
 // 获取币对信息
 //$res = $obj -> getCoinInfo();
 // 获取深度数据
-//$res = $obj -> getDepth($instrumentId,1);
+$res = $obj -> getDepth($instrumentId,1);
 // 获取全部ticker信息
 //$res = $obj -> getTicker();
 // 获取某个ticker信息

@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace OKExSDK.Models.Futures
+{
+    public class OrderBatchDetail
+    {
+        /// <summary>
+        /// 每张合约的价格
+        /// </summary>
+        public decimal price { get; set; }
+        /// <summary>
+        /// 买入或卖出合约的数量（以张计数）
+        /// </summary>
+        public int size { get; set; }
+        /// <summary>
+        /// 1:开多2:开空3:平多4:平空
+        /// </summary>
+        public string type { get; set; }
+        /// <summary>
+        /// 是否以对手价下单(0:不是 1:是)，默认为0，当取值为1时。price字段无效
+        /// </summary>
+        public string match_price { get; set; }
+        /// <summary>
+        /// 由您设置的订单ID来识别您的订单
+        /// </summary>
+        public string client_oid { get; set; }
+    }
+}
