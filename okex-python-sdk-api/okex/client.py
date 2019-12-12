@@ -22,7 +22,6 @@ class Client(object):
         self.PASSPHRASE = passphrase
         self.use_server_time = use_server_time
 
-
     def _request(self, method, request_path, params, cursor=False):
 
         if method == c.GET:
@@ -31,6 +30,7 @@ class Client(object):
         url = c.API_URL + request_path
 
         timestamp = utils.get_timestamp()
+        # print(timestamp)
         # sign & header
         if self.use_server_time:
             timestamp = self._get_timestamp()

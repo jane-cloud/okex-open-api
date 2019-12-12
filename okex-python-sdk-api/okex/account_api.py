@@ -59,6 +59,18 @@ class AccountAPI(Client):
         params = {'currency': currency}
         return self._request_with_params(GET, TOP_UP_ADDRESS, params)
 
+    def get_asset_valuation(self, account_type='', valuation_currency=''):
+        params = {}
+        if account_type:
+            params['account_type'] = account_type
+        if valuation_currency:
+            params['valuation_currency'] = valuation_currency
+        return self._request_with_params(GET, ASSET_VALUATION, params)
+
+    def get_sub_account(self, sub_account):
+        params = {'sub-account': sub_account}
+        return self._request_with_params(GET, SUB_ACCOUNT, params)
+
     # query top up records
     def get_top_up_records(self):
         return self._request_without_params(GET, COIN_TOP_UP_RECORDS)
