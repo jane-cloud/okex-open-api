@@ -1,0 +1,1900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cpprest"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\tests\;CMake Files\tests\common\;CMake Files\tests\common\utilities\;CMake Files\tests\common\UnitTestpp\;CMake Files\tests\common\TestRunner\;CMake Files\tests\functional\;CMake Files\tests\functional\http\;CMake Files\tests\functional\http\utilities\;CMake Files\tests\functional\http\client\;CMake Files\tests\functional\http\listener\;CMake Files\tests\functional\json\;CMake Files\tests\functional\pplx\;CMake Files\tests\functional\pplx\pplx_test\;CMake Files\tests\functional\streams\;CMake Files\tests\functional\uri\;CMake Files\tests\functional\utils\;CMake Files\tests\functional\websockets\;CMake Files\tests\functional\websockets\client\;CMake Files\samples\;CMake Files\samples\SearchFile\;CMake Files\samples\BingRequest\;CMake Files\samples\BlackJack\;CMake Files\samples\BlackJack\BlackJack_Server\;CMake Files\samples\BlackJack\BlackJack_Client\;CMake Files\samples\Oauth1Client\;CMake Files\samples\Oauth2Client\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpprest">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libcpprest.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/src/../include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/src/pch"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 cpprest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpprest/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libcpprest.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/src/../include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/src/pch"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 cpprest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="common_utilities">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libcommon_utilities.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/utilities"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/utilities/Makefile&quot;  VERBOSE=1 common_utilities"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/utilities/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/utilities/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/utilities/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="common_utilities/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libcommon_utilities.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/utilities"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/utilities/Makefile&quot;  VERBOSE=1 common_utilities/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/utilities/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/utilities/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/utilities/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unittestpp">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libunittestpp.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/UnitTestpp"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/."/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/UnitTestpp/Makefile&quot;  VERBOSE=1 unittestpp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/UnitTestpp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/UnitTestpp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/UnitTestpp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unittestpp/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libunittestpp.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/UnitTestpp"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/."/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/UnitTestpp/Makefile&quot;  VERBOSE=1 unittestpp/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/UnitTestpp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/UnitTestpp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/UnitTestpp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_runner">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/test_runner" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/TestRunner/../UnitTestpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/TestRunner/Makefile&quot;  VERBOSE=1 test_runner"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/TestRunner/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/TestRunner/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/TestRunner/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_runner/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/test_runner" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/TestRunner/../UnitTestpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/TestRunner/Makefile&quot;  VERBOSE=1 test_runner/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/TestRunner/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/TestRunner/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/common/TestRunner/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="httptest_utilities">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libhttptest_utilities.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/utilities"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/utilities/Makefile&quot;  VERBOSE=1 httptest_utilities"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/utilities/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/utilities/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/utilities/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="httptest_utilities/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libhttptest_utilities.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/utilities"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/utilities/Makefile&quot;  VERBOSE=1 httptest_utilities/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/utilities/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/utilities/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/utilities/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="httpclient_test">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libhttpclient_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/client"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/../utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/../utilities/testlistener/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/client/Makefile&quot;  VERBOSE=1 httpclient_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="httpclient_test/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libhttpclient_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/client"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/../utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/../utilities/testlistener/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/client/Makefile&quot;  VERBOSE=1 httpclient_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="httplistener_test">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libhttplistener_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/listener"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/../utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/listener/Makefile&quot;  VERBOSE=1 httplistener_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/listener/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/listener/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/listener/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="httplistener_test/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libhttplistener_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/listener"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/../utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/listener/Makefile&quot;  VERBOSE=1 httplistener_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/listener/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/listener/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/http/listener/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="json_test">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libjson_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/json"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/json/Makefile&quot;  VERBOSE=1 json_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/json/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="json_test/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libjson_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/json"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/json/Makefile&quot;  VERBOSE=1 json_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/json/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pplx_test">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libpplx_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/pplx/pplx_test"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/pplx/pplx_test/Makefile&quot;  VERBOSE=1 pplx_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/pplx/pplx_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/pplx/pplx_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/pplx/pplx_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pplx_test/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libpplx_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/pplx/pplx_test"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/pplx/pplx_test/Makefile&quot;  VERBOSE=1 pplx_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/pplx/pplx_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/pplx/pplx_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/pplx/pplx_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="streams_test">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libstreams_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/streams"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/streams/Makefile&quot;  VERBOSE=1 streams_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/streams/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/streams/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/streams/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="streams_test/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libstreams_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/streams"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/streams/Makefile&quot;  VERBOSE=1 streams_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/streams/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/streams/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/streams/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uri_test">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/liburi_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/uri"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/uri/Makefile&quot;  VERBOSE=1 uri_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/uri/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/uri/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/uri/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uri_test/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/liburi_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/uri"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/uri/Makefile&quot;  VERBOSE=1 uri_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/uri/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/uri/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/uri/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="utils_test">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libutils_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/utils"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/utils/Makefile&quot;  VERBOSE=1 utils_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="utils_test/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libutils_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/utils"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/utils/Makefile&quot;  VERBOSE=1 utils_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="websockettest_utilities">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libwebsockettest_utilities.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DWEBSOCKETTESTUTILITY_EXPORTS"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/Makefile&quot;  VERBOSE=1 websockettest_utilities"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="websockettest_utilities/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libwebsockettest_utilities.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DWEBSOCKETTESTUTILITY_EXPORTS"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/utilities/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/Makefile&quot;  VERBOSE=1 websockettest_utilities/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="websocketclient_test">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libwebsocketclient_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/client"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/client/../utilities"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/client/Makefile&quot;  VERBOSE=1 websocketclient_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="websocketclient_test/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/libwebsocketclient_test.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/client"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/utilities/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/client/../utilities"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/client/Makefile&quot;  VERBOSE=1 websocketclient_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/tests/functional/websockets/client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="samples">
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Makefile&quot;  VERBOSE=1 samples"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SearchFile">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/SearchFile" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/SearchFile/Makefile&quot;  VERBOSE=1 SearchFile"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/SearchFile/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/SearchFile/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/SearchFile/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SearchFile/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/SearchFile" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/SearchFile/Makefile&quot;  VERBOSE=1 SearchFile/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/SearchFile/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/SearchFile/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/SearchFile/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BingRequest">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/BingRequest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BingRequest/Makefile&quot;  VERBOSE=1 BingRequest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BingRequest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BingRequest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BingRequest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BingRequest/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/BingRequest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BingRequest/Makefile&quot;  VERBOSE=1 BingRequest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BingRequest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BingRequest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BingRequest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blackjackserver">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/blackjackserver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Server/Makefile&quot;  VERBOSE=1 blackjackserver"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Server/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blackjackserver/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/blackjackserver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Server/Makefile&quot;  VERBOSE=1 blackjackserver/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Server/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blackjackclient">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/blackjackclient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Client/Makefile&quot;  VERBOSE=1 blackjackclient"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blackjackclient/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/blackjackclient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Client/Makefile&quot;  VERBOSE=1 blackjackclient/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/BlackJack/BlackJack_Client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="oauth1client">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/oauth1client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth1Client/Makefile&quot;  VERBOSE=1 oauth1client"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth1Client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth1Client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth1Client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="oauth1client/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/oauth1client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth1Client/Makefile&quot;  VERBOSE=1 oauth1client/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth1Client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth1Client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth1Client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="oauth2client">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/oauth2client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth2Client/Makefile&quot;  VERBOSE=1 oauth2client"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth2Client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth2Client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth2Client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="oauth2client/fast">
+				<Option output="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries/oauth2client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/Binaries"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/openssl/1.0.2o_2/include"/>
+					<Add directory="/Users/oak/go/src/github.com/cpprestsdk/Release/libs/websocketpp"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth2Client/Makefile&quot;  VERBOSE=1 oauth2client/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth2Client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth2Client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/oak/go/src/github.com/cpprestsdk/Release/cmake-build-debug/samples/Oauth2Client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/astreambuf.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/asyncrt_utils.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/base_uri.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/containerstream.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/basic_types.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/cpprest_compat.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/fileio.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/http_helpers.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/http_server.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/http_server_api.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/http_server_asio.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/http_server_httpsys.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/nosal.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/resource.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/uri_parser.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/web_utilities.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/details/x509_cert_utilities.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/filestream.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/http_client.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/http_headers.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/http_listener.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/http_msg.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/interopstream.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/json.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/oauth1.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/oauth2.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/producerconsumerstream.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/rawptrstream.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/streams.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/uri.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/uri_builder.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/version.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/ws_client.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/cpprest/ws_msg.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/pplx/pplx.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/pplx/pplxcancellation_token.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/pplx/pplxconv.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/pplx/pplxinterface.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/pplx/pplxlinux.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/pplx/pplxtasks.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/pplx/pplxwin.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/include/pplx/threadpool.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BingRequest/bingrequest.cpp">
+			<Option target="BingRequest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/BlackJack_Client/BlackJackClient.cpp">
+			<Option target="blackjackclient"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/BlackJack_Client/stdafx.cpp">
+			<Option target="blackjackclient"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/BlackJack_Client/stdafx.h">
+			<Option target="blackjackclient"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/BlackJack_Server/BlackJack_Server.cpp">
+			<Option target="blackjackserver"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/BlackJack_Server/Dealer.cpp">
+			<Option target="blackjackserver"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/BlackJack_Server/Table.cpp">
+			<Option target="blackjackserver"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/BlackJack_Server/Table.h">
+			<Option target="blackjackserver"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/BlackJack_Server/stdafx.cpp">
+			<Option target="blackjackserver"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/BlackJack_Server/stdafx.h">
+			<Option target="blackjackserver"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/Oauth1Client/Oauth1Client.cpp">
+			<Option target="oauth1client"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/Oauth1Client/stdafx.cpp">
+			<Option target="oauth1client"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/Oauth1Client/stdafx.h">
+			<Option target="oauth1client"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/Oauth2Client/Oauth2Client.cpp">
+			<Option target="oauth2client"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/Oauth2Client/stdafx.cpp">
+			<Option target="oauth2client"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/Oauth2Client/stdafx.h">
+			<Option target="oauth2client"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/SearchFile/searchfile.cpp">
+			<Option target="SearchFile"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/client/http_client.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/client/http_client_asio.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/client/http_client_impl.h">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/client/http_client_msg.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/client/x509_cert_utilities.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/common/http_helpers.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/common/http_msg.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/listener/http_listener.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/listener/http_listener_msg.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/listener/http_server_api.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/listener/http_server_asio.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/oauth/oauth1.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/http/oauth/oauth2.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/json/json.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/json/json_parsing.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/json/json_serialization.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/pplx/pplx.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/pplx/pplxapple.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/pplx/threadpool.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/streams/fileio_posix.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/uri/uri.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/uri/uri_builder.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/uri/uri_parser.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/utilities/asyncrt_utils.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/utilities/base64.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/utilities/web_utilities.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/websockets/client/ws_client.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/websockets/client/ws_client_wspp.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/websockets/client/ws_msg.cpp">
+			<Option target="cpprest"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/TestRunner/test_module_loader.cpp">
+			<Option target="test_runner"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/TestRunner/test_module_loader.h">
+			<Option target="test_runner"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/TestRunner/test_runner.cpp">
+			<Option target="test_runner"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/AssertException.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/AssertException.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/CompositeTestReporter.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/CompositeTestReporter.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/CurrentTest.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/CurrentTest.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/DeferredTestReporter.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/DeferredTestReporter.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/DeferredTestResult.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/DeferredTestResult.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/GlobalSettings.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/GlobalSettings.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/MemoryOutStream.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/MemoryOutStream.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/Posix/SignalTranslator.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/Posix/SignalTranslator.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/Posix/TimeHelpers.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/Posix/TimeHelpers.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/ReportAssert.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/ReportAssert.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/Test.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/Test.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestDetails.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestDetails.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestList.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestList.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestReporter.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestReporter.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestReporterStdout.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestReporterStdout.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestResults.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestResults.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestRunner.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/TestRunner.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/XmlTestReporter.cpp">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/src/XmlTestReporter.h">
+			<Option target="unittestpp"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/os_utilities.cpp">
+			<Option target="common_utilities"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/stdafx.cpp">
+			<Option target="common_utilities"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/stdafx.h">
+			<Option target="common_utilities"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/authentication_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/building_request_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/client_construction.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/connections_and_errors.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/header_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/http_client_fuzz_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/http_client_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/http_client_tests.h">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/http_methods_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/multiple_requests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/oauth1_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/oauth2_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/outside_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/pipeline_stage_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/progress_handler_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/proxy_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/request_helper_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/request_stream_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/request_uri_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/response_extract_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/response_stream_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/status_code_reason_phrase_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/to_string_tests.cpp">
+			<Option target="httpclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/building_response_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/connections_and_errors.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/header_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/listener_construction_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/reply_helper_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/request_extract_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/request_handler_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/request_relative_uri_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/request_stream_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/requests_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/response_stream_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/status_code_reason_phrase_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/stdafx.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/stdafx.h">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/to_string_tests.cpp">
+			<Option target="httplistener_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/utilities/http_asserts.cpp">
+			<Option target="httptest_utilities"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/utilities/test_http_client.cpp">
+			<Option target="httptest_utilities"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/utilities/test_http_server.cpp">
+			<Option target="httptest_utilities"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/utilities/test_server_utilities.cpp">
+			<Option target="httptest_utilities"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/json/construction_tests.cpp">
+			<Option target="json_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/json/fuzz_tests.cpp">
+			<Option target="json_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/json/iterator_tests.cpp">
+			<Option target="json_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/json/json_numbers_tests.cpp">
+			<Option target="json_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/json/negative_parsing_tests.cpp">
+			<Option target="json_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/json/parsing_tests.cpp">
+			<Option target="json_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/json/to_as_and_operators_tests.cpp">
+			<Option target="json_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/pplx/pplx_test/pplx_op_test.cpp">
+			<Option target="pplx_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/pplx/pplx_test/pplx_task_options.cpp">
+			<Option target="pplx_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/pplx/pplx_test/pplxtask_tests.cpp">
+			<Option target="pplx_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/pplx/pplx_test/stdafx.cpp">
+			<Option target="pplx_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/pplx/pplx_test/stdafx.h">
+			<Option target="pplx_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/streams/fstreambuf_tests.cpp">
+			<Option target="streams_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/streams/fuzz_tests.cpp">
+			<Option target="streams_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/streams/istream_tests.cpp">
+			<Option target="streams_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/streams/memstream_tests.cpp">
+			<Option target="streams_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/streams/ostream_tests.cpp">
+			<Option target="streams_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/streams/stdstream_tests.cpp">
+			<Option target="streams_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/uri/accessor_tests.cpp">
+			<Option target="uri_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/uri/combining_tests.cpp">
+			<Option target="uri_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/uri/constructor_tests.cpp">
+			<Option target="uri_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/uri/conversions_tests.cpp">
+			<Option target="uri_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/uri/diagnostic_tests.cpp">
+			<Option target="uri_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/uri/encoding_tests.cpp">
+			<Option target="uri_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/uri/operator_tests.cpp">
+			<Option target="uri_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/uri/splitting_tests.cpp">
+			<Option target="uri_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/uri/uri_builder_tests.cpp">
+			<Option target="uri_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/utils/base64.cpp">
+			<Option target="utils_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/utils/datetime.cpp">
+			<Option target="utils_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/utils/macro_test.cpp">
+			<Option target="utils_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/utils/nonce_generator_tests.cpp">
+			<Option target="utils_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/utils/strings.cpp">
+			<Option target="utils_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/client/authentication_tests.cpp">
+			<Option target="websocketclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/client/client_construction.cpp">
+			<Option target="websocketclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/client/close_tests.cpp">
+			<Option target="websocketclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/client/error_tests.cpp">
+			<Option target="websocketclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/client/receive_msg_tests.cpp">
+			<Option target="websocketclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/client/send_msg_tests.cpp">
+			<Option target="websocketclient_test"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/utilities/test_websocket_server.cpp">
+			<Option target="websockettest_utilities"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/utilities/test_websocket_server.h">
+			<Option target="websockettest_utilities"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\common\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/utilities/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\common\utilities\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/UnitTestpp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\common\UnitTestpp\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/common/TestRunner/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\common\TestRunner\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\http\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/utilities/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\http\utilities\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/client/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\http\client\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/http/listener/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\http\listener\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/json/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\json\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/pplx/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\pplx\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/pplx/pplx_test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\pplx\pplx_test\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/streams/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\streams\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/uri/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\uri\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/utils/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\utils\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\websockets\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/tests/functional/websockets/client/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\functional\websockets\client\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\samples\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/SearchFile/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\samples\SearchFile\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BingRequest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\samples\BingRequest\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\samples\BlackJack\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/BlackJack_Server/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\samples\BlackJack\BlackJack_Server\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/BlackJack/BlackJack_Client/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\samples\BlackJack\BlackJack_Client\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/Oauth1Client/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\samples\Oauth1Client\"/>
+		</Unit>
+		<Unit filename="/Users/oak/go/src/github.com/cpprestsdk/Release/samples/Oauth2Client/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\samples\Oauth2Client\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
