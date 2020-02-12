@@ -33,16 +33,17 @@ public interface MarginOrderAPIService {
     /**
      * 取消指定的订单 delete协议
      *
-     * @param orderId
+     * @param order_id
      */
-    OrderResult cancleOrderByOrderId(final PlaceOrderParam order, String orderId);
+    OrderResult cancleOrderByOrderId(final PlaceOrderParam order, String order_id);
 
     /**
      * 取消指定的订单 post协议
      *
-     * @param orderId
+     * @param order_id
      */
-    OrderResult cancleOrderByOrderId_post(final PlaceOrderParam order, String orderId);
+    OrderResult cancleOrdersByOrderId(final PlaceOrderParam order, String order_id);
+    OrderResult cancleOrdersByClientOid(final PlaceOrderParam order, String client_oid);
 
     /**
      * 批量取消订单 delete协议
@@ -63,23 +64,24 @@ public interface MarginOrderAPIService {
     /**
      * 查询订单
      *
-     * @param instrumentId
-     * @param orderId
+     * @param instrument_id
+     * @param order_id
      * @return
      */
-    OrderInfo getOrderByProductIdAndOrderId(String instrumentId, String orderId);
+    OrderInfo getOrderByProductIdAndOrderId(String instrument_id, String order_id);
+    OrderInfo getOrderByClientOid(String instrument_id, String client_oid);
 
     /**
      * 订单列表
      *
-     * @param instrumentId
-     * @param status
-     * @param from
-     * @param to
+     * @param instrument_id
+     * @param state
+     * @param after
+     * @param before
      * @param limit
      * @return
      */
-    List<OrderInfo> getOrders(String instrumentId, String status, String from, String to, String limit);
+    List<OrderInfo> getOrders(String instrument_id, String state, String after, String before, String limit);
 
     /**
      * /* 订单列表
@@ -94,12 +96,12 @@ public interface MarginOrderAPIService {
     /**
      * 账单列表
      *
-     * @param orderId
-     * @param instrumentId
+     * @param order_id
+     * @param instrument_id
      * @param after
-     * @param to
+     * @param before
      * @param limit
      * @return
      */
-    List<Fills> getFills(String orderId, String instrumentId, String after, String to, String limit);
+    List<Fills> getFills(String order_id, String instrument_id, String after, String before, String limit);
 }

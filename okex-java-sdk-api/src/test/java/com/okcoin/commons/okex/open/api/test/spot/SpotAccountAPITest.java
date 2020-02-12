@@ -2,6 +2,7 @@ package com.okcoin.commons.okex.open.api.test.spot;
 
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.okcoin.commons.okex.open.api.bean.spot.result.Account;
 import com.okcoin.commons.okex.open.api.bean.spot.result.Ledger;
 import com.okcoin.commons.okex.open.api.bean.spot.result.ServerTimeDto;
@@ -27,6 +28,7 @@ public class SpotAccountAPITest extends SpotAPIBaseTests {
         this.spotAccountAPIService = new SpotAccountAPIServiceImpl(this.config);
     }
 
+    //获取服务器时间
     @Test
     public void time() {
         final ServerTimeDto serverTimeDto = this.spotAccountAPIService.time();
@@ -35,11 +37,6 @@ public class SpotAccountAPITest extends SpotAPIBaseTests {
         System.out.println(serverTimeDto.getIso());
     }
 
-    @Test
-    public void getMiningData() {
-        final Map<String, Object> miningdata = this.spotAccountAPIService.getMiningData();
-        this.toResultString(SpotAccountAPITest.LOG, "miningdata", miningdata);
-    }
 
     /**
      * 币币账户信息
@@ -61,7 +58,7 @@ public class SpotAccountAPITest extends SpotAPIBaseTests {
      */
     @Test
     public void getAccountByCurrency() {
-        final Account account = this.spotAccountAPIService.getAccountByCurrency("btc");
+        final Account account = this.spotAccountAPIService.getAccountByCurrency("ETH");
         this.toResultString(SpotAccountAPITest.LOG, "account", account);
     }
 
@@ -74,7 +71,7 @@ public class SpotAccountAPITest extends SpotAPIBaseTests {
      */
     @Test
     public void getLedgersByCurrency() {
-        final Object ledgers = this.spotAccountAPIService.getLedgersByCurrency("USDT", "", "", "100","");
+        final Object ledgers = this.spotAccountAPIService.getLedgersByCurrency("OKB", "", "", "100","");
         this.toResultString(SpotAccountAPITest.LOG, "ledges", ledgers);
     }
 
@@ -83,11 +80,13 @@ public class SpotAccountAPITest extends SpotAPIBaseTests {
      * 获取您当前账户交易等级对应的手续费费率，母账户下的子账户的费率和母账户一致。每天凌晨0点更新一次
      * 限速规则：1次/10s
      * GET /api/spot/v3/trade_fee
-     */
+     *
+     * **/
     @Test
-    public void getTradeFee(){
-        String josnObject = this.spotAccountAPIService.getTradeFee();
-        this.toResultString(SpotAccountAPITest.LOG,"TradeFee",josnObject);
+    public void testGetTradefee(){
+        JSONObject result = spotAccountAPIService.getTradeFee();
+        this.toResultString(SpotAccountAPITest.LOG, "result", result);
+
     }
 
 

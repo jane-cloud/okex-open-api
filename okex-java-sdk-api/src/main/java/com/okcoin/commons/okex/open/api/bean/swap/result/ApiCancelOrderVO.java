@@ -4,15 +4,13 @@ public class ApiCancelOrderVO {
 
     private String order_id;
     private String result;
-    private String client_oid;
-
-    public ApiCancelOrderVO(String order_id, String result, String client_oid) {
-        this.order_id = order_id;
-        this.result = result;
-        this.client_oid = client_oid;
-    }
 
     public ApiCancelOrderVO() {
+    }
+
+    public ApiCancelOrderVO(String order_id, String result) {
+        this.order_id = order_id;
+        this.result = result;
     }
 
     public String getOrder_id() {
@@ -31,20 +29,4 @@ public class ApiCancelOrderVO {
         this.result = result;
     }
 
-    public String getClient_oid() {
-        return client_oid;
-    }
-
-    public void setClient_oid(String client_oid) {
-        this.client_oid = client_oid;
-    }
-
-    @Override
-    public String toString() {
-        return "ApiCancelOrderVO{" +
-                "order_id='" + order_id + '\'' +
-                ", result='" + result + '\'' +
-                ", client_oid='" + client_oid + '\'' +
-                '}';
-    }
 }

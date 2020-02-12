@@ -99,8 +99,8 @@ public class WebSocketClient {
             @Override
             public void onMessage(final WebSocket webSocket, final ByteString bytes) {
                 final String s = uncompress(bytes.toByteArray());
-                //判断是否是深度接口
-                if (s.contains("\"table\":\"swap/depth\",")) {//是深度接口
+                //判断是否是深度接口()
+                if (s.contains("\"table\":\"spot/depth\",")||s.contains("\"table\":\"spot/depth_l2_tbt\",")||s.contains("\"table\":\"futures/depth\",")||s.contains("\"table\":\"futures/depth_l2_tbt\",")||s.contains("\"table\":\"swap/depth\",")||s.contains("\"table\":\"swap/depth_l2_tbt\",")||s.contains("\"table\":\"option/depth\",")||s.contains("\"table\":\"option/depth_l2_tbt\",")) {//是深度接口
                     if (s.contains("partial")) {//是第一次的200档，记录下第一次的200档
                         String[] strs=s.split("],");
                         //System.out.println(strs.length);

@@ -19,7 +19,7 @@ public class OrderResult {
     /**
      * The Server processing results: true: successful, false: failure.
      */
-    private String result;
+    private boolean result;
 
     private String error_code;
     private String error_message;
@@ -40,20 +40,12 @@ public class OrderResult {
         this.order_id = order_id;
     }
 
-    public String getResult() {
+    public boolean isResult() {
         return result;
     }
 
-    public void setResult(String result) {
+    public void setResult(boolean result) {
         this.result = result;
-    }
-
-    public String getError_message() {
-        return error_message;
-    }
-
-    public void setError_message(String error_message) {
-        this.error_message = error_message;
     }
 
     public String getError_code() {
@@ -70,16 +62,5 @@ public class OrderResult {
 
     public void setError_messsage(String error_messsage) {
         this.error_message = error_messsage;
-    }
-
-    @Override
-    public String toString() {
-        return "OrderResult{" +
-                "client_oid='" + client_oid + '\'' +
-                ", order_id='" + order_id + '\'' +
-                ", result='" + result + '\'' +
-                ", error_code='" + error_code + '\'' +
-                ", error_message='" + error_message + '\'' +
-                '}';
     }
 }

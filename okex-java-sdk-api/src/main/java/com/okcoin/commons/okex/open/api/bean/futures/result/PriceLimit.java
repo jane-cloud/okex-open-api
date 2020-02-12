@@ -37,14 +37,4 @@ public class PriceLimit {
     public String getLowest() { return lowest; }
 
     public void setLowest(String lowest) { this.lowest = lowest; }
-
-    @Override
-    public String toString() {
-        return "PriceLimit{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", highest='" + highest + '\'' +
-                ", lowest='" + lowest + '\'' +
-                ", timestamp='" + timestamp + '\'' +
-                '}';
-    }
 }

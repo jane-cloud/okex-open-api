@@ -51,13 +51,4 @@ public class ApiUserRiskVO {
         this.instrument_id = instrument_id;
     }
 
-    @Override
-    public String toString() {
-        return "ApiUserRiskVO{" +
-                "long_leverage='" + long_leverage + '\'' +
-                ", short_leverage='" + short_leverage + '\'' +
-                ", margin_mode='" + margin_mode + '\'' +
-                ", instrument_id='" + instrument_id + '\'' +
-                '}';
-    }
 }

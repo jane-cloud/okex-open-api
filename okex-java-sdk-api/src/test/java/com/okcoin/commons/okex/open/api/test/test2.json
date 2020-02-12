@@ -1,0 +1,1724 @@
+[
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "BTC",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Bitcoin"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LTC",
+    "min_withdrawal": 0.1000000000000000,
+    "name": "Litecoin"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ETH",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Ethereum"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "BCH",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Bitcoin Cash"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ETC",
+    "min_withdrawal": 0.1000000000000000,
+    "name": "Ethereum Classic"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "OKB",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "OKB"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "USDT",
+    "min_withdrawal": 10.0000000000000000,
+    "name": "Tether"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "USDK",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "USDK"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "1ST",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "FirstBlood"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "AAC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "AcuteAngleCloud"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ABL",
+    "min_withdrawal": 100.0000000000000000,
+    "name": "Airbloc"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ABT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Arcblock"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "ACE",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "TokenStars"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ACT",
+    "min_withdrawal": 10.0000000000000000,
+    "name": "Achain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ADA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Cardano"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "AE",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Aeternity"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "AIDOC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "AI Doctor"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ALGO",
+    "min_withdrawal": 0.1000000000000000,
+    "name": "Algorand"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "ALV",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "ALLIVE"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "AMM",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "MicroMoney"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ARDR",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Ardor"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "ARK",
+    "min_withdrawal": 0.2000000000000000,
+    "name": "Ark"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "AST",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "AirSwap"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ATL",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "ATLANT"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ATOM",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Cosmos"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "AUTO",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Cube"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "AVT",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Aventus"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "BCD",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Bitcoin Diamond"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "BCX",
+    "name": "BitcoinX"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "BEC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Beao Coin"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "BKX",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "BANKEX"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "BLOC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Blockcloud"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "BNT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Bancor"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "BRD",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Bread"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "BSV",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Bitcoin SV"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "BTG",
+    "min_withdrawal": 0.0010000000000000,
+    "name": "Bitcoin Gold"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "BTM",
+    "min_withdrawal": 10.0000000000000000,
+    "name": "Bytom"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "BTT",
+    "min_withdrawal": 200.0000000000000000,
+    "name": "BitTorrent"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "BXA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Blockchain Exchange Alliance"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "CAG",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Change"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "CAI",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Cai Token"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "CAN",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "CanYaCoin"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "CBT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "CommerceBlock"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "CHAT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "ChatCoin"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "CIC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Cloud Insurance Chain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "CIT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "CariNet"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "CKB",
+    "min_withdrawal": 61.0000000000000000,
+    "name": ""
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "CMT",
+    "min_withdrawal": 2.0000000000000000,
+    "name": "CyberMiles"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "CRO",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Crypto.com Chain CRO"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "CTR",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Centra"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "CTXC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Cortex"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "CVC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Civic"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "CVT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "CyberVein"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "DAI",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Dai"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "DASH",
+    "min_withdrawal": 0.0040000000000000,
+    "name": "Dash"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "DAT",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Datum"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "DCR",
+    "min_withdrawal": 0.1000000000000000,
+    "name": "Decred"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "DENT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Dent"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "DGB",
+    "min_withdrawal": 100.0000000000000000,
+    "name": "DigiByte"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "DGD",
+    "min_withdrawal": 0.1000000000000000,
+    "name": "DigixDAO"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "DNA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "EncrypGen"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "DNT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "district0x"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "DOGE",
+    "min_withdrawal": 100.0000000000000000,
+    "name": "Dogecoin"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "DPY",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Delphy"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "EC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Echoin"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "EDGE",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Edge"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "EDO",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Eidoo"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "EGT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Egretia"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ELF",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "aelf"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "EM",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Eminer"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ENG",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Enigma"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "ENJ",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Enjin Coin"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "EON",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Dimension Chain"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "EOP",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "EOSpace"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "EOS",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "EOS"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "EOSDAC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "eosDAC"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "EPRA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Prochain"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "ETM",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "En-Tan-Mo"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "EVX",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Everex"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "F4SBTC",
+    "name": "F4SBTC"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "FAIR",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "FairGame"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "FCT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "FirmaChain Token"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "FSN",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Fusion "
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "FTM",
+    "min_withdrawal": 10.0000000000000000,
+    "name": "Fantom Token"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "FUN",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "FunFair"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "GAS",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Gas"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "GNT",
+    "min_withdrawal": 20.0000000000000000,
+    "name": "Golem"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "GNX",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Genaro Network"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "GRIN",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Grin"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "GSC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Global Social Chain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "GTC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Game.com"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "GTO",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Gifto"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "GUSD",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Gemini Dollar"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "HBAR",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Hedera Hashgraph"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "HC",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "HyperCash"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "HIT",
+    "min_withdrawal": 2000.0000000000000000,
+    "name": "HitChain"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "HMC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Hi Mutual Society"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "HORUS",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "HorusPay"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "HOT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Holo"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "HPB",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "High Performance Blockchain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "HYC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "HYCON"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ICN",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Iconomi"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ICX",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "ICON "
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "INS",
+    "min_withdrawal": 0.1000000000000000,
+    "name": "Insolar"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "INSUR",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "InsurChain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "INT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Internet Node Token"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "IOST",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "IOST"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "IOTA",
+    "min_withdrawal": 0.0010000000000000,
+    "name": "IOTA"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "IPC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "IPChain"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "IQ",
+    "min_withdrawal": 50.0000000000000000,
+    "name": "Everipedia"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ITC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "IoT Chain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "KAN",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "BitKan"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "KCASH",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Kcash"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "KEY",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "SelfKey"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "KNC",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Kyber Network"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "LATOKEN"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LAMB",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Lambda"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LBA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Cred"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LEND",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Aave"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LEO",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Bitfinex LEO Token"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LET",
+    "min_withdrawal": 100.0000000000000000,
+    "name": "LinkEye"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LEV",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Leverj"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "LIGHT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "LightChain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LINK",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Chainlink"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LOL",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "LOL Token"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LRC",
+    "min_withdrawal": 14.0000000000000000,
+    "name": "Loopring"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "LSK",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Lisk"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "MAG",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Maggie"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "MANA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Decentraland"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "MCO",
+    "min_withdrawal": 0.4000000000000000,
+    "name": "MCO"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "MDA",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Moeda Loyalty Points"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "MDT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Measurable Data Token"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "MEETONE",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "MEETONE"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "MITH",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Mithril"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "MKR",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Maker"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "MOF",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Molecular Future"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "MOT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Olympus Labs"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "MTH",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Monetha"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "MTL",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Metal"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "MVP",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Merculet"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "NANO",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Nano"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "NAS",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Nebulas"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "NEO",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "NEO"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "NGC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "NAGA"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "NULS",
+    "min_withdrawal": 4.0000000000000000,
+    "name": "NULS"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "NXT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Nxt"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "OAX",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "OAX"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "OF",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "OFCOIN"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "OMG",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "OmiseGO"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ONG",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Ontology Gas"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ONT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Ontology"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ORBS",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Orbs Network"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ORS",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "OriginSport"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "OST",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "OST"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "PAX",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Paxos Standard"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "PAY",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "TenX"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "PIZZA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "PiZZA"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "PLG",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Pledgecamp"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "PMA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "PumaPay "
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "POE",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Po.et"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "POLY",
+    "name": "Polymath"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "PPT",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Populous"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "PRA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "ProChain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "PST",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Primas"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "PYN",
+    "name": "PAYCENT"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "QTUM",
+    "min_withdrawal": 0.1000000000000000,
+    "name": "Qtum"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "QUN",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "QunQun"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "QVT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Qvolta"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "R",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Revain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "RCN",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Ripio Credit Network"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "RCT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "RealChain"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "RDN",
+    "min_withdrawal": 0.6000000000000000,
+    "name": "Raiden Network Token"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "READ",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Read"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "REF",
+    "min_withdrawal": 0.1000000000000000,
+    "name": "RefToken"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "REN",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Ren"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "REQ",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Request Network"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "RFR",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Refereum"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "RNT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "OneRoot Network"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ROAD",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "ROAD"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "SALT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "SALT"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SAN",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Santiment Network Token"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SBTC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Super Bitcoin"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SC",
+    "min_withdrawal": 10.0000000000000000,
+    "name": "Siacoin"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SDA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "SDChain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SHOW",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Show"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "SMT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "SmartMesh"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SNC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "SunContract"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SNGLS",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "SingularDTV"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SNM",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "SONM"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 0,
+    "currency": "SNT",
+    "min_withdrawal": 100.0000000000000000,
+    "name": "Status"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SOC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "All Sports"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SPF",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "SportyCo"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SPND",
+    "min_withdrawal": 10.0000000000000000,
+    "name": "Spendcoin"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "SSC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "SelfSell"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "STC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "StarChain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "STORJ",
+    "min_withdrawal": 4.0000000000000000,
+    "name": "Storj"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SUB",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Substratum"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "SWFTC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "SwftCoin"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "TCT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "TokenClub"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "TFUEL",
+    "name": "Theta Fuel"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "THETA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "THETA"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "TIO",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Trade Token"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "TNB",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Time New Bank"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "TOPC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "TopChain"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "TRA",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "TRA"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "TRIO",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Tripio"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "TRUE",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "TrueChain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "TRX",
+    "min_withdrawal": 20.0000000000000000,
+    "name": "TRON"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "TUSD",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "TrueUSD"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "UBTC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "United Bitcoin"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "UCT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Ubique Chain Of Things"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "UGC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "ugChain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "UKG",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Unikoin Gold"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "USDC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "USD Coin"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "USDT-TRC20",
+    "name": "USDT"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "UTK",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "UTRUST"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "VCASH",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "VCASH"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "VEE",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "BLOCKv"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "VIB",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "VIBE"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "VITE",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "VITE"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "VIU",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Viuly"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "VNT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "VNT Chain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "VSYS",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "V Systems"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "WAVES",
+    "min_withdrawal": 0.1000000000000000,
+    "name": "Waves"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "WBTC",
+    "name": "World Bitcoin"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "WFEE",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Wfee"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "WIN",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "WinToken"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "WRC",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Worldcore"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "WTC",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Waltonchain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "WXT",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Wirex Token"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "XAS",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Asch"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 0,
+    "currency": "XEM",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "NEM"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "XLM",
+    "min_withdrawal": 21.0000000000000000,
+    "name": "Stellar"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "XMR",
+    "min_withdrawal": 0.0010000000000000,
+    "name": "Monero"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 1,
+    "currency": "XPO",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "X-power Chain"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "XRP",
+    "min_withdrawal": 21.0000000000000000,
+    "name": "XRP"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "XTZ",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Tezos"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "XUC",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Exchange Union"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "YEE",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "YEE"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "YOU",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "YOU COIN"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "YOYO",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "YOYOW"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "ZCO",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Zebi"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ZEC",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Zcash"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ZEN",
+    "min_withdrawal": 0.0100000000000000,
+    "name": "Horizon"
+  },
+  {
+    "can_deposit": 0,
+    "can_withdraw": 0,
+    "currency": "ZIL",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "Zilliqa"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ZIP",
+    "min_withdrawal": 1000.0000000000000000,
+    "name": "Zipper"
+  },
+  {
+    "can_deposit": 1,
+    "can_withdraw": 1,
+    "currency": "ZRX",
+    "min_withdrawal": 1.0000000000000000,
+    "name": "0x"
+  }
+]

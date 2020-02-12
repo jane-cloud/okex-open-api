@@ -37,8 +37,8 @@ public class EttOrderAPIServiceImpl implements EttOrderAPIService {
     }
 
     @Override
-    public EttCancelOrderResult cancelOrder(String orderId) {
-        return this.client.executeSync(this.api.cancelOrder(orderId));
+    public EttCancelOrderResult cancelOrder(String order_id) {
+        return this.client.executeSync(this.api.cancelOrder(order_id));
     }
 
     @Override
@@ -47,7 +47,7 @@ public class EttOrderAPIServiceImpl implements EttOrderAPIService {
     }
 
     @Override
-    public EttOrder getOrder(String orderId) {
-        return this.client.executeSync(this.api.getOrder(orderId));
+    public EttOrder getOrder(String order_id) {
+        return this.client.executeSync(this.api.getOrder(order_id));
     }
 }

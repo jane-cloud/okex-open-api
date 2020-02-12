@@ -10,9 +10,9 @@ public class SwapBaseTest extends BaseTests {
 
         config.setEndpoint("https://www.okex.com/");
         config.setApiKey("");
-        // secretKey，api注册成功后页面上有
         config.setSecretKey("");
         config.setPassphrase("");
+
         config.setPrint(true);
         config.setI18n(I18nEnum.SIMPLIFIED_CHINESE);
 
@@ -23,5 +23,5 @@ public class SwapBaseTest extends BaseTests {
     int to = 0;
     int limit = 20;
 
-    String instrument_id = "BTC-USD-SWAP";
+    String instrument_id = "XRP-USD-SWAP";
 }

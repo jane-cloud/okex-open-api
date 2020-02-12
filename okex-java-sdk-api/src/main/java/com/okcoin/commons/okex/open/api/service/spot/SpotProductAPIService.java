@@ -11,17 +11,21 @@ public interface SpotProductAPIService {
     /**
      * 单个币对行情
      *
-     * @param product
+     * @param instrument_id
      * @return
      */
-    Ticker getTickerByProductId(String product);
+    Ticker getTickerByProductId(String instrument_id);
 
     /**
+     *
      * 行情列表
      *
      * @return
      */
-    List<Ticker> getTickers();
+    //List<Ticker> getTickers();
+    String getTickers();
+
+    List<Ticker> getTickers1();
 
     /**
      * @param instrument_id
@@ -42,15 +46,13 @@ public interface SpotProductAPIService {
      * 交易列表
      *
      * @param instrument_id
-     * @param before
-     * @param after
      * @param limit
      * @return
      */
-    List<Trade> getTrades(String instrument_id, String before, String after, String limit);
+    List<Trade> getTrades(String instrument_id, String limit);
 
     /**
-     * @param product
+     * @param instrument_id
      * @param granularity
      * @param start
      * @param end
@@ -61,5 +63,7 @@ public interface SpotProductAPIService {
     List<String[]> getCandles_1(String product, String granularity, String start, String end);
 
     String getIndex(String instrument_id);
+
+    String getMarginMarkPrice(String instrument_id);
 
 }

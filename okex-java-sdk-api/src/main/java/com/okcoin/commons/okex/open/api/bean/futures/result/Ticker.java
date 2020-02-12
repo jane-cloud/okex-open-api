@@ -97,18 +97,4 @@ public class Ticker {
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
-
-    @Override
-    public String toString() {
-        return "Ticker{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", best_bid='" + best_bid + '\'' +
-                ", best_ask='" + best_ask + '\'' +
-                ", high_24h='" + high_24h + '\'' +
-                ", low_24h='" + low_24h + '\'' +
-                ", last='" + last + '\'' +
-                ", volume_24h='" + volume_24h + '\'' +
-                ", timestamp='" + timestamp + '\'' +
-                '}';
-    }
 }

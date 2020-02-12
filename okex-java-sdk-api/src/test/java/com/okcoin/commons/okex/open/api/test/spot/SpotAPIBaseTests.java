@@ -10,9 +10,7 @@ public class SpotAPIBaseTests extends BaseTests {
         final APIConfiguration config = new APIConfiguration();
 
         config.setEndpoint("https://www.okex.com/");
-
         config.setApiKey("");
-        // secretKey，api注册成功后页面上有
         config.setSecretKey("");
         config.setPassphrase("");
 

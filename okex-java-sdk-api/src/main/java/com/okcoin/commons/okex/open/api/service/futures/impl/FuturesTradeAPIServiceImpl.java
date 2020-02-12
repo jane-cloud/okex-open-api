@@ -4,16 +4,11 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.okcoin.commons.okex.open.api.bean.futures.param.CancelAll;
 import com.okcoin.commons.okex.open.api.bean.futures.param.*;
-import com.okcoin.commons.okex.open.api.bean.futures.result.CancelFuturesOrdeResult;
-import com.okcoin.commons.okex.open.api.bean.futures.result.FindFuturesOrderResult;
-import com.okcoin.commons.okex.open.api.bean.futures.result.FuturesOrderResult;
-import com.okcoin.commons.okex.open.api.bean.futures.result.OrderResult;
+import com.okcoin.commons.okex.open.api.bean.futures.result.*;
 import com.okcoin.commons.okex.open.api.client.APIClient;
 import com.okcoin.commons.okex.open.api.config.APIConfiguration;
 import com.okcoin.commons.okex.open.api.service.futures.FuturesTradeAPIService;
 import com.okcoin.commons.okex.open.api.utils.JsonUtils;
-
-import java.util.List;
 
 /**
  * Futures trade api
@@ -39,8 +34,8 @@ public class FuturesTradeAPIServiceImpl implements FuturesTradeAPIService {
     }
 
     @Override
-    public JSONObject getInstrumentPosition(String instrumentId) {
-        return this.client.executeSync(this.api.getInstrumentPosition(instrumentId));
+    public JSONObject getInstrumentPosition(String instrument_id) {
+        return this.client.executeSync(this.api.getInstrumentPosition(instrument_id));
     }
 
     @Override
@@ -79,13 +74,13 @@ public class FuturesTradeAPIServiceImpl implements FuturesTradeAPIService {
     }
 
     @Override
-    public JSONObject cancelOrder(String instrumentId, String orderId) {
-        return this.client.executeSync(this.api.cancelOrder(instrumentId, orderId));
+    public JSONObject cancelOrderByOrderId(String instrument_id, String order_id) {
+        return this.client.executeSync(this.api.cancelOrderByOrderId(instrument_id, order_id));
     }
 
     @Override
-    public JSONObject cancelOrderByClientOid(String instrumentId, String clientOid) {
-        return this.client.executeSync(this.api.cancelOrderByClientOid(instrumentId, clientOid));
+    public JSONObject cancelOrderByClientOid(String instrument_id, String client_oid) {
+        return this.client.executeSync(this.api.cancelOrderByClientOid(instrument_id,client_oid));
     }
 
     @Override
@@ -94,28 +89,23 @@ public class FuturesTradeAPIServiceImpl implements FuturesTradeAPIService {
     }
 
     @Override
-    public JSONObject cancelOrdersByClientOid(String instrumentId, CancelOrders cancelOrders) {
-        return this.client.executeSync(this.api.cancelOrdersByClientOid(instrumentId, JsonUtils.convertObject(cancelOrders, CancelOrders.class)));
-    }
-
-    @Override
     public JSONObject getOrders(String instrument_id, String state, String after, String before, String limit) {
         return this.client.executeSync(this.api.getOrders(instrument_id, state, after, before, limit));
     }
 
     @Override
-    public JSONObject getOrder(String instrumentId, String orderId) {
-        return this.client.executeSync(this.api.getOrder(instrumentId, String.valueOf(orderId)));
+    public JSONObject getOrderByOrderId(String instrumentId, String orderId) {
+        return this.client.executeSync(this.api.getOrderByOrderId(instrumentId,orderId));
     }
 
     @Override
-    public JSONObject getOrderByClientOid(String instrumentId, String clientOid) {
-        return this.client.executeSync(this.api.getOrder(instrumentId, String.valueOf(clientOid)));
+    public JSONObject getOrderByClientOid(String instrumentId,String client_oid) {
+        return this.client.executeSync(this.api.getOrderByClientOid(instrumentId,client_oid));
     }
 
     @Override
-    public JSONArray getFills(String instrumentId, String orderId, String from, String to, String limit) {
-        return this.client.executeSync(this.api.getFills(instrumentId, orderId, from, to, limit));
+    public JSONArray getFills(String instrument_id, String order_id, String before, String after, String limit) {
+        return this.client.executeSync(this.api.getFills(instrument_id, String.valueOf(order_id), before, after, limit));
     }
 
     @Override
@@ -124,12 +114,12 @@ public class FuturesTradeAPIServiceImpl implements FuturesTradeAPIService {
     }
 
     @Override
-    public JSONObject changeLeverageOnFixed(String currency, String instrumentId, String direction, String leverage) {
+    public JSONObject changeLeverageOnFixed(String underlying, String instrument_id, String direction, String leverage) {
         JSONObject params = new JSONObject();
-        params.put("instrument_id", instrumentId);
+        params.put("instrument_id", instrument_id);
         params.put("direction", direction);
         params.put("leverage", leverage);
-        return this.client.executeSync(this.api.changeLeverageOnFixed(currency, params));
+        return this.client.executeSync(this.api.changeLeverageOnFixed(underlying, params));
     }
 
     @Override
@@ -172,12 +162,18 @@ public class FuturesTradeAPIServiceImpl implements FuturesTradeAPIService {
     }
 
     @Override
-    public String findFuturesOrder(String instrument_id, String order_type, String status, String algo_id, String after, String before, String limit) {
-        return this.client.executeSync(this.api.findFuturesOrder(instrument_id,order_type,status,algo_id,after,before,limit));
+    public String findFuturesOrder(String instrument_id, String order_type, String status, String algo_ids, String after, String before, String limit) {
+        return this.client.executeSync(this.api.findFuturesOrder(instrument_id,order_type,status,algo_ids,after,before,limit));
     }
 
     @Override
-    public String getTradeFee() {
+    public JSONObject getTradeFee() {
         return this.client.executeSync(this.api.getTradeFee());
     }
+
+    @Override
+    public Holds getHolds(String instrument_id) {
+        return this.client.executeSync(this.api.getHolds(instrument_id));
+    }
+
 }

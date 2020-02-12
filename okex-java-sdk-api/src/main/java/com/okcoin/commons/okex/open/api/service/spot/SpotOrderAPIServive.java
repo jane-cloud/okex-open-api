@@ -1,10 +1,7 @@
 package com.okcoin.commons.okex.open.api.service.spot;
 
 import com.alibaba.fastjson.JSONObject;
-import com.okcoin.commons.okex.open.api.bean.spot.param.FindAlgOrders;
-import com.okcoin.commons.okex.open.api.bean.spot.param.OrderAlgoParam;
-import com.okcoin.commons.okex.open.api.bean.spot.param.OrderParamDto;
-import com.okcoin.commons.okex.open.api.bean.spot.param.PlaceOrderParam;
+import com.okcoin.commons.okex.open.api.bean.spot.param.*;
 import com.okcoin.commons.okex.open.api.bean.spot.result.*;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -33,17 +30,17 @@ public interface SpotOrderAPIServive {
      * 取消单个订单 delete协议
      *
      *  @param order
-     * @param orderId
+     * @param order_id
      */
-    OrderResult cancleOrderByOrderId(final PlaceOrderParam order, String orderId);
+    OrderResult cancleOrderByOrderId(final PlaceOrderParam order, String order_id);
 
     /**
      * 取消单个订单 post协议
      *
      * @param order
-     * @param orderId
+     * @param order_id
      */
-    OrderResult cancleOrderByOrderId_post(final PlaceOrderParam order, String orderId);
+    OrderResult cancleOrderByOrderId_post(final PlaceOrderParam order, String order_id);
     //通过client_oid进行撤单
     OrderResult cancleOrderByClientOid(final PlaceOrderParam order, String client_oid);
 
@@ -65,26 +62,28 @@ public interface SpotOrderAPIServive {
 
     Map<String, Object> batchCancleOrders_2(final List<OrderParamDto> cancleOrders);
 
+    Map<String, Object> batch_orderCle(List<OrderParamDto> orderParamDto);
+
     /**
      * 单个订单
      * @param instrument_id
-     * @param orderId
+     * @param order_id
      * @return
      */
-    OrderInfo getOrderByOrderId(String instrument_id, String orderId);
+    OrderInfo getOrderByOrderId(String instrument_id, String order_id);
     OrderInfo getOrderByClientOid(String instrument_id, String client_oid);
 
     /**
      * 订单列表
      *
-     * @param product
+     * @param instrument_id
      * @param state
      * @param after
      * @param before
      * @param limit
      * @return
      */
-    List<OrderInfo> getOrders(String product, String state, String after, String before, String limit);
+    List<OrderInfo> getOrders(String instrument_id, String state, String after, String before, String limit);
 
     /**
      * 订单列表
@@ -94,19 +93,19 @@ public interface SpotOrderAPIServive {
      * @param limit
      * @return
      */
-    List<OrderInfo> getPendingOrders(String before, String after, String limit, String instrument_id);
+    List<PendingOrdersInfo> getPendingOrders(String before, String after, String limit, String instrument_id);
 
     /**
      * 账单列表
      *
-     * @param orderId
-     * @param product
+     * @param order_id
+     * @param instrument_id
      * @param before
      * @param after
      * @param limit
      * @return
      */
-    List<Fills> getFills(String orderId, String product, String before, String after, String limit);
+    List<Fills> getFills(String order_id, String instrument_id, String before, String after, String limit);
 
     /**
      * 委托下单
@@ -134,6 +133,7 @@ public interface SpotOrderAPIServive {
      * @return
      */
     String  getAlgoOrder(String instrument_id, String order_type, String status, String algo_id, String before, String after, String limit);
+
 
 
 }

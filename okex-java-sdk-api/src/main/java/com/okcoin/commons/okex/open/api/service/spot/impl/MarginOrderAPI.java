@@ -34,24 +34,29 @@ public interface MarginOrderAPI {
     /**
      * 撤销指定订单
      *
-     * @param orderId
+     * @param order_id
      * @param order
      * @return
      */
     @HTTP(method = "DELETE", path = "api/margin/v3/orders/{order_id}", hasBody = true)
-    Call<OrderResult> cancleOrdersByProductIdAndOrderId(@Path("order_id") String orderId,
+    Call<OrderResult> cancleOrdersByProductIdAndOrderId(@Path("order_id") String order_id,
                                                         @Body PlaceOrderParam order);
 
     /**
      * 撤销指定订单
      *
-     * @param orderId
+     * @param order_id
      * @param order
      * @return
      */
     @HTTP(method = "POST", path = "api/margin/v3/cancel_orders/{order_id}", hasBody = true)
-    Call<OrderResult> cancleOrdersByProductIdAndOrderId_1(@Path("order_id") String orderId,
-                                                          @Body PlaceOrderParam order);
+    Call<OrderResult> cancleOrdersByOrderId(@Path("order_id") String order_id,
+                                            @Body PlaceOrderParam order);
+
+    @HTTP(method = "POST", path = "api/margin/v3/cancel_orders/{client_oid}", hasBody = true)
+    Call<OrderResult> cancleOrdersByClientOid(@Path("client_oid") String client_oid,
+                                              @Body PlaceOrderParam order);
+
 
     /**
      * 批量撤销订单
@@ -74,29 +79,33 @@ public interface MarginOrderAPI {
     /**
      * 查询指定币对订单
      *
-     * @param product
-     * @param orderId
+     * @param instrument_id
+     * @param order_id
      * @return
      */
     @GET("api/margin/v3/orders/{order_id}")
-    Call<OrderInfo> getOrderByProductIdAndOrderId(@Path("order_id") String orderId,
-                                                  @Query("instrument_id") String product);
+    Call<OrderInfo> getOrderByProductIdAndOrderId(@Path("order_id") String order_id,
+                                                  @Query("instrument_id") String instrument_id);
+
+    @GET("api/margin/v3/orders/{client_oid}")
+    Call<OrderInfo> getOrderByClientOid(@Path("client_oid") String client_oid,
+                                        @Query("instrument_id") String instrument_id);
 
     /**
      * 查询订单列表
      *
-     * @param product
-     * @param status
-     * @param from
-     * @param to
+     * @param instrument_id
+     * @param state
+     * @param after
+     * @param before
      * @param limit
      * @return
      */
     @GET("api/margin/v3/orders")
-    Call<List<OrderInfo>> getOrders(@Query("instrument_id") String product,
-                                    @Query("status") String status,
-                                    @Query("from") String from,
-                                    @Query("to") String to,
+    Call<List<OrderInfo>> getOrders(@Query("instrument_id") String instrument_id,
+                                    @Query("state") String state,
+                                    @Query("after") String after,
+                                    @Query("before") String before,
                                     @Query("limit") String limit);
 
     /**
@@ -115,9 +124,9 @@ public interface MarginOrderAPI {
 
 
     @GET("api/margin/v3/fills")
-    Call<List<Fills>> getFills(@Query("order_id") String orderId,
-                               @Query("instrument_id") String product,
+    Call<List<Fills>> getFills(@Query("order_id") String order_id,
+                               @Query("instrument_id") String instrument_id,
                                @Query("after") String after,
-                               @Query("to") String to,
+                               @Query("before") String before,
                                @Query("limit") String limit);
 }

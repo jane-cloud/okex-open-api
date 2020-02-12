@@ -39,12 +39,4 @@ public class ApiMarkPriceVO {
         this.timestamp = timestamp;
     }
 
-    @Override
-    public String toString() {
-        return "ApiMarkPriceVO{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", mark_price='" + mark_price + '\'' +
-                ", timestamp='" + timestamp + '\'' +
-                '}';
-    }
 }

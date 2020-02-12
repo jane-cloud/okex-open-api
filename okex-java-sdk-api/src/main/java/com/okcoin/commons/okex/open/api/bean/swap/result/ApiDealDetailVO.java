@@ -2,7 +2,7 @@ package com.okcoin.commons.okex.open.api.bean.swap.result;
 
 public class ApiDealDetailVO {
 
-    private String trade_id;
+    private Long trade_id;
     private String instrument_id;
     private String order_id;
     private String price;
@@ -12,26 +12,14 @@ public class ApiDealDetailVO {
     private String exec_type;
     private String side;
 
-    public ApiDealDetailVO(String trade_id, String instrument_id, String order_id, String price, String order_qty, String fee, String timestamp, String exec_type, String side) {
-        this.trade_id = trade_id;
-        this.instrument_id = instrument_id;
-        this.order_id = order_id;
-        this.price = price;
-        this.order_qty = order_qty;
-        this.fee = fee;
-        this.timestamp = timestamp;
-        this.exec_type = exec_type;
-        this.side = side;
-    }
-
     public ApiDealDetailVO() {
     }
 
-    public String getTrade_id() {
+    public Long getTrade_id() {
         return trade_id;
     }
 
-    public void setTrade_id(String trade_id) {
+    public void setTrade_id(Long trade_id) {
         this.trade_id = trade_id;
     }
 
@@ -99,18 +87,15 @@ public class ApiDealDetailVO {
         this.side = side;
     }
 
-    @Override
-    public String toString() {
-        return "ApiDealDetailVO{" +
-                "trade_id='" + trade_id + '\'' +
-                ", instrument_id='" + instrument_id + '\'' +
-                ", order_id='" + order_id + '\'' +
-                ", price='" + price + '\'' +
-                ", order_qty='" + order_qty + '\'' +
-                ", fee='" + fee + '\'' +
-                ", timestamp='" + timestamp + '\'' +
-                ", exec_type='" + exec_type + '\'' +
-                ", side='" + side + '\'' +
-                '}';
+    public ApiDealDetailVO(Long trade_id, String instrument_id, String order_id, String price, String order_qty, String fee, String timestamp, String exec_type, String side) {
+        this.trade_id = trade_id;
+        this.instrument_id = instrument_id;
+        this.order_id = order_id;
+        this.price = price;
+        this.order_qty = order_qty;
+        this.fee = fee;
+        this.timestamp = timestamp;
+        this.exec_type = exec_type;
+        this.side = side;
     }
 }

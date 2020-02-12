@@ -44,7 +44,7 @@ public class SpotProductAPITest extends SpotAPIBaseTests {
     @Test
     public void bookProductsByProductId() {
         for (int i = 0; i < 1; i++) {
-            final Book book = this.spotProductAPIService.bookProductsByProductId("BTC-USDT", "10", "");
+            final Book book = this.spotProductAPIService.bookProductsByProductId("BTC-USDT", "250", "");
             this.toResultString(SpotProductAPITest.LOG, "book", book);
             System.out.println("==========i=" + i);
             try {
@@ -63,10 +63,11 @@ public class SpotProductAPITest extends SpotAPIBaseTests {
      */
     @Test
     public void getTickers() {
-        final List<Ticker> tickers = this.spotProductAPIService.getTickers();
+        String tickers = this.spotProductAPIService.getTickers();
         this.toResultString(SpotProductAPITest.LOG, "tickers", tickers);
 
     }
+
 
     /**
      * 公共-获取某个ticker信息
@@ -89,7 +90,7 @@ public class SpotProductAPITest extends SpotAPIBaseTests {
      */
     @Test
     public void getTrades() {
-        final List<Trade> trades = this.spotProductAPIService.getTrades("BTC-USDT", "", "", "20");
+        final List<Trade> trades = this.spotProductAPIService.getTrades("BTC-USDT", "70");
         this.toResultString(SpotProductAPITest.LOG, "trades", trades);
     }
 
@@ -102,7 +103,9 @@ public class SpotProductAPITest extends SpotAPIBaseTests {
      */
     @Test
     public void getCandles() {
-        final JSONArray klines = this.spotProductAPIService.getCandles("BTC-USDT", "60", "", "");
+        /*String start = "2020-01-19T16:00:00.000Z";
+        String end = "2020-01-20T08:15:00.000Z";*/
+        final JSONArray klines = this.spotProductAPIService.getCandles("BTC-USDT", "60","","");
         this.toResultString(SpotProductAPITest.LOG, "klines", klines);
     }
 
@@ -119,6 +122,16 @@ public class SpotProductAPITest extends SpotAPIBaseTests {
         final String index = this.spotProductAPIService.getIndex("BTC-USD");
         this.toResultString(SpotProductAPITest.LOG, "klines", index);
     }
+
+    //币币杠杆   公共获取标记价格
+    @Test
+    public void testGetMarginMarkPrice(){
+        final String markPrice = this.spotProductAPIService.getMarginMarkPrice("BTC-USDT");
+        this.toResultString(SpotProductAPITest.LOG, "markPrice", markPrice);
+    }
+
+
+
 
 
 

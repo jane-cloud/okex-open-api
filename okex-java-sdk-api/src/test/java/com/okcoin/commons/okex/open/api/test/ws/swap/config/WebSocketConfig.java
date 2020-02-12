@@ -1,14 +1,11 @@
 package com.okcoin.commons.okex.open.api.test.ws.swap.config;
 
 public class WebSocketConfig {
-    // okex webSocket url
+
     private static final String SERVICE_URL = "wss://real.okex.com:8443/ws/v3?_compress=false";
     // api key
     private static final String API_KEY = "";
-    // secret key
     private static final String SECRET_KEY = "";
-    // passphrase
-
     private static final String PASSPHRASE = "";
 
     public static void publicConnect(WebSocketClient webSocketClient) {

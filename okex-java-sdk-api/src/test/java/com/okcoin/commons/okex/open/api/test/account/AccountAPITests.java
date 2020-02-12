@@ -10,10 +10,8 @@ import com.okcoin.commons.okex.open.api.bean.account.result.Wallet;
 import com.okcoin.commons.okex.open.api.bean.account.result.WithdrawFee;
 import com.okcoin.commons.okex.open.api.service.account.AccountAPIService;
 import com.okcoin.commons.okex.open.api.service.account.impl.AccountAPIServiceImpl;
-import org.checkerframework.checker.units.qual.A;
 import org.junit.Before;
 import org.junit.Test;
-import org.omg.CORBA.ACTIVITY_COMPLETED;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,6 +30,22 @@ public class AccountAPITests extends  AccountAPIBaseTests {
         this.accountAPIService = new AccountAPIServiceImpl(this.config);
     }
 
+    /**
+     * 资金账户信息
+     * 限速规则：20次/2s
+     * GET /api/account/v3/wallet
+     */
+    @Test
+    public void getWallet() {
+        //所有的资金账户信息
+       /* List<Wallet> result = this.accountAPIService.getWallet();
+        this.toResultString(AccountAPITests.LOG, "result", result);*/
+        //单一币种账户信息
+        List<Wallet> result2 = this.accountAPIService.getWallet("OKB");
+        this.toResultString(AccountAPITests.LOG, "result", result2);
+    }
+
+
     /**资金划转
       *OKEx站内在资金账户、交易账户和子账户之间进行资金划转
      * 限速规则：1次/2s（每个币种）
@@ -40,14 +54,13 @@ public class AccountAPITests extends  AccountAPIBaseTests {
     @Test
     public void transfer() {
         Transfer transfer = new Transfer();
-        transfer.setFrom("6");
-        transfer.setTo("3");
-        transfer.setCurrency("USDT");
-        transfer.setAmount("1");
-        //transfer.setSub_account("");
-        //transfer.setInstrument_id("");
-
-        transfer.setTo_instrument_id("BTC-USDT");
+        transfer.setFrom("1");
+        transfer.setTo("6");
+        transfer.setCurrency("OKB");
+        transfer.setAmount("0.001");
+        transfer.setSub_account("");
+        transfer.setInstrument_id("");
+        transfer.setTo_instrument_id("");
 
         JSONObject result = this.accountAPIService.transfer(transfer);
         this.toResultString(AccountAPITests.LOG, "result", result);
@@ -70,16 +83,7 @@ public class AccountAPITests extends  AccountAPIBaseTests {
         this.toResultString(AccountAPITests.LOG, "result", result);
     }
 
-    /**
-     * 获取币种列表
-     * 限速规则：20次/2s
-     * GET /api/account/v3/currencies
-     */
-    @Test
-    public void getCurrencies() {
-        List<Currency> result = this.accountAPIService.getCurrencies();
-        this.toResultString(AccountAPITests.LOG, "result", result);
-    }
+
 
     /**
      * 账单流水查询
@@ -88,27 +92,11 @@ public class AccountAPITests extends  AccountAPIBaseTests {
      */
     @Test
     public void getLedger() {
-        JSONArray result = this.accountAPIService.getLedger("", "BTC", "", "", "");
+        JSONArray result = this.accountAPIService.getLedger("",null,"","","");
         this.toResultString(AccountAPITests.LOG, "result", result);
     }
 
-    /**
-     * 资金账户信息
-     * 限速规则：20次/2s
-     * GET /api/account/v3/wallet
-     */
-    @Test
-    public void getWallet() {
-        //所有的资金账户信息
-       /* List<Wallet> result = this.accountAPIService.getWallet();
-        this.toResultString(AccountAPITests.LOG, "result", result);*/
-        //单一币种账户信息
-        List<Wallet> result2 = this.accountAPIService.getWallet("USDT");
-        this.toResultString(AccountAPITests.LOG, "result", result2);
 
-
-
-    }
 
     /**
      * 获取充值地址
@@ -118,48 +106,21 @@ public class AccountAPITests extends  AccountAPIBaseTests {
      */
     @Test
     public void getDepositAddress() {
-        JSONArray result = this.accountAPIService.getDepositAddress("BTC");
+        JSONArray result = this.accountAPIService.getDepositAddress("USDT");
         this.toResultString(AccountAPITests.LOG, "result", result);
     }
 
-    /**
-     * 提币手续费
-     * 查询提现到数字货币地址时，建议网络手续费信息。手续费越高，网络确认越快。
-     * 限速规则：20次/2s
-     * GET /api/account/v3/withdrawal/fee
-     */
+    //获取账户资产估值
     @Test
-    public void getWithdrawFee() {
-        //List<WithdrawFee> result = this.accountAPIService.getWithdrawFee("btc");
-        List<WithdrawFee> result = this.accountAPIService.getWithdrawFee("BTC");
+    public void testGetAllAcccount(){
+        JSONObject result = this.accountAPIService.getAllAccount("","CNY");
         this.toResultString(AccountAPITests.LOG, "result", result);
     }
 
-    /**
-     * 接口下线
-     */
+    //获取子账户余额
     @Test
-    public void getOnHold() {
-        JSONArray result = this.accountAPIService.getOnHold("cac");
-        this.toResultString(AccountAPITests.LOG, "result", result);
-    }
-    /**
-     * 接口下线
-     */
-    @Test
-    public void lock() {
-        JSONObject result = this.accountAPIService.lock("cac", new BigDecimal("10000"));
-        this.toResultString(AccountAPITests.LOG, "result", result);
-        this.toResultString(AccountAPITests.LOG, "result", result);
-
-    }
-    /**
-     * 接口下线
-     */
-    @Test
-    public void unlock() {
-        JSONObject result = this.accountAPIService.unlock("cac", new BigDecimal("10000"));
-        this.toResultString(AccountAPITests.LOG, "result", result);
+    public void testGetSubAccount(){
+        JSONObject result = this.accountAPIService.getSubAccount("ctt042501");
         this.toResultString(AccountAPITests.LOG, "result", result);
 
     }
@@ -185,34 +146,39 @@ public class AccountAPITests extends  AccountAPIBaseTests {
      * GET /api/account/v3/withdrawal/history
      */
     @Test
-    public void getWithdrawalHistory() {
-        /*JSONArray result = this.accountAPIService.getWithdrawalHistory();
+    public void getWithdrawalHistory() {/*
+        JSONArray result = this.accountAPIService.getWithdrawalHistory();
         this.toResultString(AccountAPITests.LOG, "result", result);*/
         JSONArray result2 = this.accountAPIService.getWithdrawalHistory("btc");
         this.toResultString(AccountAPITests.LOG, "result", result2);
     }
 
     /**
-     * 获取子账户余额信息
-     * 母账户获取子账户的各个账户里的资金余额信息。
-     * 限速规则：1次/20s
-     * GET /api/account/v3/sub-account
+     * 获取币种列表
+     * 限速规则：20次/2s
+     * GET /api/account/v3/currencies
      */
     @Test
-    public void getSubAccount(){
-        String result = this.accountAPIService.getSubAccount("xylon1");
-        this.toResultString(AccountAPITests.LOG,"result",result);
+    public void getCurrencies() {
+        List<Currency> result = this.accountAPIService.getCurrencies();
+        this.toResultString(AccountAPITests.LOG, "result", result);
     }
 
     /**
-     *获取账户资产估值
-     * 按照btc或法币计价单位，获取账户总资产的估值
-     * 限速规则：1次/20s
-     * GET /api/account/v3/asset-valuation
+     * 提币手续费
+     * 查询提现到数字货币地址时，建议网络手续费信息。手续费越高，网络确认越快。
+     * 限速规则：20次/2s
+     * GET /api/account/v3/withdrawal/fee
      */
     @Test
-    public void getAssetValuation(){
-        String result = this.accountAPIService.getAssetValuation("","");
-        this.toResultString(AccountAPITests.LOG,"result",result);
+    public void getWithdrawFee() {
+        //List<WithdrawFee> result = this.accountAPIService.getWithdrawFee("btc");
+        List<WithdrawFee> result = this.accountAPIService.getWithdrawFee("USDT");
+        this.toResultString(AccountAPITests.LOG, "result", result);
     }
+
+
+
+
+
 }

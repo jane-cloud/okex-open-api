@@ -1,5 +1,7 @@
 package com.okcoin.commons.okex.open.api.bean.spot.param;
 
+import java.util.List;
+
 public class OrderAlgoParam {
     /**
      * 币对名称
@@ -73,6 +75,16 @@ public class OrderAlgoParam {
      * 撤销指定的委托单ID
      */
     private String algo_ids[];
+
+    public List<String> getAlgo_id() {
+        return algo_id;
+    }
+
+    public void setAlgo_id(List<String> algo_id) {
+        this.algo_id = algo_id;
+    }
+
+    private List<String> algo_id;
 
 
     public String getInstrument_id() {

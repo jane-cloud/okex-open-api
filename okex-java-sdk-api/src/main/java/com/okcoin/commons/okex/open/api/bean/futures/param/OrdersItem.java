@@ -5,9 +5,13 @@ package com.okcoin.commons.okex.open.api.bean.futures.param;
  * Created by Tony Tian on 2018/2/28 17:57. <br/>
  */
 public class OrdersItem {
+
     /**
      * You setting order id. (optional)
      */
+    private String order_type;
+    private String price;
+
     private String client_oid;
     /**
      * The execution type {@link com.okcoin.commons.okex.open.api.enums.FuturesTransactionTypeEnum}
@@ -16,7 +20,7 @@ public class OrdersItem {
     /**
      * The order price: Maximum 1 million
      */
-    private String price;
+
     /**
      * The order amount: Maximum 1 million
      */
@@ -25,9 +29,6 @@ public class OrdersItem {
      * Match best counter party price (BBO)? 0: No 1: Yes   If yes, the 'price' field is ignored
      */
     private String match_price;
-
-    private String order_type;
-
     public String getOrder_type() {
         return order_type;
     }
@@ -36,12 +37,12 @@ public class OrdersItem {
         this.order_type = order_type;
     }
 
-    public String getClient_oid() {
-        return client_oid;
+    public String getPrice() {
+        return price;
     }
 
-    public void setClient_oid(String client_oid) {
-        this.client_oid = client_oid;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public String getType() {
@@ -50,14 +51,6 @@ public class OrdersItem {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
     }
 
     public String getSize() {
@@ -76,15 +69,14 @@ public class OrdersItem {
         this.match_price = match_price;
     }
 
-    @Override
-    public String toString() {
-        return "OrdersItem{" +
-                "client_oid='" + client_oid + '\'' +
-                ", type='" + type + '\'' +
-                ", price='" + price + '\'' +
-                ", size='" + size + '\'' +
-                ", match_price='" + match_price + '\'' +
-                ", order_type='" + order_type + '\'' +
-                '}';
+
+
+    public String getClient_oid() {
+        return client_oid;
     }
+
+    public void setClient_oid(String client_oid) {
+        this.client_oid = client_oid;
+    }
+
 }

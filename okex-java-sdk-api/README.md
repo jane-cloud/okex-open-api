@@ -14,7 +14,7 @@ OKCoin OKEX V3 Open Api使用说明
  public static void main(String[] args) {
 
         APIConfiguration config = new APIConfiguration();
-        config.setEndpoint("https://www.okex.com/");
+        config.setEndpoint("http://192.168.80.14:8118");
         config.setApiKey("75c60758-be16-4acc-8f2d-66403e53072c");
         config.setSecretKey("8DF095FE9C662F787A60F3133A06414C");
         config.setPassphrase("19205A%9980");
@@ -30,10 +30,11 @@ OKCoin OKEX V3 Open Api使用说明
         Order order = new Order();
         order.setClient_oid("TYPb040b3daa40f793e69f86344a1839");
         order.setType(FuturesTransactionTypeEnum.OPEN_SHORT.code());
-        order.setProduct_id("BTC-USD-191227");
-        order.setPrice("7500");
-        order.setAmount("10");
-        order.setMatch_price("0");
+        order.setProduct_id("BTC-USD-0331");
+        order.setPrice(99900.00);
+        order.setAmount(123);
+        order.setMatch_price(0);
+        order.setLever_rate(10.00);
         OrderResult orderResult = tradeAPIService.newOrder(order);
         // eg : {"client_oid":"TYPb040b3daa40f793e69f86344a1839","order_id":"400574928061440","result":true}
         System.out.println(JSON.toJSONString(orderResult));
@@ -55,11 +56,10 @@ public class TestOKEXOpenApiV3 {
     @Bean
     public APIConfiguration okexApiConfig() {
         APIConfiguration config = new APIConfiguration();
-        config.setEndpoint("https://www.okex.com/");
+        config.setEndpoint("http://192.168.80.14:8118");
         config.setApiKey("75c60758-be16-4acc-8f2d-66403e53072c");
         config.setSecretKey("8DF095FE9C662F787A60F3133A06414C");
         config.setPassphrase("19205A%9980");
-		//是否打印请求头数据
         config.setPrint(false);
         return config;
     }

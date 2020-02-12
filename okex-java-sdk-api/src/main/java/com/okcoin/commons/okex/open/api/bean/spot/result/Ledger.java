@@ -71,7 +71,6 @@ public class Ledger {
     public static class Details {
         private Long order_id;
         private String instrument_id;
-        private String product_id;
 
         public Long getOrder_id() {
             return this.order_id;
@@ -89,20 +88,12 @@ public class Ledger {
             this.instrument_id = instrument_id;
         }
 
-        public String getProduct_id() {
-            return product_id;
-        }
-
-        public void setProduct_id(String product_id) {
-            this.product_id = product_id;
-        }
 
         @Override
         public String toString() {
             return "Details{" +
                     "order_id=" + order_id +
                     ", instrument_id='" + instrument_id + '\'' +
-                    ", product_id='" + product_id + '\'' +
                     '}';
         }
     }

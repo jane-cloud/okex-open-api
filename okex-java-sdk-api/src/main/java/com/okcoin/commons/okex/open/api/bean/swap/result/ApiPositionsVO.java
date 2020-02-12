@@ -31,11 +31,4 @@ public class ApiPositionsVO {
         this.holding = holding;
     }
 
-    @Override
-    public String toString() {
-        return "ApiPositionsVO{" +
-                "margin_mode='" + margin_mode + '\'' +
-                ", holding=" + holding +
-                '}';
-    }
 }

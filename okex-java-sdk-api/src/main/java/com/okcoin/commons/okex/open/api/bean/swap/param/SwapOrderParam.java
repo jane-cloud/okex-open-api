@@ -1,16 +1,21 @@
 package com.okcoin.commons.okex.open.api.bean.swap.param;
 
 public class SwapOrderParam {
+    //通用参数
     private String instrument_id;
     private String type;
     private String order_type;
     private String size;
+    //止盈止损
     private String trigger_price;
     private String algo_price;
+    //跟踪委托
     private String callback_rate;
+    //冰山委托
     private String algo_variance;
     private String avg_amount;
     private String price_limit;
+    //时间加权
     private String sweep_range;
     private String sweep_ratio;
     private String single_limit;

@@ -12,10 +12,7 @@ public class Order {
      * The id of the futures, eg: BTC-USD-180629
      */
     protected String instrument_id;
-    /**
-     * lever, default 10.
-     */
-    protected String order_type;
+
     /**
      * You setting order id.(optional)
      */
@@ -24,10 +21,7 @@ public class Order {
      * The execution type {@link com.okcoin.commons.okex.open.api.enums.FuturesTransactionTypeEnum}
      */
     private String type;
-    /**
-     * The order price: Maximum 1 million
-     */
-    private String price;
+
     /**
      * The order amount: Maximum 1 million
      */
@@ -37,29 +31,16 @@ public class Order {
      */
     private String match_price;
 
-    public String getInstrument_id() {
-        return instrument_id;
-    }
+    private String order_type;
+    /**
+     * The order price: Maximum 1 million
+     */
+    private String price;
 
     public void setInstrument_id(String instrument_id) {
         this.instrument_id = instrument_id;
     }
 
-    public String getOrder_type() {
-        return order_type;
-    }
-
-    public void setOrder_type(String order_type) {
-        this.order_type = order_type;
-    }
-
-    public String getClient_oid() {
-        return client_oid;
-    }
-
-    public void setClient_oid(String client_oid) {
-        this.client_oid = client_oid;
-    }
 
     public String getType() {
         return type;
@@ -93,16 +74,32 @@ public class Order {
         this.match_price = match_price;
     }
 
-    @Override
-    public String toString() {
-        return "Order{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", order_type='" + order_type + '\'' +
-                ", client_oid='" + client_oid + '\'' +
-                ", type='" + type + '\'' +
-                ", price='" + price + '\'' +
-                ", size='" + size + '\'' +
-                ", match_price='" + match_price + '\'' +
-                '}';
+    public String getOrder_type() {
+        return order_type;
     }
+
+    public void setOrder_type(String order_type) {
+        this.order_type = order_type;
+    }
+
+
+
+    public String getInstrument_id() {
+        return instrument_id;
+    }
+
+    public void setinstrument_id(String instrument_id) {
+        this.instrument_id = instrument_id;
+    }
+
+
+    public String getClient_oid() {
+        return client_oid;
+    }
+
+    public void setClient_oid(String client_oid) {
+        this.client_oid = client_oid;
+    }
+
+
 }

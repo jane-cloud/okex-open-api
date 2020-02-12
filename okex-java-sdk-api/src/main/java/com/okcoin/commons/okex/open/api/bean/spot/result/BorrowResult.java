@@ -5,8 +5,16 @@ public class BorrowResult {
 
     private boolean result;
     private String borrow_id;
-    private String client_oid;
 
+    public String getClient_oid() {
+        return client_oid;
+    }
+
+    public void setClient_oid(String client_oid) {
+        this.client_oid = client_oid;
+    }
+
+    private  String client_oid;
 
     public boolean isResult() {
         return this.result;
@@ -17,18 +25,11 @@ public class BorrowResult {
     }
 
     public String getBorrow_id() {
-        return borrow_id;
+        return this.borrow_id;
     }
 
-    public void setBorrow_id(String borrow_id) {
+    public void setBorrow_id(final String borrow_id) {
         this.borrow_id = borrow_id;
     }
 
-    public String getClient_oid() {
-        return client_oid;
-    }
-
-    public void setClient_oid(String client_oid) {
-        this.client_oid = client_oid;
-    }
 }

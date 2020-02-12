@@ -33,14 +33,20 @@ public class MarginOrderAPIServiceImpl implements MarginOrderAPIService {
     }
 
     @Override
-    public OrderResult cancleOrderByOrderId(final PlaceOrderParam order, final String orderId) {
-        return this.client.executeSync(this.marginOrderAPI.cancleOrdersByProductIdAndOrderId(orderId, order));
+    public OrderResult cancleOrderByOrderId(final PlaceOrderParam order, final String order_id) {
+        return this.client.executeSync(this.marginOrderAPI.cancleOrdersByProductIdAndOrderId(order_id, order));
     }
 
     @Override
-    public OrderResult cancleOrderByOrderId_post(final PlaceOrderParam order, final String orderId) {
-        return this.client.executeSync(this.marginOrderAPI.cancleOrdersByProductIdAndOrderId_1(orderId, order));
+    public OrderResult cancleOrdersByOrderId(final PlaceOrderParam order, final String order_id) {
+        return this.client.executeSync(this.marginOrderAPI.cancleOrdersByOrderId(order_id, order));
     }
+
+    @Override
+     public OrderResult cancleOrdersByClientOid(final PlaceOrderParam order, final String client_oid) {
+            return this.client.executeSync(this.marginOrderAPI.cancleOrdersByClientOid(client_oid, order));
+     }
+
 
     @Override
     public Map<String, JSONObject> cancleOrders(final List<OrderParamDto> cancleOrders) {
@@ -53,13 +59,18 @@ public class MarginOrderAPIServiceImpl implements MarginOrderAPIService {
     }
 
     @Override
-    public OrderInfo getOrderByProductIdAndOrderId(final String instrumentId, final String orderId) {
-        return this.client.executeSync(this.marginOrderAPI.getOrderByProductIdAndOrderId(orderId, instrumentId));
+    public OrderInfo getOrderByProductIdAndOrderId(final String instrument_id, final String order_id) {
+        return this.client.executeSync(this.marginOrderAPI.getOrderByProductIdAndOrderId(order_id, instrument_id));
     }
 
     @Override
-    public List<OrderInfo> getOrders(final String instrumentId, final String status, final String from, final String to, final String limit) {
-        return this.client.executeSync(this.marginOrderAPI.getOrders(instrumentId, status, from, to, limit));
+    public OrderInfo getOrderByClientOid(String instrument_id, String client_oid) {
+        return client.executeSync(this.marginOrderAPI.getOrderByClientOid(instrument_id,client_oid));
+    }
+
+    @Override
+    public List<OrderInfo> getOrders(final String instrument_id, final String state, final String after, final String before, final String limit) {
+        return this.client.executeSync(this.marginOrderAPI.getOrders(instrument_id, state, after, before, limit));
     }
 
     @Override
@@ -68,7 +79,7 @@ public class MarginOrderAPIServiceImpl implements MarginOrderAPIService {
     }
 
     @Override
-    public List<Fills> getFills(final String orderId, final String instrumentId, final String after, final String to, final String limit) {
-        return this.client.executeSync(this.marginOrderAPI.getFills(orderId, instrumentId, after, to, limit));
+    public List<Fills> getFills(final String order_id, final String instrument_id, final String after, final String before, final String limit) {
+        return this.client.executeSync(this.marginOrderAPI.getFills(order_id, instrument_id, after, before, limit));
     }
 }

@@ -1,8 +1,19 @@
 package com.okcoin.commons.okex.open.api.bean.swap.param;
 
+import java.util.List;
+
 public class CancelOrderAlgo {
     private String instrument_id;
-    private String algo_ids;
+
+    public List<String> getAlgo_ids() {
+        return algo_ids;
+    }
+
+    public void setAlgo_ids(List<String> algo_ids) {
+        this.algo_ids = algo_ids;
+    }
+
+    private List<String> algo_ids;
     private String order_type;
 
 
@@ -14,13 +25,7 @@ public class CancelOrderAlgo {
         this.instrument_id = instrument_id;
     }
 
-    public String getAlgo_ids() {
-        return algo_ids;
-    }
 
-    public void setAlgo_ids(String algo_ids) {
-        this.algo_ids = algo_ids;
-    }
 
     public String getOrder_type() {
         return order_type;

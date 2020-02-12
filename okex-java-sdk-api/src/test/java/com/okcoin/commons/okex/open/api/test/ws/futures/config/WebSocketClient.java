@@ -109,7 +109,6 @@ public class WebSocketClient {
                 //测试服务器返回的字节
                 final String byteString=bytes.toString();
                 //System.out.println("byteString::::::"+byteString);
-
                 final String s = uncompress(bytes.toByteArray());
                 //判断是否是深度接口
                 if (s.contains("\"table\":\"futures/depth\",")||s.contains("\"table\":\"futures/depth_l2_tbt\",")||s.contains("\"table\":\"swap/depth\",")) {//是深度接口

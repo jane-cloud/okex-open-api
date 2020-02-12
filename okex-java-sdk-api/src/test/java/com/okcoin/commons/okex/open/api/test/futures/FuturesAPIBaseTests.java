@@ -20,7 +20,6 @@ public class FuturesAPIBaseTests extends BaseTests {
 
         config.setEndpoint("https://www.okex.com/");
         config.setApiKey("");
-        // secretKey，api注册成功后页面上有
         config.setSecretKey("");
         config.setPassphrase("");
         config.setPrint(true);
@@ -35,9 +34,9 @@ public class FuturesAPIBaseTests extends BaseTests {
     int to = 0;
     int limit = 20;
 
-    String instrument_id = "BTC-USD-191227";
+    String instrument_id = "BTC-USD-191108";
     String currency = FuturesCurrenciesEnum.BTC.name();
     String direction = FuturesDirectionEnum.LONG.getDirection();
-    String leverage = "20.19";
+    String leverage = "22.22";
 
 }

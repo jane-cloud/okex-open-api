@@ -99,19 +99,4 @@ public class ApiContractVO {
         this.tick_size = tick_size;
     }
 
-
-    @Override
-    public String toString() {
-        return "ApiContractVO{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", underlying_index='" + underlying_index + '\'' +
-                ", quote_currency='" + quote_currency + '\'' +
-                ", coin='" + coin + '\'' +
-                ", contract_val='" + contract_val + '\'' +
-                ", listing='" + listing + '\'' +
-                ", delivery='" + delivery + '\'' +
-                ", size_increment='" + size_increment + '\'' +
-                ", tick_size='" + tick_size + '\'' +
-                '}';
-    }
 }

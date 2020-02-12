@@ -8,6 +8,7 @@ import com.okcoin.commons.okex.open.api.service.swap.impl.SwapMarketAPIServiceIm
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
 import java.util.List;
 
 public class SwapMarketTest extends SwapBaseTest {
@@ -47,9 +48,9 @@ public class SwapMarketTest extends SwapBaseTest {
     @Test
     public void getDepthApi() {
         //size控制深度档位
-        String depthApi = swapMarketAPIService.getDepthApi(instrument_id, "1","0.01");
+        String depthApi = swapMarketAPIService.getDepthApi("BTC-USD-SWAP", "5","");
         DepthVO depthVO = JSONObject.parseObject(depthApi, DepthVO.class);
-        System.out.println(depthApi);
+        //System.out.println(depthVO.getAsks().toString());
     }
 
     /**
@@ -65,7 +66,7 @@ public class SwapMarketTest extends SwapBaseTest {
             System.out.println(tickersApi);
         } else {
             List<ApiTickerVO> list = JSONArray.parseArray(tickersApi, ApiTickerVO.class);
-            //list.forEach(vo -> System.out.println(vo.getInstrument_id()));
+            list.forEach(vo -> System.out.println(vo.getInstrument_id()));
             System.out.println(tickersApi);
         }
     }
@@ -78,10 +79,10 @@ public class SwapMarketTest extends SwapBaseTest {
      */
     @Test
     public void getTickerApi() {
-        String tickerApi = swapMarketAPIService.getTickerApi(instrument_id);
+        String tickerApi = swapMarketAPIService.getTickerApi("BTC-USDT-SWAP");
         ApiTickerVO apiTickerVO = JSONObject.parseObject(tickerApi, ApiTickerVO.class);
         System.out.println(tickerApi);
-
+        System.out.println(apiTickerVO.getInstrument_id());
     }
 
     /**
@@ -91,12 +92,12 @@ public class SwapMarketTest extends SwapBaseTest {
      */
     @Test
     public void getTradesApi() {
-        String tradesApi = swapMarketAPIService.getTradesApi(instrument_id, null, null, null);
+        String tradesApi = swapMarketAPIService.getTradesApi("XRP-USDT-SWAP", "", "", "5");
         if (tradesApi.startsWith("{")) {
             System.out.println(tradesApi);
         } else {
             List<ApiDealVO> apiDealVOS = JSONArray.parseArray(tradesApi, ApiDealVO.class);
-            //apiDealVOS.forEach(vo -> System.out.println(vo.getTimestamp()));
+            apiDealVOS.forEach(vo -> System.out.println(vo.getTimestamp()));
             System.out.println(tradesApi);
         }
     }
@@ -109,23 +110,18 @@ public class SwapMarketTest extends SwapBaseTest {
      */
     @Test
     public void getCandlesApi() {
-        String candlesApi = swapMarketAPIService.getCandlesApi(instrument_id, null, null, "60");
+        //String start = "2019-03-24T02:31:00.000Z";
+        //String end = "2019-10-10T05:19:00.000Z";
+        String start = "";
+        String end = "";
+        String candlesApi = swapMarketAPIService.getCandlesApi("BSV-USD-SWAP", start, end, "60");
        String[] candleSize=candlesApi.split("],");
 
         System.out.println("------------------------"+candleSize.length);
         candlesApi = candlesApi.replaceAll("\\[", "\\{");
 
         System.out.println(candlesApi);
-        /*if (candlesApi.lastIndexOf("\\]") != candlesApi.length()) {
-            candlesApi = candlesApi.replace("\\]", "\\}");
-        }
-        if (candlesApi.startsWith("{")) {
-            System.out.println(candlesApi);
-        } else {
-            List<ApiKlineVO> apiKlineVOS = JSONArray.parseArray(candlesApi, ApiKlineVO.class);
-            apiKlineVOS.forEach(vo -> System.out.println(vo.getTimestamp()));
-            System.out.println(candlesApi);
-        }*/
+
 
     }
 
@@ -136,9 +132,10 @@ public class SwapMarketTest extends SwapBaseTest {
      */
     @Test
     public void getIndexApi() {
-        String indexApi = swapMarketAPIService.getIndexApi(instrument_id);
+        String indexApi = swapMarketAPIService.getIndexApi("XRP-USDT-SWAP");
         ApiIndexVO apiIndexVO = JSONObject.parseObject(indexApi, ApiIndexVO.class);
         System.out.println(indexApi);
+        System.out.println(apiIndexVO);
     }
 
     /**
@@ -161,7 +158,7 @@ public class SwapMarketTest extends SwapBaseTest {
      */
     @Test
     public void getOpenInterestApi() {
-        String openInterestApi = swapMarketAPIService.getOpenInterestApi(instrument_id);
+        String openInterestApi = swapMarketAPIService.getOpenInterestApi("XRP-USDT-SWAP");
         ApiOpenInterestVO apiOpenInterestVO = JSONObject.parseObject(openInterestApi, ApiOpenInterestVO.class);
         System.out.println(apiOpenInterestVO.getTimestamp());
         System.out.println(openInterestApi);
@@ -175,7 +172,7 @@ public class SwapMarketTest extends SwapBaseTest {
      */
     @Test
     public void getPriceLimitApi() {
-        String priceLimitApi = swapMarketAPIService.getPriceLimitApi(instrument_id);
+        String priceLimitApi = swapMarketAPIService.getPriceLimitApi("XRP-USDT-SWAP");
         ApiPriceLimitVO apiPriceLimitVO = JSONObject.parseObject(priceLimitApi, ApiPriceLimitVO.class);
         System.out.println(apiPriceLimitVO);
         System.out.println(priceLimitApi);
@@ -188,12 +185,12 @@ public class SwapMarketTest extends SwapBaseTest {
      */
     @Test
     public void getLiquidationApi() {
-        String liquidationApi = swapMarketAPIService.getLiquidationApi(instrument_id, "1", "1", "", "10");
+        String liquidationApi = swapMarketAPIService.getLiquidationApi("XRP-USDT-SWAP", "1", "1", "", "10");
         if (liquidationApi.startsWith("{")) {
             System.out.println(liquidationApi);
         } else {
             List<ApiLiquidationVO> apiLiquidationVOS = JSONArray.parseArray(liquidationApi, ApiLiquidationVO.class);
-            apiLiquidationVOS.forEach(vo -> System.out.println(vo));
+            //apiLiquidationVOS.forEach(vo -> System.out.println(vo.getInstrument_id()));
         }
     }
 
@@ -204,25 +201,9 @@ public class SwapMarketTest extends SwapBaseTest {
      */
     @Test
     public void getFundingTimeApi() {
-        String fundingTimeApi = swapMarketAPIService.getFundingTimeApi(instrument_id);
+        String fundingTimeApi = swapMarketAPIService.getFundingTimeApi("XRP-USDT-SWAP");
         ApiFundingTimeVO apiFundingTimeVO = JSONObject.parseObject(fundingTimeApi, ApiFundingTimeVO.class);
-        System.out.println(apiFundingTimeVO.toString());
-    }
-
-    /**
-     * 公共-获取合约历史资金费率
-     * GET /api/swap/v3/instruments/<instrument_id>/historical_funding_rate
-     * 限速规则：20次/2s
-     */
-    @Test
-    public void getHistoricalFundingRateApi() {
-        String historicalFundingRateApi = swapMarketAPIService.getHistoricalFundingRateApi(instrument_id, "1", "", "10");
-        if (historicalFundingRateApi.startsWith("{")) {
-            System.out.println(historicalFundingRateApi);
-        } else {
-            List<ApiFundingRateVO> apiFundingRateVOS = JSONArray.parseArray(historicalFundingRateApi, ApiFundingRateVO.class);
-            apiFundingRateVOS.forEach(vo -> System.out.println(vo));
-        }
+        System.out.println(apiFundingTimeVO.getInstrument_id());
     }
 
     /**
@@ -232,9 +213,27 @@ public class SwapMarketTest extends SwapBaseTest {
      */
     @Test
     public void getMarkPriceApi() {
-        String markPriceApi = swapMarketAPIService.getMarkPriceApi(instrument_id);
+        String markPriceApi = swapMarketAPIService.getMarkPriceApi("XRP-USDT-SWAP");
         ApiMarkPriceVO apiMarkPriceVO = JSONObject.parseObject(markPriceApi, ApiMarkPriceVO.class);
-        System.out.println(apiMarkPriceVO);
+        System.out.println(apiMarkPriceVO.getInstrument_id());
     }
+
+    /**
+     * 公共-获取合约历史资金费率
+     * GET /api/swap/v3/instruments/<instrument_id>/historical_funding_rate
+     * 限速规则：20次/2s
+     */
+    @Test
+    public void getHistoricalFundingRateApi() {
+        String historicalFundingRateApi = swapMarketAPIService.getHistoricalFundingRateApi("XRP-USDT-SWAP", "");
+        if (historicalFundingRateApi.startsWith("{")) {
+            System.out.println(historicalFundingRateApi);
+        } else {
+            List<ApiFundingRateVO> apiFundingRateVOS = JSONArray.parseArray(historicalFundingRateApi, ApiFundingRateVO.class);
+           // apiFundingRateVOS.forEach(vo -> System.out.println(vo.getFunding_rate()));
+        }
+    }
+
+
 
 }

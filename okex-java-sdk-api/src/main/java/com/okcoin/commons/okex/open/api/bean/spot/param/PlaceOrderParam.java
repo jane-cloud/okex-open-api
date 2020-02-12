@@ -4,11 +4,24 @@ public class PlaceOrderParam {
     /**
      * 客户端下单 标示id 非必填
      */
+    private String instrument_id;
     private String client_oid;
+    private String order_id;
+
+
+    public String getInstrument_id() {
+        return instrument_id;
+    }
+
+    public void setInstrument_id(String instrument_id) {
+        this.instrument_id = instrument_id;
+    }
+
+
     /**
      * 币对如 etc_eth
      */
-    private String instrument_id;
+
     /**
      * 买卖类型 buy/sell
      */
@@ -29,6 +42,11 @@ public class PlaceOrderParam {
      * 市价单使用 价格
      */
     private String notional;
+    private String order_type;
+    /**
+     * 1币币交易 2杠杆交易
+     */
+    private String margin_trading;
 
     public String getOrder_type() {
         return order_type;
@@ -38,13 +56,29 @@ public class PlaceOrderParam {
         this.order_type = order_type;
     }
 
-    private String order_type;
 
 
     /**
-     * 1币币交易 2杠杆交易
+     * 来源（web app ios android）
      */
-    private String margin_trading;
+    private Byte source = 0;
+    public String getOrder_id() {
+        return order_id;
+    }
+
+    public void setOrder_id(String order_id) {
+        this.order_id = order_id;
+    }
+
+    public String getMargin_trading() {
+        return margin_trading;
+    }
+
+    public void setMargin_trading(String margin_trading) {
+        this.margin_trading = margin_trading;
+    }
+
+
 
     public String getClient_oid() {
         return this.client_oid;
@@ -55,13 +89,6 @@ public class PlaceOrderParam {
     }
 
 
-    public String getInstrument_id() {
-        return this.instrument_id;
-    }
-
-    public void setInstrument_id(final String instrument_id) {
-        this.instrument_id = instrument_id;
-    }
 
     public String getSide() {
         return this.side;
@@ -104,12 +131,14 @@ public class PlaceOrderParam {
         this.notional = notional;
     }
 
-
-    public String getMargin_trading() {
-        return margin_trading;
+    public Byte getSource() {
+        return this.source;
     }
 
-    public void setMargin_trading(String margin_trading) {
-        this.margin_trading = margin_trading;
+    public void setSource(final Byte source) {
+        this.source = source;
     }
+
+
+
 }

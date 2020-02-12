@@ -54,7 +54,7 @@ public class OptionPrivateChannelTest {
     @Test
     public void positionChannel() {
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("option/position:TBTC-USD");
+        channel.add("option/position:BTC-USD");
         try {
             Thread.sleep(100);
         } catch (Exception e) {
@@ -77,7 +77,7 @@ public class OptionPrivateChannelTest {
     @Test
     public void accountChannel() {
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("option/account:TBTC-USD");
+        channel.add("option/account:BTC-USD");
         try {
             Thread.sleep(100);
         } catch (Exception e) {
@@ -100,7 +100,7 @@ public class OptionPrivateChannelTest {
     @Test
     public void orderChannel() {
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("option/order:TBTC-USD");
+        channel.add("option/order:BTC-USD");
         try {
             Thread.sleep(100);
         } catch (Exception e) {

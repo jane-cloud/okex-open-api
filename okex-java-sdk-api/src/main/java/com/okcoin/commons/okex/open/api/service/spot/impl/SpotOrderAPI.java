@@ -1,10 +1,7 @@
 package com.okcoin.commons.okex.open.api.service.spot.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.okcoin.commons.okex.open.api.bean.spot.param.FindAlgOrders;
-import com.okcoin.commons.okex.open.api.bean.spot.param.OrderAlgoParam;
-import com.okcoin.commons.okex.open.api.bean.spot.param.OrderParamDto;
-import com.okcoin.commons.okex.open.api.bean.spot.param.PlaceOrderParam;
+import com.okcoin.commons.okex.open.api.bean.spot.param.*;
 import com.okcoin.commons.okex.open.api.bean.spot.result.*;
 import retrofit2.Call;
 import retrofit2.http.*;
@@ -16,7 +13,6 @@ public interface SpotOrderAPI {
 
     /**
      * 单个下单
-     *
      * @param order
      * @return
      */
@@ -35,23 +31,23 @@ public interface SpotOrderAPI {
     /**
      * 指定订单撤单 delete协议
      *
-     * @param orderId
+     * @param order_id
      * @param order
      * @return
      */
     @HTTP(method = "DELETE", path = "api/spot/v3/orders/{order_id}", hasBody = true)
-    Call<OrderResult> cancleOrderByOrderId(@Path("order_id") String orderId,
+    Call<OrderResult> cancleOrderByOrderId(@Path("order_id") String order_id,
                                            @Body PlaceOrderParam order);
 
     /**
      * 指定订单撤单 post协议
      *通过order_id进行撤单
-     * @param orderId
+     * @param order_id
      * @param order
      * @return
      */
     @HTTP(method = "POST", path = "api/spot/v3/cancel_orders/{order_id}", hasBody = true)
-    Call<OrderResult> cancleOrderByOrderId_1(@Path("order_id") String orderId,
+    Call<OrderResult> cancleOrderByOrderId_1(@Path("order_id") String order_id,
                                              @Body PlaceOrderParam order);
     /**
      * 指定订单撤单 post协议
@@ -82,6 +78,8 @@ public interface SpotOrderAPI {
     @HTTP(method = "POST", path = "api/spot/v3/cancel_batch_orders", hasBody = true)
     Call<Map<String, Object>> batchCancleOrders_1(@Body List<OrderParamDto> cancleOrders);
 
+
+
     /**
      * 批量撤单 post协议
      *根据client_oid进行撤单
@@ -91,34 +89,37 @@ public interface SpotOrderAPI {
     @HTTP(method = "POST", path = "api/spot/v3/cancel_batch_orders", hasBody = true)
     Call<Map<String, Object>> batchCancleOrders_2(@Body List<OrderParamDto> cancleOrders);
 
+    @HTTP(method = "POST", path = "api/spot/v3/cancel_batch_orders", hasBody = true)
+    Call<Map<String, Object>> batch_orderCle(@Body List<OrderParamDto> orderParamDto);
+
     /**
      * 查询指定订单数据
      *
-     * @param orderId
+     * @param order_id
      * @param instrument_id
      * @return
      */
     @GET("api/spot/v3/orders/{order_id}")
-    Call<OrderInfo> getOrderByOrderId(@Path("order_id") String orderId,
+    Call<OrderInfo> getOrderByOrderId(@Path("order_id") String order_id,
                                       @Query("instrument_id") String instrument_id);
 
     @GET("api/spot/v3/orders/{client_oid}")
     Call<OrderInfo> getOrderByClientOid(@Path("client_oid") String client_oid,
-                                        @Query("instrument_id") String instrument_id);
+                                      @Query("instrument_id") String instrument_id);
 
     /**
      * 分页查询订单
      *
-     * @param product
-     * @param status
+     * @param instrument_id
+     * @param state
      * @param after
      * @param before
      * @param limit
      * @return
      */
     @GET("api/spot/v3/orders")
-    Call<List<OrderInfo>> getOrders(@Query("instrument_id") String product,
-                                    @Query("state") String status,
+    Call<List<OrderInfo>> getOrders(@Query("instrument_id") String instrument_id,
+                                    @Query("state") String state,
                                     @Query("after") String after,
                                     @Query("before") String before,
                                     @Query("limit") String limit);
@@ -132,7 +133,7 @@ public interface SpotOrderAPI {
      * @return
      */
     @GET("api/spot/v3/orders_pending")
-    Call<List<OrderInfo>> getPendingOrders(@Query("before") String before,
+    Call<List<PendingOrdersInfo>> getPendingOrders(@Query("before") String before,
                                            @Query("after") String after,
                                            @Query("limit") String limit,
                                            @Query("instrument_id") String instrument_id);
@@ -141,7 +142,7 @@ public interface SpotOrderAPI {
      * 分页查询账单
      *
      * @param order_id
-     * @param product
+     * @param instrument_id
      * @param before
      * @param after
      * @param limit
@@ -149,7 +150,7 @@ public interface SpotOrderAPI {
      */
     @GET("api/spot/v3/fills")
     Call<List<Fills>> getFills(@Query("order_id") String order_id,
-                               @Query("instrument_id") String product,
+                               @Query("instrument_id") String instrument_id,
                                @Query("before") String before,
                                @Query("after") String after,
                                @Query("limit") String limit);

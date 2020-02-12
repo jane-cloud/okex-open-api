@@ -3,7 +3,6 @@ package com.okcoin.commons.okex.open.api.bean.swap.result;
 public class ApiAccountVO {
 
     private String equity;
-    private String fixed_balance;
     private String total_avail_balance;
     private String margin;
     private String realized_pnl;
@@ -13,11 +12,13 @@ public class ApiAccountVO {
     private String margin_frozen;
     private String timestamp;
     private String margin_mode;
-    private String maint_margin_ratio;
+    private ApiAccountVO info;
 
-    public ApiAccountVO(String equity, String fixed_balance, String total_avail_balance, String margin, String realized_pnl, String unrealized_pnl, String margin_ratio, String instrument_id, String margin_frozen, String timestamp, String margin_mode, String maint_margin_ratio) {
+    public ApiAccountVO() {
+    }
+
+    public ApiAccountVO(String equity, String total_avail_balance, String margin, String realized_pnl, String unrealized_pnl, String margin_ratio, String instrument_id, String margin_frozen, String timestamp, String margin_mode, ApiAccountVO info) {
         this.equity = equity;
-        this.fixed_balance = fixed_balance;
         this.total_avail_balance = total_avail_balance;
         this.margin = margin;
         this.realized_pnl = realized_pnl;
@@ -27,11 +28,9 @@ public class ApiAccountVO {
         this.margin_frozen = margin_frozen;
         this.timestamp = timestamp;
         this.margin_mode = margin_mode;
-        this.maint_margin_ratio = maint_margin_ratio;
+        this.info = info;
     }
 
-    public ApiAccountVO() {
-    }
 
     public String getEquity() {
         return equity;
@@ -39,14 +38,6 @@ public class ApiAccountVO {
 
     public void setEquity(String equity) {
         this.equity = equity;
-    }
-
-    public String getFixed_balance() {
-        return fixed_balance;
-    }
-
-    public void setFixed_balance(String fixed_balance) {
-        this.fixed_balance = fixed_balance;
     }
 
     public String getTotal_avail_balance() {
@@ -121,29 +112,11 @@ public class ApiAccountVO {
         this.margin_mode = margin_mode;
     }
 
-    public String getMaint_margin_ratio() {
-        return maint_margin_ratio;
+    public ApiAccountVO getInfo() {
+        return info;
     }
 
-    public void setMaint_margin_ratio(String maint_margin_ratio) {
-        this.maint_margin_ratio = maint_margin_ratio;
-    }
-
-    @Override
-    public String toString() {
-        return "ApiAccountVO{" +
-                "equity='" + equity + '\'' +
-                ", fixed_balance='" + fixed_balance + '\'' +
-                ", total_avail_balance='" + total_avail_balance + '\'' +
-                ", margin='" + margin + '\'' +
-                ", realized_pnl='" + realized_pnl + '\'' +
-                ", unrealized_pnl='" + unrealized_pnl + '\'' +
-                ", margin_ratio='" + margin_ratio + '\'' +
-                ", instrument_id='" + instrument_id + '\'' +
-                ", margin_frozen='" + margin_frozen + '\'' +
-                ", timestamp='" + timestamp + '\'' +
-                ", margin_mode='" + margin_mode + '\'' +
-                ", maint_margin_ratio='" + maint_margin_ratio + '\'' +
-                '}';
+    public void setInfo(ApiAccountVO info) {
+        this.info = info;
     }
 }

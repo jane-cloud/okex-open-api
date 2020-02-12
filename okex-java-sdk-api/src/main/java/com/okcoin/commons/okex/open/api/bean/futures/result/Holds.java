@@ -35,13 +35,4 @@ public class Holds {
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
-
-    @Override
-    public String toString() {
-        return "Holds{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", amount='" + amount + '\'' +
-                ", timestamp='" + timestamp + '\'' +
-                '}';
-    }
 }

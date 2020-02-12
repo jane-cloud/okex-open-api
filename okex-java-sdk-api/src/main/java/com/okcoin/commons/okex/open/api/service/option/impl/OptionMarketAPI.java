@@ -29,12 +29,12 @@ public interface OptionMarketAPI {
     //获取同一标的下所有期权合约详细定价
     @GET("/api/option/v3/instruments/{underlying}/summary")
     Call<JSONArray> getAllSummary(@Path("underlying") String underlying,
-                                  @Query("delivery") String delivery);
+                                   @Query("delivery") String delivery);
 
     //获取某个期权合约的详细定价
     @GET("/api/option/v3/instruments/{underlying}/summary/{instrument_id}")
     Call<JSONObject> getDetailPrice(@Path("underlying") String underlying,
-                                    @Path("instrument_id") String instrument_id);
+                              @Path("instrument_id") String instrument_id);
 
     //获取K线数据
     @GET("/api/option/v3/instruments/{instrument_id}/candles")

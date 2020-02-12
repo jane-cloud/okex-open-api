@@ -26,36 +26,22 @@ public interface SwapTradeAPIService {
     String getOrders();
 
     /**
-     * 撤单 根据orderId
-     * @param instrumentId
-     * @param orderId
+     * 撤单
+     * @param instrument_id
+     * @param order_id
      * @return
      */
-    String cancelOrder(String instrumentId, String orderId);
+    String cancelOrderByOrderId(String instrument_id, String order_id);
+
+    String cancelOrderByClientOid(String instrument_id, String client_oid);
 
     /**
-     * 撤单 client_oid
-     * @param instrumentId
-     * @param clientOid
-     * @return
-     */
-    String cancelOrderByClientOid(String instrumentId, String clientOid);
-
-    /**
-     * 批量撤单根据orderid
+     * 批量撤单
      * @param instrumentId
      * @param ppCancelOrderVO
      * @return
      */
     String cancelOrders(String instrumentId, PpCancelOrderVO ppCancelOrderVO);
-
-    /**
-     * 批量撤单根据clientOid
-     * @param instrumentId
-     * @param ppCancelOrderVO
-     * @return
-     */
-    String batchCancelOrderByClientOid(String instrumentId, PpCancelOrderVO ppCancelOrderVO);
 
     /**
      * 策略委托下单

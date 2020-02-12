@@ -42,13 +42,4 @@ public class OrderCancelResult {
         this.result = result;
 
     }
-
-    @Override
-    public String toString() {
-        return "OrderCancelResult{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", order_ids=" + order_ids +
-                ", result='" + result + '\'' +
-                '}';
-    }
 }

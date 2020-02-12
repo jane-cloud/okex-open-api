@@ -4,8 +4,8 @@ import java.util.List;
 
 public class PpOrders {
 
-    private String instrument_id = "";
-    private List<PpBatchOrder> order_data = null;
+    private String instrument_id ;
+    private List<PpBatchOrder> order_data ;
 
     public void setInstrument_id(String instrument_id) {
         this.instrument_id = instrument_id;
@@ -30,13 +30,5 @@ public class PpOrders {
     public PpOrders(String instrumentId, List<PpBatchOrder> orderData) {
         this.instrument_id = instrumentId;
         this.order_data = orderData;
-    }
-
-    @Override
-    public String toString() {
-        return "PpOrders{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", order_data=" + order_data +
-                '}';
     }
 }

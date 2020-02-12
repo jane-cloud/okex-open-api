@@ -14,7 +14,7 @@ public class WsDemo {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url("")
+                .url("wss://149.129.81.70/websocket/okexapi?compress=true")
                 .build();
 
         client.newWebSocket(request, new WebSocketListener() {

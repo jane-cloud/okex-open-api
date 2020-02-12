@@ -30,13 +30,17 @@ public class SpotProductAPIServiceImpl implements SpotProductAPIService {
     }
 
     @Override
-    public List<Ticker> getTickers() {
+    public List<Ticker> getTickers1() {
+        return this.client.executeSync(this.spotProductAPI.getTickers1());
+    }
+    @Override
+    public String getTickers() {
         return this.client.executeSync(this.spotProductAPI.getTickers());
     }
 
     @Override
-    public Book bookProductsByProductId(final String product, final String size, final  String depth) {
-        return this.client.executeSync(this.spotProductAPI.bookProductsByProductId(product, size, depth));
+    public Book bookProductsByProductId(final String instrument_id, final String size, final  String depth) {
+        return this.client.executeSync(this.spotProductAPI.bookProductsByProductId(instrument_id, size, depth));
     }
 
     @Override
@@ -45,8 +49,8 @@ public class SpotProductAPIServiceImpl implements SpotProductAPIService {
     }
 
     @Override
-    public List<Trade> getTrades(final String instrument_id, final String before, final String after, final String limit) {
-        return this.client.executeSync(this.spotProductAPI.getTrades(instrument_id, before, after, limit));
+    public List<Trade> getTrades(final String instrument_id,final String limit) {
+        return this.client.executeSync(this.spotProductAPI.getTrades(instrument_id,limit));
     }
 
     @Override
@@ -62,6 +66,11 @@ public class SpotProductAPIServiceImpl implements SpotProductAPIService {
     @Override
     public String getIndex(String instrument_id) {
         return this.client.executeSync(this.spotProductAPI.getIndex(instrument_id));
+    }
+
+    @Override
+    public String getMarginMarkPrice(String instrument_id) {
+        return this.client.executeSync(this.spotProductAPI.getMarginMarkPrice(instrument_id));
     }
 
 }

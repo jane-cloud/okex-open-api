@@ -49,13 +49,4 @@ public class ApiPriceLimitVO {
         this.timestamp = timestamp;
     }
 
-    @Override
-    public String toString() {
-        return "ApiPriceLimitVO{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", highest='" + highest + '\'' +
-                ", lowest='" + lowest + '\'' +
-                ", timestamp='" + timestamp + '\'' +
-                '}';
-    }
 }

@@ -2,7 +2,10 @@ package com.okcoin.commons.okex.open.api.service.option;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.google.gson.JsonObject;
 import com.okcoin.commons.okex.open.api.bean.option.param.*;
+
+import java.util.List;
 
 public interface OptionTradeAPIService {
 
@@ -12,9 +15,9 @@ public interface OptionTradeAPIService {
 
     JSONObject amendBatchOrders(String underlying, AmendDateParam amendDateParam);
 
-    JSONObject cancelOrders(String underlying, String order_id);
+    JSONObject cancelOrders(String underlying,String order_id);
 
-    JSONObject cancelOrderByClientOid(String underlying, String client_oid);
+    JSONObject cancelOrderByClientOid(String underlying,String client_oid);
 
     JSONObject cancelBatchOrders(String underlying, CancelOrders cancelOrders);
 
@@ -28,12 +31,12 @@ public interface OptionTradeAPIService {
 
     JSONObject getOrders1(OrderDataParam orderDataParam);
 
-    JSONObject getOrderInfo(String underlying, String order_id);
-    JSONObject getOrderInfoByClientOid(String underlying, String client_oid);
+    JSONObject getOrderInfo(String underlying,String order_id);
+    JSONObject getOrderInfoByClientOid(String underlying,String client_oid);
 
-    JSONObject getOrderList(String underlying, String state, String instrument_id, String before, String after, String limit);
+    JSONObject getOrderList(String underlying,String state,String instrument_id,String before,String after,String limit);
 
-    JSONObject getPosition(String underlying, String instrument_id);
+    JSONObject getPosition(String underlying,String instrument_id);
 
     JSONObject getTradeFee();
 

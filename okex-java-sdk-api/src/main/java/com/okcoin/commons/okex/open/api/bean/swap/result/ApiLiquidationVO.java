@@ -69,15 +69,4 @@ public class ApiLiquidationVO {
         this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return "ApiLiquidationVO{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", size='" + size + '\'' +
-                ", created_at='" + created_at + '\'' +
-                ", loss='" + loss + '\'' +
-                ", price='" + price + '\'' +
-                ", type='" + type + '\'' +
-                '}';
-    }
 }

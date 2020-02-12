@@ -51,30 +51,24 @@ public class SwapTradeAPIServiceImpl implements SwapTradeAPIService {
     }
 
     /**
-     * 撤单根据orderid
+     * 撤单
      *
-     * @param instrumentId
-     * @param orderId
+     * @param instrument_id
+     * @param order_id
      * @return
      */
     @Override
-    public String cancelOrder(String instrumentId, String orderId) {
-        return this.client.executeSync(this.api.cancelOrder(instrumentId,orderId));
+    public String cancelOrderByOrderId(String instrument_id, String order_id) {
+        return this.client.executeSync(this.api.cancelOrderByOrderId(instrument_id,order_id));
     }
 
-    /**
-     * 根据client_oid撤单
-     * @param instrumentId
-     * @param clientOid
-     * @return
-     */
     @Override
-    public String cancelOrderByClientOid(String instrumentId, String clientOid) {
-        return this.client.executeSync(this.api.cancelOrderByClientOid(instrumentId,clientOid));
+    public String cancelOrderByClientOid(String instrument_id, String client_oid) {
+        return this.client.executeSync(this.api.cancelOrderByClientOid(instrument_id,client_oid));
     }
 
     /**
-     * 批量撤单根据orderid
+     * 批量撤单
      *
      * @param instrumentId
      * @param ppCancelOrderVO
@@ -84,30 +78,19 @@ public class SwapTradeAPIServiceImpl implements SwapTradeAPIService {
     public String cancelOrders(String instrumentId, PpCancelOrderVO ppCancelOrderVO) {
         return this.client.executeSync(this.api.cancelOrders(instrumentId,JsonUtils.convertObject(ppCancelOrderVO, PpCancelOrderVO.class)));
     }
-
-    /**
-     * 批量撤单根据ClientOid
-     * @param instrumentId
-     * @param ppCancelOrderVO
-     * @return
-     */
-    @Override
-    public String batchCancelOrderByClientOid(String instrumentId, PpCancelOrderVO ppCancelOrderVO) {
-        return this.client.executeSync(this.api.batchCancelOrderByClientOid(instrumentId,JsonUtils.convertObject(ppCancelOrderVO, PpCancelOrderVO.class)));
-    }
-
+    //委托策略下单
     @Override
     public String swapOrderAlgo(SwapOrderParam swapOrderParam) {
         System.out.println("begin swapOrder-----");
         return this.client.executeSync(this.api.swapOrderAlgo(swapOrderParam));
     }
-
+    //委托策略撤单
     @Override
     public String cancelOrderAlgo(CancelOrderAlgo cancelOrderAlgo) {
         System.out.println("canceling the algo order");
         return this.client.executeSync(this.api.cancelOrderAlgo(cancelOrderAlgo));
     }
-
+    //获取委托单列表
     @Override
     public String getSwapOrders(String instrument_id, String order_type, String status, String algo_id, String before, String after, String limit) {
         return this.client.executeSync(this.api.getSwapOrders(instrument_id,order_type,status,algo_id,before,after,limit));

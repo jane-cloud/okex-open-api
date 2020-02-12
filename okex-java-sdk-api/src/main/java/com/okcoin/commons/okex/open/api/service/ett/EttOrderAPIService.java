@@ -28,10 +28,10 @@ public interface EttOrderAPIService {
     /**
      * Cancel order
      *
-     * @param orderId order id
+     * @param order_id order id
      * @return cancel order result
      */
-    EttCancelOrderResult cancelOrder(String orderId);
+    EttCancelOrderResult cancelOrder(String order_id);
 
     /**
      * Get all of ett account order list
@@ -51,9 +51,9 @@ public interface EttOrderAPIService {
     /**
      * Get the ett account order info
      *
-     * @param orderId order id
+     * @param order_id order id
      * @return order info
      */
-    EttOrder getOrder(String orderId);
+    EttOrder getOrder(String order_id);
 
 }

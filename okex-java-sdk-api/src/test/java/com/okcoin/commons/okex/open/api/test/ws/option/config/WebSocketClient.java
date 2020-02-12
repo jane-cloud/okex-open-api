@@ -10,6 +10,7 @@ import com.okcoin.commons.okex.open.api.bean.other.SpotOrderBook;
 import com.okcoin.commons.okex.open.api.bean.other.SpotOrderBookDiff;
 import com.okcoin.commons.okex.open.api.bean.other.SpotOrderBookItem;
 import com.okcoin.commons.okex.open.api.enums.CharsetEnum;
+import com.okcoin.commons.okex.open.api.test.ws.futures.FuturesPublicChannelTest;
 import com.okcoin.commons.okex.open.api.test.ws.option.OptionPublicChannelTest;
 import com.okcoin.commons.okex.open.api.utils.DateUtils;
 import lombok.Data;

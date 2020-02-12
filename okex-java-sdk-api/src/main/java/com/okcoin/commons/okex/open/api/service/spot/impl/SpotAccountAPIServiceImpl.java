@@ -1,6 +1,7 @@
 package com.okcoin.commons.okex.open.api.service.spot.impl;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.okcoin.commons.okex.open.api.bean.spot.result.Account;
 import com.okcoin.commons.okex.open.api.bean.spot.result.Ledger;
 import com.okcoin.commons.okex.open.api.bean.spot.result.ServerTimeDto;
@@ -47,7 +48,7 @@ public class SpotAccountAPIServiceImpl implements SpotAccountAPIService {
     }
 
     @Override
-    public String getTradeFee() {
+    public JSONObject getTradeFee() {
         return this.client.executeSync(this.api.getTradeFee());
     }
 }

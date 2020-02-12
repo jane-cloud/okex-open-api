@@ -37,13 +37,13 @@ public class FuturesMarketAPIServiceImpl implements FuturesMarketAPIService {
     }
 
     @Override
-    public Book getInstrumentBook(String instrumentId, String size,String depth) {
-        return this.client.executeSync(this.api.getInstrumentBook(instrumentId, size,depth));
+    public Book getInstrumentBook(String instrument_id,  String size,String depth) {
+        return this.client.executeSync(this.api.getInstrumentBook(instrument_id, size,depth));
     }
 
     @Override
-    public Ticker getInstrumentTicker(String instrumentId) {
-        return this.client.executeSync(this.api.getInstrumentTicker(instrumentId));
+    public Ticker getInstrumentTicker(String instrument_id) {
+        return this.client.executeSync(this.api.getInstrumentTicker(instrument_id));
     }
 
     @Override
@@ -52,18 +52,18 @@ public class FuturesMarketAPIServiceImpl implements FuturesMarketAPIService {
     }
 
     @Override
-    public List<Trades> getInstrumentTrades(String instrumentId, String after, String before, String limit) {
-        return this.client.executeSync(this.api.getInstrumentTrades(instrumentId,  after,  before,  limit));
+    public List<Trades> getInstrumentTrades(String instrument_id, String after, String before, String limit) {
+        return this.client.executeSync(this.api.getInstrumentTrades(instrument_id,  after,  before,  limit));
     }
 
     @Override
-    public JSONArray getInstrumentCandles(String instrumentId, String start, String end, String granularity) {
-        return this.client.executeSync(this.api.getInstrumentCandles(instrumentId, String.valueOf(start), String.valueOf(end), String.valueOf(granularity)));
+    public JSONArray getInstrumentCandles(String instrument_id, String start, String end, String granularity) {
+        return this.client.executeSync(this.api.getInstrumentCandles(instrument_id, start,end, granularity));
     }
 
     @Override
-    public Index getInstrumentIndex(String instrumentId) {
-        return this.client.executeSync(this.api.getInstrumentIndex(instrumentId));
+    public Index getInstrumentIndex(String instrument_id) {
+        return this.client.executeSync(this.api.getInstrumentIndex(instrument_id));
     }
 
     @Override
@@ -73,23 +73,23 @@ public class FuturesMarketAPIServiceImpl implements FuturesMarketAPIService {
 
 
     @Override
-    public EstimatedPrice getInstrumentEstimatedPrice(String instrumentId) {
-        return this.client.executeSync(this.api.getInstrumentEstimatedPrice(instrumentId));
+    public EstimatedPrice getInstrumentEstimatedPrice(String instrument_id) {
+        return this.client.executeSync(this.api.getInstrumentEstimatedPrice(instrument_id));
     }
 
     @Override
-    public Holds getInstrumentHolds(String instrumentId) {
-        return this.client.executeSync(this.api.getInstrumentHolds(instrumentId));
+    public Holds getInstrumentHolds(String instrument_id) {
+        return this.client.executeSync(this.api.getInstrumentHolds(instrument_id));
     }
 
     @Override
-    public PriceLimit getInstrumentPriceLimit(String instrumentId) {
-        return this.client.executeSync(this.api.getInstrumentPriceLimit(instrumentId));
+    public PriceLimit getInstrumentPriceLimit(String instrument_id) {
+        return this.client.executeSync(this.api.getInstrumentPriceLimit(instrument_id));
     }
 
     @Override
-    public List<Liquidation> getInstrumentLiquidation(String instrumentId, String status, String from, String to, String limit) {
-        return this.client.executeSync(this.api.getInstrumentLiquidation(instrumentId, status,  from,  to,  limit));
+    public List<Liquidation> getInstrumentLiquidation(String instrument_id, String status, String from, String to, String limit) {
+        return this.client.executeSync(this.api.getInstrumentLiquidation(instrument_id, status,  from,  to,  limit));
     }
 
     @Override
@@ -97,9 +97,5 @@ public class FuturesMarketAPIServiceImpl implements FuturesMarketAPIService {
         return this.client.executeSync(this.api.getMarkPrice(instrumentId));
     }
 
-    @Override
-    public Holds getHolds(String instrumentId) {
-        return this.client.executeSync(this.api.getHolds(instrumentId));
-    }
 
 }

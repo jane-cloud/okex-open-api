@@ -35,26 +35,9 @@ public class FuturesPublicChannelTest {
         webSocketClient.closeConnection();
     }
 
+
     /**
-     * 行情频道
-     * Ticker Channel
-     */
-    @Test
-    public void tickerChannel() {
-        //添加订阅频道
-        ArrayList<String> channel = Lists.newArrayList();
-        channel.add("futures/ticker:BTC-USD-191227");
-        //调用订阅方法
-        webSocketClient.subscribe(channel);
-        //为保证测试方法不停，需要让线程延迟
-        try {
-            Thread.sleep(10000000);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    /**
-     * 全量合约信息
+     * 公共-全量合约信息
      * Ticker Channel
      */
     @Test
@@ -62,6 +45,7 @@ public class FuturesPublicChannelTest {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
         channel.add("futures/instruments");
+
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -71,8 +55,30 @@ public class FuturesPublicChannelTest {
             e.printStackTrace();
         }
     }
+
+
     /**
-     * k线频道
+     * 公共-ticker频道
+     * Ticker Channel
+     */
+    @Test
+    public void tickerChannel() {
+        //添加订阅频道
+        ArrayList<String> channel = Lists.newArrayList();
+        channel.add("futures/ticker:BTC-USD-200327");
+        channel.add("futures/ticker:BTC-USD-200125");
+        //调用订阅方法
+        webSocketClient.subscribe(channel);
+        //为保证测试方法不停，需要让线程延迟
+        try {
+            Thread.sleep(10000000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 公共-k线频道
      * 频道列表：
      * futures/candle60s // 1分钟k线数据频道
      * futures/candle180s // 3分钟k线数据频道
@@ -89,11 +95,9 @@ public class FuturesPublicChannelTest {
      */
     @Test
     public void klineChannel() {
-        logger.info("info信息");
-        logger.debug("debug信息");
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("futures/candle60s:EOS-USD-191227");
+        channel.add("futures/candle60s:BTC-USD-200327");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -105,14 +109,14 @@ public class FuturesPublicChannelTest {
     }
 
     /**
-     * 交易频道
+     * 公共-交易频道
      * Trade Channel
      */
     @Test
     public void tradeChannel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("futures/trade:EOS-USD-191227");
+        channel.add("futures/trade:BTC-USD-200327");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -124,14 +128,14 @@ public class FuturesPublicChannelTest {
     }
 
     /**
-     * 标记价格频道
-     * markPrice Channel
+     * 公共-预估交割价频道
+     * estimatedPrice Channel
      */
     @Test
-    public void Channel() {
+    public void estimatedPriceChannel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("futures/mark_price:BTC-USD-191227");
+        channel.add("futures/estimated_price:BTC-USD-191220");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -143,7 +147,7 @@ public class FuturesPublicChannelTest {
     }
 
     /**
-     * 限价范围频道
+     * 公共-限价频道
      * priceRange Channel
      */
     @Test
@@ -161,16 +165,15 @@ public class FuturesPublicChannelTest {
         }
     }
 
-
     /**
-     * 全量深度
+     * 公共-5档深度
      * Depth5 Channel
      */
     @Test
-    public void depthAllChannel() {
+    public void depth5Channel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("futures/depth_l2_tbt:BTC-USD-191227");
+        channel.add("futures/depth5:BTC-USD-200327");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -182,7 +185,7 @@ public class FuturesPublicChannelTest {
     }
 
     /**
-     * 400深度
+     * 公共-400档深度
      * Depth Channel
      * 首次返回400档，后续为增量
      */
@@ -190,11 +193,9 @@ public class FuturesPublicChannelTest {
     public void depthChannel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        //channel.add("swap/depth:LTC-USD-SWAP");
-        //200档位深度校验
-        channel.add("futures/depth:BTC-USD-191227");
+        //400档位深度校验
+        channel.add("futures/depth:BTC-USD-200327");
 
-        //channel.add("futures/depth_l2_tbt:BTC-USD-191018");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -205,17 +206,12 @@ public class FuturesPublicChannelTest {
         }
     }
 
-
-
-    /**
-     * 5档深度
-     * Depth5 Channel
-     */
+    //公共全量深度频道
     @Test
-    public void depth5Channel() {
+    public void depth12Channel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("futures/depth5:BTC-USD-191227");
+        channel.add("futures/depth_l2_tbt:ETC-USD-200327");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -227,14 +223,14 @@ public class FuturesPublicChannelTest {
     }
 
     /**
-     * 预估交割价频道
-     * estimatedPrice Channel
+     * 公共-标记价格频道
+     * markPrice Channel
      */
     @Test
-    public void estimatedPriceChannel() {
+    public void Channel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("futures/estimated_price:BTC-USD-191227");
+        channel.add("futures/mark_price:BTC-USD-191227");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -251,13 +247,10 @@ public class FuturesPublicChannelTest {
     public void unsubscribeChannel() {
         ArrayList<String> list = Lists.newArrayList();
         //添加要取消订阅的频道名
-        list.add("futures/depth5:BTC-USD-191227");
+        list.add("futures/candle60s:BTC-USD-191220");
+        //订阅
         webSocketClient.subscribe(list);
-        webSocketClient.unsubscribe(list);
-        webSocketClient.unsubscribe(list);
-        webSocketClient.unsubscribe(list);
-        webSocketClient.unsubscribe(list);
-        webSocketClient.unsubscribe(list);
+        //取消订阅
         webSocketClient.unsubscribe(list);
         //为保证收到服务端返回的消息，需要让线程延迟
         try {

@@ -1,11 +1,21 @@
 package com.okcoin.commons.okex.open.api.bean.spot.result;
 
 public class UserMarginBillDto {
-    private String ledger_id;
+    private Long ledger_id;
     private String timestamp;
     private String amount;
     private String balance;
     private String type;
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    private String currency;
     private UserMarginBillDto.Details details;
 
     public String getTimestamp() {
@@ -16,13 +26,14 @@ public class UserMarginBillDto {
         this.timestamp = timestamp;
     }
 
-    public String getLedger_id() {
-        return ledger_id;
+    public Long getLedger_id() {
+        return this.ledger_id;
     }
 
-    public void setLedger_id(String ledger_id) {
+    public void setLedger_id(final Long ledger_id) {
         this.ledger_id = ledger_id;
     }
+
 
     public String getAmount() {
         return this.amount;
@@ -57,14 +68,14 @@ public class UserMarginBillDto {
     }
 
     public static class Details {
-        private String order_id;
+        private Long order_id;
         private String instrument_id;
 
-        public String getOrder_id() {
-            return order_id;
+        public Long getOrder_id() {
+            return this.order_id;
         }
 
-        public void setOrder_id(String order_id) {
+        public void setOrder_id(final Long order_id) {
             this.order_id = order_id;
         }
 

@@ -1,6 +1,7 @@
 package com.okcoin.commons.okex.open.api.service.spot.impl;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.okcoin.commons.okex.open.api.bean.spot.result.Account;
 import com.okcoin.commons.okex.open.api.bean.spot.result.Ledger;
 import com.okcoin.commons.okex.open.api.bean.spot.result.ServerTimeDto;
@@ -62,6 +63,9 @@ public interface SpotAccountAPI {
                                          @Query("after") String after,
                                          @Query("limit") String limit,
                                          @Query("type") String type);
+
+    //当前账户交易手续等级的费率
     @GET("/api/spot/v3/trade_fee")
-    Call<String> getTradeFee();
+    Call<JSONObject> getTradeFee();
+
 }

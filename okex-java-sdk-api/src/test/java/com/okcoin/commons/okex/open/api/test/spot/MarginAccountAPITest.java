@@ -1,13 +1,12 @@
 package com.okcoin.commons.okex.open.api.test.spot;
 
-import com.alibaba.fastjson.JSONArray;
-import com.okcoin.commons.okex.open.api.bean.spot.param.SpotMarginLeverage;
+import com.alibaba.fastjson.JSONObject;
+import com.okcoin.commons.okex.open.api.bean.spot.param.MarginLeverage;
 import com.okcoin.commons.okex.open.api.bean.spot.result.*;
 import com.okcoin.commons.okex.open.api.service.spot.MarginAccountAPIService;
 import com.okcoin.commons.okex.open.api.service.spot.impl.MarginAccountAPIServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
-import org.omg.PortableServer.THREAD_POLICY_ID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -110,7 +109,7 @@ public class MarginAccountAPITest extends SpotAPIBaseTests {
      */
     @Test
     public void getBorrowedAccountsByProductId() {
-        final List<MarginBorrowOrderDto> result = this.marginAccountAPIService.getBorrowedAccountsByProductId("BTC-USDT", "", "", "2", "0");
+        final List<MarginBorrowOrderDto> result = this.marginAccountAPIService.getBorrowedAccountsByProductId("XRP-USDT", "", "", "10", "1");
         this.toResultString(MarginAccountAPITest.LOG, "result", result);
     }
     /**
@@ -122,9 +121,10 @@ public class MarginAccountAPITest extends SpotAPIBaseTests {
     @Test
     public void borrow_1() {
         final BorrowRequestDto dto = new BorrowRequestDto();
-        dto.setAmount("10");
-        dto.setCurrency("usdt");
-        dto.setInstrument_id("ltc_usdt");
+        dto.setAmount("1");
+        dto.setCurrency("XRP");
+        dto.setInstrument_id("XRP-USDT");
+        dto.setClient_oid("ttc1226testborrow1");
         final BorrowResult result = this.marginAccountAPIService.borrow_1(dto);
         this.toResultString(MarginAccountAPITest.LOG, "result", result);
     }
@@ -139,31 +139,27 @@ public class MarginAccountAPITest extends SpotAPIBaseTests {
     public void repayment_1() {
         final RepaymentRequestDto dto = new RepaymentRequestDto();
         dto.setAmount("1");
-        dto.setBorrow_id("185778");
-        dto.setCurrency("usdt");
-        dto.setInstrument_id("ltc-usdt");
+        //dto.setBorrow_id("185778");
+        dto.setCurrency("XRP");
+        dto.setInstrument_id("XRP-USDT");
+        dto.setClient_oid("ttc1226testrepayment2");
         final RepaymentResult result = this.marginAccountAPIService.repayment_1(dto);
         this.toResultString(MarginAccountAPITest.LOG, "result", result);
     }
 
-    /**
-     * 设置杠杆倍数
-     * 设置币币杠杆账户币对杠杆倍数。
-     * 限速规则：5次/2s
-     * POST /api/margin/v3/accounts/<instrument_id>/leverage
-     */
+    //设置杠杆倍数
     @Test
-    public void getSpotMarginLeverage(){
-        SpotMarginLeverage spotMarginLeverage=new SpotMarginLeverage();
-        spotMarginLeverage.setLeverage("10");
-        String result = this.marginAccountAPIService.getSpotMarginLeverage("BTC-USDT",spotMarginLeverage);
-        this.toResultString(MarginAccountAPITest.LOG,"result",result);
+    public void testSetLeverage(){
+        MarginLeverage leverage = new MarginLeverage();
+        leverage.setLeverage("5");
+        JSONObject result = marginAccountAPIService.setLeverage("XRP-USDT",leverage);
+        this.toResultString(MarginAccountAPITest.LOG, "result", result);
     }
-
+    //获取杠杆倍数
     @Test
-    public void getMarginLeverage(){
-        String result = this.marginAccountAPIService.getMarginLeverage("BTC-USDT");
-        this.toResultString(MarginAccountAPITest.LOG,"result",result);
-    }
+    public void testGetLeverage(){
+        JSONObject result = marginAccountAPIService.getLeverage("XRP-USDT");
+        this.toResultString(MarginAccountAPITest.LOG, "result", result);
 
+    }
 }

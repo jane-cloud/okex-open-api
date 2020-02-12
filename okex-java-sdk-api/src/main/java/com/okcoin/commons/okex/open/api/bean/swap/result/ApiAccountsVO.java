@@ -19,11 +19,4 @@ public class ApiAccountsVO {
     public ApiAccountsVO(List<ApiAccountVO> info) {
         this.info = info;
     }
-
-    @Override
-    public String toString() {
-        return "ApiAccountsVO{" +
-                "info=" + info +
-                '}';
-    }
 }

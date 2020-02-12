@@ -3,7 +3,7 @@ package com.okcoin.commons.okex.open.api.bean.spot.result;
 public class OrderResult {
 
     private boolean result;
-    private String order_id;
+    private Long order_id;
     private String client_oid;
     private String error_code;
     private String error_message;
@@ -25,11 +25,11 @@ public class OrderResult {
         this.result = result;
     }
 
-    public String getOrder_id() {
-        return order_id;
+    public Long getOrder_id() {
+        return this.order_id;
     }
 
-    public void setOrder_id(String order_id) {
+    public void setOrder_id(final Long order_id) {
         this.order_id = order_id;
     }
 

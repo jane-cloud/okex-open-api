@@ -21,16 +21,18 @@ public interface SpotProductAPI {
                                        @Query("depth") String depth);
 
     @GET("/api/spot/v3/instruments/ticker")
-    Call<List<Ticker>> getTickers();
+    Call<String> getTickers();
+
+    @GET("/api/spot/v3/instruments/ticker")
+    Call<List<Ticker>> getTickers1();
+
 
     @GET("/api/spot/v3/instruments/{instrument_id}/ticker")
-    Call<Ticker> getTickerByProductId(@Path("instrument_id") String product);
+    Call<Ticker> getTickerByProductId(@Path("instrument_id") String instrument_id);
 
 
     @GET("/api/spot/v3/instruments/{instrument_id}/trades")
     Call<List<Trade>> getTrades(@Path("instrument_id") String instrument_id,
-                                @Query("before") String before,
-                                @Query("after") String after,
                                 @Query("limit") String limit);
 
     @GET("/api/spot/v3/instruments/{instrument_id}/candles")
@@ -47,5 +49,9 @@ public interface SpotProductAPI {
 
     @GET("/api/index/v3/{instrument_id}/constituents")
     Call<String> getIndex(@Path("instrument_id") String instrument_id);
+
+
+    @GET("/api/margin/v3/instruments/{instrument_id}/mark_price")
+    Call<String> getMarginMarkPrice(@Path("instrument_id") String instrument_id);
 
 }

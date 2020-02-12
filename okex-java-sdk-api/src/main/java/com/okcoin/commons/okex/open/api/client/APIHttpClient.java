@@ -64,7 +64,8 @@ public class APIHttpClient {
         clientBuilder.addInterceptor((Interceptor.Chain chain) -> {
             final Request.Builder requestBuilder = chain.request().newBuilder();
             final String timestamp = DateUtils.getUnixTime();
-            System.out.println("timestamp={" + timestamp + "}");
+            //打印首行时间戳
+            System.out.println("时间戳timestamp={" + timestamp + "}");
             requestBuilder.headers(this.headers(chain.request(), timestamp));
             final Request request = requestBuilder.build();
             if (this.config.isPrint()) {
@@ -81,6 +82,7 @@ public class APIHttpClient {
         builder.add(APIConstants.CONTENT_TYPE, ContentTypeEnum.APPLICATION_JSON_UTF8.contentType());
         builder.add(APIConstants.COOKIE, this.getCookie());
         if (StringUtils.isNotEmpty(this.credentials.getSecretKey())) {
+            //拼接上秘钥，密码，签名和时间戳
             builder.add(HttpHeadersEnum.OK_ACCESS_KEY.header(), this.credentials.getApiKey());
             builder.add(HttpHeadersEnum.OK_ACCESS_SIGN.header(), this.sign(request, timestamp));
             builder.add(HttpHeadersEnum.OK_ACCESS_TIMESTAMP.header(), timestamp);
@@ -165,6 +167,7 @@ public class APIHttpClient {
             throw new APIException("Request get body io exception.", e);
         }
         final StringBuilder requestInfo = new StringBuilder();
+
         //requestInfo.append("\n").append("\tSecret-Key: ").append(this.credentials.getSecretKey());
         requestInfo.append("\n\tRequest").append("(").append(DateUtils.timeToString(null, 4)).append("):");
         requestInfo.append("\n\t\t").append("Url: ").append(this.url(request));
@@ -173,7 +176,7 @@ public class APIHttpClient {
         final Headers headers = request.headers();
         if (headers != null && headers.size() > 0) {
             for (final String name : headers.names()) {
-                if(name=="Accept" || name=="Content-Type" || name == "OK-ACCESS-TIMESTAMP")
+                //if(name=="Accept" || name=="Content-Type" || name == "OK-ACCESS-TIMESTAMP")
                 requestInfo.append("\n\t\t\t").append(name).append(": ").append(headers.get(name));
             }
         }

@@ -45,7 +45,7 @@ public class OptionPublicChannelTest {
     public void instrumentsChannel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("option/instruments:TBTC-USD");
+        channel.add("option/instruments:BTC-USD");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -65,7 +65,8 @@ public class OptionPublicChannelTest {
     public void tickerChannel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("option/ticker:TBTC-USD-191227-12500-C");
+        channel.add("option/ticker:BTC-USD-200327-7500-C");
+        channel.add("option/ticker:BTC-USD-200327-5000-C");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -98,7 +99,7 @@ public class OptionPublicChannelTest {
         //logger.debug("debug信息");
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("option/candle60s:TBTC-USD-191227-12500-C");
+        channel.add("option/candle60s:BTC-USD-200327-12500-C");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -117,7 +118,7 @@ public class OptionPublicChannelTest {
     public void tradeChannel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("option/trade:TBTC-USD-191227-12500-C");
+        channel.add("option/trade:BTC-USD-200327-12500-C");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -136,7 +137,7 @@ public class OptionPublicChannelTest {
     public void estimatedPriceChannel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("option/summary:TBTC-USD");
+        channel.add("option/summary:BTC-USD");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -156,7 +157,8 @@ public class OptionPublicChannelTest {
     public void depth5Channel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("option/depth5:TBTC-USD-191227-12500-C");
+        channel.add("option/depth5:BTC-USD-200327-6000-C");
+        //channel.add("option/depth5:tbtc-usd-191213-7000-P");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -168,7 +170,7 @@ public class OptionPublicChannelTest {
     }
 
     /**
-     * 公共-200档深度
+     * 公共-400档深度
      * Depth Channel
      * 首次返回400档，后续为增量
      */
@@ -176,9 +178,7 @@ public class OptionPublicChannelTest {
     public void depthChannel() {
         //添加订阅频道
         ArrayList<String> channel = Lists.newArrayList();
-        //channel.add("swap/depth:LTC-USD-SWAP");
-        //200档位深度校验
-        channel.add("option/depth:TBTC-USD-191227-12500-C");
+        channel.add("option/depth:BTC-USD-200327-8500-C");
         //调用订阅方法
         webSocketClient.subscribe(channel);
         //为保证测试方法不停，需要让线程延迟
@@ -189,7 +189,20 @@ public class OptionPublicChannelTest {
         }
     }
 
-
+    @Test
+    public void allDepthChannel() {
+        //添加订阅频道
+        ArrayList<String> channel = Lists.newArrayList();
+        channel.add("option/depth_l2_tbt:BTC-USD-200327-9500-C");
+        //调用订阅方法
+        webSocketClient.subscribe(channel);
+        //为保证测试方法不停，需要让线程延迟
+        try {
+            Thread.sleep(100000000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     //取消订阅
     @Test

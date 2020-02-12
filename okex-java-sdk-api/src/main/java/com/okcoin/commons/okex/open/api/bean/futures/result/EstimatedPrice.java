@@ -33,13 +33,4 @@ public class EstimatedPrice {
     public String getSettlement_price() { return settlement_price; }
 
     public void setSettlement_price(String settlement_price) { this.settlement_price = settlement_price; }
-
-    @Override
-    public String toString() {
-        return "EstimatedPrice{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", settlement_price='" + settlement_price + '\'' +
-                ", timestamp='" + timestamp + '\'' +
-                '}';
-    }
 }

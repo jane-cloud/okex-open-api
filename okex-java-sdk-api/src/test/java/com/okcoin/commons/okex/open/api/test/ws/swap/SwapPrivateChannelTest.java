@@ -47,7 +47,7 @@ public class SwapPrivateChannelTest {
     @Test
     public void positionChannel() {
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("swap/position:BTC-USD-SWAP");
+        channel.add("swap/position:XRP-USD-SWAP");
         try {
             Thread.sleep(100);
         } catch (Exception e) {
@@ -70,7 +70,7 @@ public class SwapPrivateChannelTest {
     @Test
     public void accountChannel() {
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("swap/account:BTC-USD-SWAP");
+        channel.add("swap/account:XRP-USDT-SWAP");
         try {
             Thread.sleep(100);
         } catch (Exception e) {
@@ -93,7 +93,7 @@ public class SwapPrivateChannelTest {
     @Test
     public void orderChannel() {
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("swap/order:BTC-USD-SWAP");
+        channel.add("swap/order:XRP-USD-SWAP");
         try {
             Thread.sleep(100);
         } catch (Exception e) {
@@ -114,9 +114,9 @@ public class SwapPrivateChannelTest {
      * Order Channel
      */
     @Test
-    public void algoOrderChannel() {
+    public void orderAlgoChannel() {
         ArrayList<String> channel = Lists.newArrayList();
-        channel.add("swap/order_algo:LTC-USD-SWAP");
+        channel.add("swap/order_algo:BTC-USDT-SWAP");
         try {
             Thread.sleep(100);
         } catch (Exception e) {

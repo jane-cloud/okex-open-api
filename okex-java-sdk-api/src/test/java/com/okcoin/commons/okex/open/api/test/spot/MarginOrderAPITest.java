@@ -40,17 +40,17 @@ public class MarginOrderAPITest extends SpotAPIBaseTests {
         final PlaceOrderParam order = new PlaceOrderParam();
 
         //公共参数
-        order.setClient_oid("20191122buy");
-        order.setInstrument_id("okb-usdt");
+        order.setClient_oid("20200121sell4");
+        order.setInstrument_id("BTC-USDT");
         order.setType("limit");
-        order.setSide("buy");
+        order.setSide("sell");
         order.setOrder_type("0");
         order.setMargin_trading("2");
         //限价委托
-        order.setPrice("1.0");
-        order.setSize("0.1");
+        order.setPrice("10000");
+        order.setSize("0.001");
 
-        //市价(买入必填<买入金额>)
+        //市价(买入必填<买入金额> 卖出必填size，卖出数量)
         order.setNotional("");
 
         final OrderResult orderResult = this.marginOrderAPIService.addOrder(order);
@@ -66,24 +66,33 @@ public class MarginOrderAPITest extends SpotAPIBaseTests {
     @Test
     public void batchAddOrder() {
         final PlaceOrderParam order = new PlaceOrderParam();
-        //order.setClient_oid("");
+        //公共参数
+        order.setClient_oid("");
         order.setInstrument_id("LTC-USDT");
         order.setType("limit");
         order.setSide("buy");
+        order.setOrder_type("");
+        order.setMargin_trading("2");
+        //普通限价单
         order.setPrice("40");
         order.setSize("1");
-        order.setMargin_trading("2");
-
+        //市价单(买入必填notional<买入金额> 卖出必填size<卖出数量>)
+        order.setNotional("");
 
 
         final PlaceOrderParam order1 = new PlaceOrderParam();
-        //order1.setClient_oid("201807s2802");
+        //公共参数
+        order1.setClient_oid("201807s2802");
         order1.setInstrument_id("LTC-USDT");
-        order1.setPrice("35");
         order1.setType("limit");
         order1.setSide("buy");
-        order1.setSize("1");
+        order.setOrder_type("");
         order1.setMargin_trading("2");
+        //普通限价单参数
+        order1.setPrice("35");
+        order1.setSize("1");
+        //市价单(买入必填notional<买入金额> 卖出必填size<卖出数量>)
+        order.setNotional("");
 
         final List<PlaceOrderParam> list = new ArrayList<>();
         list.add(order);
@@ -93,17 +102,6 @@ public class MarginOrderAPITest extends SpotAPIBaseTests {
         this.toResultString(MarginOrderAPITest.LOG, "orders", orderResult);
     }
 
-    /**
-     * 指定订单id撤单 delete协议 暂不使用
-     */
-    @Test
-    public void cancleOrderByProductIdAndOrderId() {
-        final PlaceOrderParam order = new PlaceOrderParam();
-        order.setInstrument_id("btc_usd");
-        order.setClient_oid("20181009-01");
-        final OrderResult orderResult = this.marginOrderAPIService.cancleOrderByOrderId(order, "23850");
-        this.toResultString(MarginOrderAPITest.LOG, "cancleOrder", orderResult);
-    }
 
     /**
      * 指定订单id撤单 post协议
@@ -111,36 +109,23 @@ public class MarginOrderAPITest extends SpotAPIBaseTests {
      * 限速规则：100次/2s
      */
     @Test
-    public void cancleOrderByProductIdAndOrderId_post() {
-        final PlaceOrderParam order = new PlaceOrderParam();
-        order.setInstrument_id("btc-usdt");
-        order.setClient_oid("20181009-01");
-        final OrderResult orderResult = this.marginOrderAPIService.cancleOrderByOrderId_post(order, "23850");
+    public void cancleOrdersByOrderId() {
+        PlaceOrderParam orderParam = new PlaceOrderParam();
+        orderParam.setInstrument_id("BTC-USDT");
+        orderParam.setOrder_id("4250464400384000");
+        final OrderResult orderResult = this.marginOrderAPIService.cancleOrdersByOrderId(orderParam,"4250464400384000" );
         this.toResultString(MarginOrderAPITest.LOG, "cancleOrder", orderResult);
     }
 
-    /**
-     * 批量撤单 delete协议 暂不使用
-     */
     @Test
-    public void batchCancleOrders() {
-        final List<OrderParamDto> cancleOrders = new ArrayList<>();
-
-        final OrderParamDto dto = new OrderParamDto();
-        dto.setInstrument_id("btc-usdt");
-        final List<String> order_ids = new ArrayList<>();
-        order_ids.add("23464L");
-        order_ids.add("23465L");
-        dto.setOrder_ids(order_ids);
-        cancleOrders.add(dto);
-
-        final OrderParamDto dto1 = new OrderParamDto();
-        dto1.setInstrument_id("etc_usdt");
-        cancleOrders.add(dto1);
-
-        final Map<String, JSONObject> orderResult = this.marginOrderAPIService.cancleOrders(cancleOrders);
-        this.toResultString(MarginOrderAPITest.LOG, "cancleOrders", orderResult);
+    public void cancleOrdersByClientOid() {
+        PlaceOrderParam orderParam = new PlaceOrderParam();
+        orderParam.setInstrument_id("BTC-USDT");
+        orderParam.setClient_oid("20200121sell4");
+        final OrderResult orderResult = this.marginOrderAPIService.cancleOrdersByClientOid(orderParam, "20200121sell4");
+        this.toResultString(MarginOrderAPITest.LOG, "cancleOrder", orderResult);
     }
+
 
     /**
      * 批量撤单 post协议
@@ -160,9 +145,38 @@ public class MarginOrderAPITest extends SpotAPIBaseTests {
         dto.setOrder_ids(order_ids);
         cancleOrders.add(dto);
 
-//        final OrderParamDto dto1 = new OrderParamDto();
-//        dto1.setInstrument_id("etc_usdt");
-//        cancleOrders.add(dto1);
+        final OrderParamDto dto1 = new OrderParamDto();
+        dto1.setInstrument_id("XRP-USDT");
+        final List<String> order_ids1 = new ArrayList<>();
+        order_ids1.add("3747071400218624");
+        order_ids1.add("3747071400284160");
+        dto1.setOrder_ids(order_ids1);
+        cancleOrders.add(dto1);
+
+        final Map<String, Object> orderResult = this.marginOrderAPIService.cancleOrders_post(cancleOrders);
+        this.toResultString(MarginOrderAPITest.LOG, "cancleOrders", orderResult);
+    }
+
+    //根据client_oid进行撤单
+    @Test
+    public void batchCancleOrdersByClientOids() {
+        final List<OrderParamDto> cancleOrders = new ArrayList<>();
+
+        final OrderParamDto dto = new OrderParamDto();
+        dto.setInstrument_id("BTC-USDT");
+        final List<String> client_oids = new ArrayList<>();
+        client_oids.add("");
+        client_oids.add("");
+        dto.setClient_oids(client_oids);
+        cancleOrders.add(dto);
+
+        final OrderParamDto dto1 = new OrderParamDto();
+        dto1.setInstrument_id("XRP-USDT");
+        final List<String> client_oids1 = new ArrayList<>();
+        client_oids1.add("");
+        client_oids1.add("");
+        dto1.setClient_oids(client_oids1);
+        cancleOrders.add(dto1);
 
         final Map<String, Object> orderResult = this.marginOrderAPIService.cancleOrders_post(cancleOrders);
         this.toResultString(MarginOrderAPITest.LOG, "cancleOrders", orderResult);
@@ -176,7 +190,13 @@ public class MarginOrderAPITest extends SpotAPIBaseTests {
      */
     @Test
     public void getOrderByProductIdAndOrderId() {
-        final OrderInfo orderInfo = this.marginOrderAPIService.getOrderByProductIdAndOrderId("btc-usdt", "23844");
+        final OrderInfo orderInfo = this.marginOrderAPIService.getOrderByProductIdAndOrderId("BTC-USDT", "");
+        this.toResultString(MarginOrderAPITest.LOG, "orderInfo", orderInfo);
+    }
+
+    @Test
+    public void getOrderByClientOid() {
+        final OrderInfo orderInfo = this.marginOrderAPIService.getOrderByClientOid("XRP-USDT","");
         this.toResultString(MarginOrderAPITest.LOG, "orderInfo", orderInfo);
     }
 
@@ -188,7 +208,7 @@ public class MarginOrderAPITest extends SpotAPIBaseTests {
      */
     @Test
     public void getOrders() {
-        final List<OrderInfo> orderInfoList = this.marginOrderAPIService.getOrders("etc-usdt", "open", null, null, "3");
+        final List<OrderInfo> orderInfoList = this.marginOrderAPIService.getOrders("BTC-USDT", "2", null, null, "");
         this.toResultString(MarginOrderAPITest.LOG, "orderInfoList", orderInfoList);
     }
 
@@ -213,7 +233,7 @@ public class MarginOrderAPITest extends SpotAPIBaseTests {
      */
     @Test
     public void getFills() {
-        final List<Fills> fills = this.marginOrderAPIService.getFills("23855", "btc-usdt", "", "", "1");
+        final List<Fills> fills = this.marginOrderAPIService.getFills("", "XRP-USDT", "", "", "");
         this.toResultString(MarginOrderAPITest.LOG, "fills", fills);
     }
 }

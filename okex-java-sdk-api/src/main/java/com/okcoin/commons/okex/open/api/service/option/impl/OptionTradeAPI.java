@@ -6,6 +6,8 @@ import com.okcoin.commons.okex.open.api.bean.option.param.*;
 import retrofit2.Call;
 import retrofit2.http.*;
 
+import java.util.List;
+
 public interface OptionTradeAPI {
 
     //获取单个标的物账户信息
@@ -24,11 +26,11 @@ public interface OptionTradeAPI {
 
     //撤单
     @POST("/api/option/v3/cancel_order/{underlying}/{order_id}")
-    Call<JSONObject> cancelOrder(@Path("underlying") String underlying, @Path("order_id") String order_id);
+    Call<JSONObject> cancelOrder(@Path("underlying") String underlying,@Path("order_id") String order_id);
 
     //根据client_oid撤单
     @POST("/api/option/v3/cancel_order/{underlying}/{client_oid}")
-    Call<JSONObject> cancelOrderByClientOid(@Path("underlying") String underlying, @Path("client_oid") String client_oid);
+    Call<JSONObject> cancelOrderByClientOid(@Path("underlying") String underlying,@Path("client_oid") String client_oid);
 
 
 
@@ -62,7 +64,7 @@ public interface OptionTradeAPI {
 
     @GET("/api/option/v3/orders/{underlying}/{client_oid}")
     Call<JSONObject> getOrderInfoByClientOid(@Path("underlying") String underlying,
-                                             @Path("client_oid") String client_oid);
+                                  @Path("client_oid") String client_oid);
 
     //获取订单列表
     @GET("/api/option/v3/orders/{underlying}")
@@ -81,7 +83,7 @@ public interface OptionTradeAPI {
 
     //获取单个标的下的持仓信息
     @GET("/api/option/v3/{underlying}/position")
-    Call<JSONObject> getPosition(@Path("underlying") String underlying, @Query("instrument_id") String instrument_id);
+    Call<JSONObject> getPosition(@Path("underlying") String underlying,@Query("instrument_id") String instrument_id);
 
     //获取当前账户交易的手续费率
     @GET("/api/option/v3/trade_fee")

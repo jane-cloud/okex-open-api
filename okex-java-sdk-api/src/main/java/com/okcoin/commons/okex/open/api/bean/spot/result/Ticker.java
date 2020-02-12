@@ -2,10 +2,10 @@ package com.okcoin.commons.okex.open.api.bean.spot.result;
 
 public class Ticker {
 
-    private String product_id;
+    //private String product_id;
     private String last;
-    private String bid;
-    private String ask;
+   // private String bid;
+    //private String ask;
     private String open_24h;
     private String high_24h;
     private String low_24h;
@@ -15,6 +15,35 @@ public class Ticker {
     private String best_ask;
     private String best_bid;
     private String instrument_id;
+    private String best_ask_size;
+    private String best_bid_size;
+
+    public String getBest_ask_size() {
+        return best_ask_size;
+    }
+
+    public void setBest_ask_size(String best_ask_size) {
+        this.best_ask_size = best_ask_size;
+    }
+
+    public String getBest_bid_size() {
+        return best_bid_size;
+    }
+
+    public void setBest_bid_size(String best_bid_size) {
+        this.best_bid_size = best_bid_size;
+    }
+
+    public String getLast_qty() {
+        return last_qty;
+    }
+
+    public void setLast_qty(String last_qty) {
+        this.last_qty = last_qty;
+    }
+
+    private String last_qty;
+
 
     public String getInstrument_id() {
         return this.instrument_id;
@@ -24,13 +53,6 @@ public class Ticker {
         this.instrument_id = instrument_id;
     }
 
-    public String getProduct_id() {
-        return this.product_id;
-    }
-
-    public void setProduct_id(final String product_id) {
-        this.product_id = product_id;
-    }
 
     public String getLast() {
         return this.last;
@@ -40,21 +62,7 @@ public class Ticker {
         this.last = last;
     }
 
-    public String getBid() {
-        return this.bid;
-    }
 
-    public void setBid(final String bid) {
-        this.bid = bid;
-    }
-
-    public String getAsk() {
-        return this.ask;
-    }
-
-    public void setAsk(final String ask) {
-        this.ask = ask;
-    }
 
     public String getOpen_24h() {
         return this.open_24h;

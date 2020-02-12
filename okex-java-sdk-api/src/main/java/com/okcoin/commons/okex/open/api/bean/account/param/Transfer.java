@@ -5,6 +5,22 @@ import java.math.BigDecimal;
 public class Transfer {
 
     private String currency;
+    private String amount;
+    private String from;
+    private String to;
+    private String sub_account;
+    private String instrument_id;
+    private String to_instrument_id;
+
+    public String getTo_instrument_id() {
+        return to_instrument_id;
+    }
+
+    public void setTo_instrument_id(String to_instrument_id) {
+        this.to_instrument_id = to_instrument_id;
+    }
+
+
 
     public String getAmount() {
         return amount;
@@ -18,14 +34,6 @@ public class Transfer {
         return to;
     }
 
-    private String amount;
-
-    private String from;
-
-    private String to;
-
-    private String sub_account;
-
     public String getInstrument_id() {
         return instrument_id;
     }
@@ -33,11 +41,6 @@ public class Transfer {
     public void setInstrument_id(String instrument_id) {
         this.instrument_id = instrument_id;
     }
-
-    private String instrument_id;
-
-    private String to_instrument_id;
-
 
     public void setAmount(String amount) {
         this.amount = amount;
@@ -51,15 +54,6 @@ public class Transfer {
         this.to = to;
     }
 
-    public String getTo_instrument_id() {
-        return to_instrument_id;
-    }
-
-    public void setTo_instrument_id(String to_instrument_id) {
-        this.to_instrument_id = to_instrument_id;
-    }
-
-
 
     public String getCurrency() {
         return currency;
@@ -68,8 +62,6 @@ public class Transfer {
     public void setCurrency(String currency) {
         this.currency = currency;
     }
-
-
 
     public String getSub_account() {
         return sub_account;

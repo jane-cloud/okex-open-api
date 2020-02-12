@@ -15,9 +15,17 @@ public class ExchangeRate {
     /**
      * exchange rate
      */
-    private String rate;
+    private Double rate;
 
     private String timestamp;
+
+    public Double getRate() {
+        return rate;
+    }
+
+    public void setRate(Double rate) {
+        this.rate = rate;
+    }
 
     public String getInstrument_id() {
         return instrument_id;
@@ -27,28 +35,11 @@ public class ExchangeRate {
         this.instrument_id = instrument_id;
     }
 
-    public String getRate() {
-        return rate;
-    }
-
-    public void setRate(String rate) {
-        this.rate = rate;
-    }
-
     public String getTimestamp() {
         return timestamp;
     }
 
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
-    }
-
-    @Override
-    public String toString() {
-        return "ExchangeRate{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", rate='" + rate + '\'' +
-                ", timestamp='" + timestamp + '\'' +
-                '}';
     }
 }

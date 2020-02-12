@@ -1,7 +1,7 @@
 package com.okcoin.commons.okex.open.api.service.spot;
 
-import com.alibaba.fastjson.JSONArray;
-import com.okcoin.commons.okex.open.api.bean.spot.param.SpotMarginLeverage;
+import com.alibaba.fastjson.JSONObject;
+import com.okcoin.commons.okex.open.api.bean.spot.param.MarginLeverage;
 import com.okcoin.commons.okex.open.api.bean.spot.result.*;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -24,10 +24,10 @@ public interface MarginAccountAPIService {
     /**
      * 单个币对杠杆账号资产
      *
-     * @param product
+     * @param instrument_id
      * @return
      */
-    Map<String, Object> getAccountsByProductId(@Path("instrument_id") final String product);
+    Map<String, Object> getAccountsByProductId(@Path("instrument_id") final String instrument_id);
 
     /**
      * 杠杆账单明细
@@ -54,10 +54,10 @@ public interface MarginAccountAPIService {
     /**
      * 单个币对配置
      *
-     * @param product
+     * @param instrument_id
      * @return
      */
-    List<Map<String, Object>> getAvailabilityByProductId(@Path("instrument_id") final String product);
+    List<Map<String, Object>> getAvailabilityByProductId(@Path("instrument_id") final String instrument_id);
 
     /**
      * 全部借币历史
@@ -80,7 +80,7 @@ public interface MarginAccountAPIService {
      * @param before
      * @param after
      * @param limit
-     * @param product
+     * @param instrument_id
      * @return
      */
     List<MarginBorrowOrderDto> getBorrowedAccountsByProductId(@Path("instrument_id") final String instrument_id,
@@ -105,14 +105,10 @@ public interface MarginAccountAPIService {
      */
     RepaymentResult repayment_1(RepaymentRequestDto order);
 
-    /**
-     * 设定杠杆倍数
-     * @param spotMarginLeverage
-     * @param instrument_id
-     * @return
-     */
-    String getSpotMarginLeverage(String instrument_id,SpotMarginLeverage spotMarginLeverage);
+    //设置杠杆倍数
+    JSONObject setLeverage(String instrument_id, MarginLeverage leverage);
 
+    //获取杠杆倍数
+    JSONObject getLeverage(String leverage);
 
-    String getMarginLeverage(String instrument_id);
 }

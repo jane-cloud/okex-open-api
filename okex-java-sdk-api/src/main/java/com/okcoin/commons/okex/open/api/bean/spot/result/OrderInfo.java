@@ -59,7 +59,7 @@ public class OrderInfo {
     /**
      * 订单状态 -1 已撤销 0 未成交
      */
-    private String status;
+    //private String status;
 
     private String state;
     /**
@@ -133,12 +133,12 @@ public class OrderInfo {
         return this.state;
     }
 
-    public String getStatus() {
+    /*public String getStatus() {
         return this.status;
     }
     public void setStatus(final String status) {
         this.status = status;
-    }
+    }*/
     public String getSide() {
         return this.side;
     }

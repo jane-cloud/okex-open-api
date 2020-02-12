@@ -41,12 +41,4 @@ public class DepthVO {
         this.timestamp = timeStamp;
     }
 
-    @Override
-    public String toString() {
-        return "DepthVO{" +
-                "asks=" + asks +
-                ", bids=" + bids +
-                ", timestamp='" + timestamp + '\'' +
-                '}';
-    }
 }

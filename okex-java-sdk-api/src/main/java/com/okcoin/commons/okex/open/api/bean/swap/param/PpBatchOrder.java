@@ -22,21 +22,28 @@ public class PpBatchOrder {
      * 委托价格
      */
     private String price;
-    /**
-     *下单类型
-     */
+
+    public String getOrder_type() {
+        return order_type;
+    }
+
+    public void setOrder_type(String order_type) {
+        this.order_type = order_type;
+    }
+
     private String order_type;
 
-    public PpBatchOrder(String client_oid, String size, String type, String match_price, String price, String order_type) {
+    public PpBatchOrder() {
+    }
+
+    public PpBatchOrder(String client_oid, String size, String type, String match_price, String price,String order_type) {
         this.client_oid = client_oid;
         this.size = size;
         this.type = type;
         this.match_price = match_price;
         this.price = price;
         this.order_type = order_type;
-    }
 
-    public PpBatchOrder() {
     }
 
     public String getClient_oid() {
@@ -79,23 +86,4 @@ public class PpBatchOrder {
         this.price = price;
     }
 
-    public String getOrder_type() {
-        return order_type;
-    }
-
-    public void setOrder_type(String order_type) {
-        this.order_type = order_type;
-    }
-
-    @Override
-    public String toString() {
-        return "PpBatchOrder{" +
-                "client_oid='" + client_oid + '\'' +
-                ", size='" + size + '\'' +
-                ", type='" + type + '\'' +
-                ", match_price='" + match_price + '\'' +
-                ", price='" + price + '\'' +
-                ", order_type='" + order_type + '\'' +
-                '}';
-    }
 }

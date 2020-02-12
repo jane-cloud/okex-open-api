@@ -33,13 +33,4 @@ public class Index {
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
-
-    @Override
-    public String toString() {
-        return "Index{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", index='" + index + '\'' +
-                ", timestamp='" + timestamp + '\'' +
-                '}';
-    }
 }

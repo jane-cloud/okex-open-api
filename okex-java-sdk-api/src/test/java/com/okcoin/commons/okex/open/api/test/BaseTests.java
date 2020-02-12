@@ -17,6 +17,7 @@ import java.io.IOException;
  * @version 1.0.0
  * @date 2018/3/12 14:48
  */
+
 public class BaseTests {
 
     public APIConfiguration config;

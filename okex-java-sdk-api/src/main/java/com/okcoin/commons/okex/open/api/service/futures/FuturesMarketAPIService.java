@@ -26,18 +26,18 @@ public interface FuturesMarketAPIService {
     /**
      * Get the futures contract product book
      *
-     * @param instrumentId The id of the futures contract eg: BTC-USD-0331"
+     * @param instrument_id The id of the futures contract eg: BTC-USD-0331"
      * @param size     value：1-200
      * @return
      */
-    Book getInstrumentBook(String instrumentId, String size,String depth);
+    Book getInstrumentBook(String instrument_id, String size,String depth);
 
     /**
      * Get the futures contract product ticker
      *
-     * @param instrumentId The id of the futures contract eg: BTC-USD-0331"
+     * @param instrument_id The id of the futures contract eg: BTC-USD-0331"
      */
-    Ticker getInstrumentTicker(String instrumentId);
+    Ticker getInstrumentTicker(String instrument_id);
 
     /**
      * Get all futures contract product ticker
@@ -48,14 +48,14 @@ public interface FuturesMarketAPIService {
     /**
      * Get the futures contract product trades
      *
-     * @param instrumentId The id of the futures contract eg: BTC-USD-0331"
+     * @param instrument_id The id of the futures contract eg: BTC-USD-0331"
      */
-    List<Trades> getInstrumentTrades(String instrumentId , String after, String before, String limit);
+    List<Trades> getInstrumentTrades(String instrument_id , String after, String before, String limit);
 
     /**
      * Get the futures contract product candles
      *
-     * @param instrumentId   The id of the futures contract eg: BTC-USD-0331"
+     * @param instrument_id   The id of the futures contract eg: BTC-USD-0331"
      * @param start       start timestamp of candles, (eg:1530676775258)
      * @param end         start timestamp of candles, (eg:1530676841895)
      * @param granularity Time granularity measured in seconds. data after the timestamp will be returned
@@ -72,55 +72,55 @@ public interface FuturesMarketAPIService {
      *                    86400  ->  1day
      *                    604800 ->  1week
      */
-    JSONArray getInstrumentCandles(String instrumentId, String start, String end, String granularity);
+    JSONArray getInstrumentCandles(String instrument_id, String start, String end, String granularity);
 
     /**
      * Get the futures contract product index
      *
-     * @param instrumentId The id of the futures contract eg: BTC-USD-0331"
+     * @param instrument_id The id of the futures contract eg: BTC-USD-0331"
      */
-    Index getInstrumentIndex(String instrumentId);
+    Index getInstrumentIndex(String instrument_id);
 
 
     ExchangeRate getExchangeRate();
     /**
      * Get the futures contract product estimated price
      *
-     * @param instrumentId The id of the futures contract eg: BTC-USD-0331"
+     * @param instrument_id The id of the futures contract eg: BTC-USD-0331"
      */
-    EstimatedPrice getInstrumentEstimatedPrice(String instrumentId);
+    EstimatedPrice getInstrumentEstimatedPrice(String instrument_id);
 
     /**
      * Get the futures contract product holds
      *
-     * @param instrumentId The id of the futures contract eg: BTC-USD-0331"
+     * @param instrument_id The id of the futures contract eg: BTC-USD-0331"
      */
-    Holds getInstrumentHolds(String instrumentId);
+    Holds getInstrumentHolds(String instrument_id);
 
     /**
      * Get the futures contract product limit price
      *
-     * @param instrumentId The id of the futures contract eg: BTC-USD-0331"
+     * @param instrument_id The id of the futures contract eg: BTC-USD-0331"
      */
-    PriceLimit getInstrumentPriceLimit(String instrumentId);
+    PriceLimit getInstrumentPriceLimit(String instrument_id);
 
     /**
      * Get the futures contract liquidation
      *
-     * @param instrumentId The id of the futures contract eg: BTC-USD-0331"
+     * @param instrument_id The id of the futures contract eg: BTC-USD-0331"
      * @param status    0:Last 7 days: Open 1:Last 7 days: Filled
      * @param from    Paging content after requesting this id .
      * @param to     Paging content prior to requesting this id.
      * @param limit     Number of results per request. Maximum 100. (default 100)
      */
-    List<Liquidation> getInstrumentLiquidation(String instrumentId, String status, String from, String to, String limit);
+    List<Liquidation> getInstrumentLiquidation(String instrument_id, String status, String from, String to, String limit);
 
     /**
      * Get MarkPrice
      *
-     * @param instrumentId The id of the futures contract eg: BTC-USD-0331"
+     * @param instrument_id The id of the futures contract eg: BTC-USD-0331"
      */
-    JSONObject getMarkPrice(String instrumentId);
+    JSONObject getMarkPrice(String instrument_id);
 
-    Holds getHolds(String instrumentId);
+
 }

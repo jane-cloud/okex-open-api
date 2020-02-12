@@ -1,0 +1,15 @@
+{
+  "best_bid_size": "305",
+  "last": "0.285",
+  "last_qty": "0",
+  "open_interest": "600",
+  "best_ask": "0.3135",
+  "instrument_id": "BTC-USD-200327-7500-C",
+  "best_ask_size": "305",
+  "best_bid": "0.311",
+  "high_24h": "0.285",
+  "low_24h": "0.285",
+  "volume_24h": "0",
+  "open_24h": "0.285",
+  "timestamp": "2020-02-12T07:38:05.335Z"
+}

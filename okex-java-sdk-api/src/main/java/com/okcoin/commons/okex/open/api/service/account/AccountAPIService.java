@@ -15,17 +15,20 @@ import java.util.List;
 
 public interface AccountAPIService {
 
+    List<Wallet> getWallet();
+
+    List<Wallet> getWallet(String currency);
+
     JSONObject transfer(Transfer transfer);
 
     JSONObject withdraw(Withdraw withdraw);
 
     List<Currency> getCurrencies();
 
+    //
     JSONArray getLedger(String type, String currency, String before, String after, String limit);
 
-    List<Wallet> getWallet();
 
-    List<Wallet> getWallet(String currency);
 
     JSONArray getDepositAddress(String currency);
 
@@ -44,9 +47,10 @@ public interface AccountAPIService {
     JSONArray getWithdrawalHistory();
     //查看单个提币记录
     JSONArray getWithdrawalHistory(String currency);
-    //获取子账户余额信息
-    String getSubAccount(String subaccount);
-    //获取账户资产估值
-    String getAssetValuation(String account_type,String valuation_currency);
+
+    //获取子账户余额
+    JSONObject getSubAccount(String sub_account);
+
+    JSONObject getAllAccount(String account_type,String valuation_currency);
 
 }

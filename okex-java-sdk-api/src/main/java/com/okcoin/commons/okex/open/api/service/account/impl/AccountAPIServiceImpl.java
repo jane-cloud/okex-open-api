@@ -26,6 +26,18 @@ public class AccountAPIServiceImpl implements AccountAPIService {
         this.api = client.createService(AccountAPI.class);
     }
 
+
+    @Override
+    public List<Wallet> getWallet() {
+        return this.client.executeSync(this.api.getWallet());
+    }
+
+    @Override
+    public List<Wallet> getWallet(String currency) {
+        return this.client.executeSync(this.api.getWallet(currency));
+    }
+
+
     @Override
     public JSONObject transfer(Transfer transfer) {
         return this.client.executeSync(this.api.transfer(JSONObject.parseObject(JSON.toJSONString(transfer))));
@@ -41,19 +53,10 @@ public class AccountAPIServiceImpl implements AccountAPIService {
         return this.client.executeSync(this.api.getCurrencies());
     }
 
+    //String currency,
     @Override
-    public JSONArray getLedger(String type, String currency, String before, String after, String limit) {
+    public JSONArray getLedger(String type, String currency,  String before, String after, String limit) {
         return this.client.executeSync(this.api.getLedger(type, currency, before, after, limit));
-    }
-
-    @Override
-    public List<Wallet> getWallet() {
-        return this.client.executeSync(this.api.getWallet());
-    }
-
-    @Override
-    public List<Wallet> getWallet(String currency) {
-        return this.client.executeSync(this.api.getWallet(currency));
     }
 
     @Override
@@ -108,12 +111,12 @@ public class AccountAPIServiceImpl implements AccountAPIService {
     }
 
     @Override
-    public String getSubAccount(String subaccount) {
-        return this.client.executeSync(this.api.getSubAccount(subaccount));
+    public JSONObject getSubAccount(String sub_account) {
+        return this.client.executeSync(this.api.getSubAccount(sub_account));
     }
 
     @Override
-    public String getAssetValuation(String account_type, String valuation_currency) {
-        return this.client.executeSync(this.api.getAssetValuation(account_type,valuation_currency));
+    public JSONObject getAllAccount(String account_type, String valuation_currency) {
+        return this.client.executeSync(this.api.getAllAccount(account_type,valuation_currency));
     }
 }

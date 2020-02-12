@@ -4,7 +4,6 @@ public class CancelFuturesOrdeResult {
     private String instrument_id;
     private String order_type;
     private String algo_ids;
-    private String result;
 
     public String getInstrument_id() {
         return instrument_id;
@@ -38,13 +37,8 @@ public class CancelFuturesOrdeResult {
         this.result = result;
     }
 
-    @Override
-    public String toString() {
-        return "CancelFuturesOrdeResult{" +
-                "instrument_id='" + instrument_id + '\'' +
-                ", order_type='" + order_type + '\'' +
-                ", algo_ids='" + algo_ids + '\'' +
-                ", result='" + result + '\'' +
-                '}';
-    }
+    private String result;
+
+
+
 }

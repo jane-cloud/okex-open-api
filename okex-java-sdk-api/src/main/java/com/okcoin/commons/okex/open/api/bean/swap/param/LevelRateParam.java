@@ -14,6 +14,7 @@ public class LevelRateParam extends JSONObject {
     private String side;
     private String leverage;
 
+
     public LevelRateParam(String side, String levelRate) {
         this.side = side;
         this.leverage = levelRate;
