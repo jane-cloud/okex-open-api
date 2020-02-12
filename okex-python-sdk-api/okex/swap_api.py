@@ -4,8 +4,8 @@ from .consts import *
 
 class SwapAPI(Client):
 
-    def __init__(self, api_key, api_seceret_key, passphrase, use_server_time=False):
-        Client.__init__(self, api_key, api_seceret_key, passphrase, use_server_time)
+    def __init__(self, api_key, api_secret_key, passphrase, use_server_time=False, first=False):
+        Client.__init__(self, api_key, api_secret_key, passphrase, use_server_time, first)
 
     def get_position(self):
         return self._request_without_params(GET, SWAP_POSITIONS)
@@ -26,7 +26,7 @@ class SwapAPI(Client):
         params = {'leverage': leverage, 'side': side}
         return self._request_with_params(POST, SWAP_ACCOUNTS + '/' + str(instrument_id) + '/leverage', params)
 
-    def get_ledger(self, instrument_id, after='', before='', limit=''):
+    def get_ledger(self, instrument_id, after='', before='', limit='', type=''):
         params = {}
         if after:
             params['after'] = after
@@ -34,9 +34,11 @@ class SwapAPI(Client):
             params['before'] = before
         if limit:
             params['limit'] = limit
-        return self._request_with_params(GET, SWAP_ACCOUNTS + '/' + str(instrument_id) + '/ledger', params)
+        if type:
+            params['type'] = type
+        return self._request_with_params(GET, SWAP_ACCOUNTS + '/' + str(instrument_id) + '/ledger', params, cursor=True)
 
-    def take_order(self, instrument_id, type, size, price, client_oid='', order_type='0', match_price=''):
+    def take_order(self, instrument_id, type, price, size, client_oid='', order_type='0', match_price=''):
         params = {'instrument_id': instrument_id, 'type': type, 'size': size, 'price': price}
         if client_oid:
             params['client_oid'] = client_oid
@@ -72,7 +74,7 @@ class SwapAPI(Client):
             params['before'] = before
         if limit:
             params['limit'] = limit
-        return self._request_with_params(GET, SWAP_ORDERS + '/' + str(instrument_id), params)
+        return self._request_with_params(GET, SWAP_ORDERS + '/' + str(instrument_id), params, cursor=True)
 
     def get_order_info(self, instrument_id, order_id='', client_oid=''):
         if order_id:
@@ -90,7 +92,7 @@ class SwapAPI(Client):
             params['before'] = before
         if limit:
             params['limit'] = limit
-        return self._request_with_params(GET, SWAP_FILLS, params)
+        return self._request_with_params(GET, SWAP_FILLS, params, cursor=True)
 
     def get_instruments(self):
         return self._request_without_params(GET, SWAP_INSTRUMENTS)
@@ -117,22 +119,22 @@ class SwapAPI(Client):
             params['before'] = before
         if limit:
             params['limit'] = limit
-        return self._request_with_params(GET, SWAP_INSTRUMENTS + '/' + str(instrument_id) + '/trades', params)
+        return self._request_with_params(GET, SWAP_INSTRUMENTS + '/' + str(instrument_id) + '/trades', params, cursor=True)
 
-    def get_kline(self, instrument_id, start='', end='', granularity=''):
+    def get_kline(self, instrument_id, granularity='', start='', end=''):
         params = {}
+        if granularity:
+            params['granularity'] = granularity
         if start:
             params['start'] = start
         if end:
             params['end'] = end
-        if granularity:
-            params['granularity'] = granularity
         # 按时间倒叙 即由结束时间到开始时间
-        # return self._request_with_params(GET, SWAP_INSTRUMENTS + '/' + str(instrument_id) + '/candles', params)
+        return self._request_with_params(GET, SWAP_INSTRUMENTS + '/' + str(instrument_id) + '/candles', params)
 
         # 按时间正序 即由开始时间到结束时间
-        data = self._request_with_params(GET, SWAP_INSTRUMENTS + '/' + str(instrument_id) + '/candles', params)
-        return list(reversed(data))
+        # data = self._request_with_params(GET, SWAP_INSTRUMENTS + '/' + str(instrument_id) + '/candles', params)
+        # return list(reversed(data))
 
     def get_index(self, instrument_id):
         return self._request_without_params(GET, SWAP_INSTRUMENTS + '/' + str(instrument_id) + '/index')

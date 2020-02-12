@@ -4,8 +4,8 @@ from .consts import *
 
 class SpotAPI(Client):
 
-    def __init__(self, api_key, api_seceret_key, passphrase, use_server_time=False):
-        Client.__init__(self, api_key, api_seceret_key, passphrase, use_server_time)
+    def __init__(self, api_key, api_secret_key, passphrase, use_server_time=False, first=False):
+        Client.__init__(self, api_key, api_secret_key, passphrase, use_server_time, first)
 
     # query spot account info
     def get_account_info(self):
@@ -26,7 +26,7 @@ class SpotAPI(Client):
             params['limit'] = limit
         if type:
             params['type'] = type
-        return self._request_with_params(GET, SPOT_LEDGER_RECORD + str(currency) + '/ledger', params)
+        return self._request_with_params(GET, SPOT_LEDGER_RECORD + str(currency) + '/ledger', params, cursor=True)
 
     # take order
     def take_order(self, instrument_id, side, client_oid='', type='', size='', price='', order_type='0', notional=''):
@@ -145,7 +145,6 @@ class SpotAPI(Client):
             params['size'] = size
         if depth:
             params['depth'] = depth
-        print(params)
         return self._request_with_params(GET, SPOT_DEPTH + str(instrument_id) + '/book', params)
 
     # query ticker info
@@ -156,12 +155,8 @@ class SpotAPI(Client):
     def get_specific_ticker(self, instrument_id):
         return self._request_without_params(GET, SPOT_SPECIFIC_TICKER + str(instrument_id) + '/ticker')
 
-    def get_deal(self, instrument_id, after='', before='', limit=''):
+    def get_deal(self, instrument_id, limit=''):
         params = {}
-        if after:
-            params['after'] = after
-        if before:
-            params['before'] = before
         if limit:
             params['limit'] = limit
         return self._request_with_params(GET, SPOT_DEAL + str(instrument_id) + '/trades', params)
@@ -177,8 +172,8 @@ class SpotAPI(Client):
             params['granularity'] = granularity
 
         # 按时间倒叙 即由结束时间到开始时间
-        # return self._request_with_params(GET, SPOT_KLINE + str(instrument_id) + '/candles', params)
+        return self._request_with_params(GET, SPOT_KLINE + str(instrument_id) + '/candles', params)
 
         # 按时间正序 即由开始时间到结束时间
-        data = self._request_with_params(GET, SPOT_KLINE + str(instrument_id) + '/candles', params)
-        return list(reversed(data))
+        # data = self._request_with_params(GET, SPOT_KLINE + str(instrument_id) + '/candles', params)
+        # return list(reversed(data))

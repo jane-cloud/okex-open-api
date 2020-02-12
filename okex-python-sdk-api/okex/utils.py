@@ -1,12 +1,11 @@
 import hmac
 import base64
-import time
 import datetime
 from . import consts as c
 
 
-def sign(message, secretKey):
-    mac = hmac.new(bytes(secretKey, encoding='utf8'), bytes(message, encoding='utf-8'), digestmod='sha256')
+def sign(message, secret_key):
+    mac = hmac.new(bytes(secret_key, encoding='utf8'), bytes(message, encoding='utf-8'), digestmod='sha256')
     d = mac.digest()
     return base64.b64encode(d)
 
@@ -35,10 +34,9 @@ def parse_params_to_str(params):
 
 
 def get_timestamp():
-    now = datetime.datetime.now()
+    now = datetime.datetime.utcnow()
     t = now.isoformat("T", "milliseconds")
     return t + "Z"
-
 
 def signature(timestamp, method, request_path, body, secret_key):
     if str(body) == '{}' or str(body) == 'None':

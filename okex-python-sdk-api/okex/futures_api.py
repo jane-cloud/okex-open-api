@@ -4,8 +4,8 @@ from .consts import *
 
 class FutureAPI(Client):
 
-    def __init__(self, api_key, api_seceret_key, passphrase, use_server_time=False):
-        Client.__init__(self, api_key, api_seceret_key, passphrase, use_server_time)
+    def __init__(self, api_key, api_secret_key, passphrase, use_server_time=False, first=False):
+        Client.__init__(self, api_key, api_secret_key, passphrase, use_server_time, first)
 
     # query position
     def get_position(self):
@@ -47,7 +47,7 @@ class FutureAPI(Client):
             params['limit'] = limit
         if type:
             params['type'] = type
-        return self._request_with_params(GET, FUTURE_LEDGER + str(underlying) + '/ledger', params)
+        return self._request_with_params(GET, FUTURE_LEDGER + str(underlying) + '/ledger', params, cursor=True)
 
     # take order
     def take_order(self, instrument_id, type, price, size, client_oid='', order_type='0', match_price='0'):
@@ -85,7 +85,7 @@ class FutureAPI(Client):
             params['before'] = before
         if limit:
             params['limit'] = limit
-        return self._request_with_params(GET, FUTURE_ORDERS_LIST + str(instrument_id), params)
+        return self._request_with_params(GET, FUTURE_ORDERS_LIST + str(instrument_id), params, cursor=True)
 
     # query order info
     def get_order_info(self, instrument_id, order_id='', client_oid=''):
@@ -105,7 +105,7 @@ class FutureAPI(Client):
             params['before'] = before
         if limit:
             params['limit'] = limit
-        return self._request_with_params(GET, FUTURE_FILLS, params)
+        return self._request_with_params(GET, FUTURE_FILLS, params, cursor=True)
 
     # set margin_mode
     def set_margin_mode(self, underlying, margin_mode):
@@ -198,11 +198,11 @@ class FutureAPI(Client):
     def get_kline(self, instrument_id, granularity='', start='', end=''):
         params = {'granularity': granularity, 'start': start, 'end': end}
         # 按时间倒叙 即由结束时间到开始时间
-        # return self._request_with_params(GET, FUTURE_KLINE + str(instrument_id) + '/candles', params)
+        return self._request_with_params(GET, FUTURE_KLINE + str(instrument_id) + '/candles', params)
 
         # 按时间正序 即由开始时间到结束时间
-        data = self._request_with_params(GET, FUTURE_KLINE + str(instrument_id) + '/candles', params)
-        return list(reversed(data))
+        # data = self._request_with_params(GET, FUTURE_KLINE + str(instrument_id) + '/candles', params)
+        # return list(reversed(data))
 
     # query index
     def get_index(self, instrument_id):

@@ -4,8 +4,8 @@ from .consts import *
 
 class LeverAPI(Client):
 
-    def __init__(self, api_key, api_seceret_key, passphrase, use_server_time=False):
-        Client.__init__(self, api_key, api_seceret_key, passphrase, use_server_time)
+    def __init__(self, api_key, api_secret_key, passphrase, use_server_time=False):
+        Client.__init__(self, api_key, api_secret_key, passphrase, use_server_time)
 
     # query lever account info
     def get_account_info(self):
@@ -108,3 +108,6 @@ class LeverAPI(Client):
     def set_leverage(self, instrument_id, leverage):
         params = {'leverage': leverage}
         return self._request_with_params(POST, LEVER_LEDGER_RECORD + str(instrument_id) + '/leverage', params)
+
+    def get_mark_price(self, instrument_id):
+        return self._request_without_params(GET, LEVER_MARK_PRICE + str(instrument_id) + '/mark_price')

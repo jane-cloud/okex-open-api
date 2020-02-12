@@ -4,8 +4,8 @@ from .consts import *
 
 class OptionAPI(Client):
 
-    def __init__(self, api_key, api_seceret_key, passphrase, use_server_time=False):
-        Client.__init__(self, api_key, api_seceret_key, passphrase, use_server_time)
+    def __init__(self, api_key, api_secret_key, passphrase, use_server_time=False):
+        Client.__init__(self, api_key, api_secret_key, passphrase, use_server_time)
 
     def take_order(self, instrument_id, side, price, size, client_oid='', order_type='', match_price=''):
         params = {'instrument_id': instrument_id, 'side': side, 'price': price, 'size': size}
@@ -69,7 +69,7 @@ class OptionAPI(Client):
             params['before'] = before
         if limit:
             params['limit'] = limit
-        return self._request_with_params(GET, OPTION_ORDERS + '/' + str(underlying), params)
+        return self._request_with_params(GET, OPTION_ORDERS + '/' + str(underlying), params, cursor=True)
 
     def get_fills(self, underlying, order_id='', instrument_id='', after='', before='', limit=''):
         params = {}
@@ -83,7 +83,7 @@ class OptionAPI(Client):
             params['before'] = before
         if limit:
             params['limit'] = limit
-        return self._request_with_params(GET, OPTION_FILLS + str(underlying), params)
+        return self._request_with_params(GET, OPTION_FILLS + str(underlying), params, cursor=True)
 
     def get_specific_position(self, underlying, instrument_id=''):
         params = {}
@@ -102,7 +102,7 @@ class OptionAPI(Client):
             params['before'] = before
         if limit:
             params['limit'] = limit
-        return self._request_with_params(GET, OPTION_ACCOUNT + str(underlying) + '/ledger', params)
+        return self._request_with_params(GET, OPTION_ACCOUNT + str(underlying) + '/ledger', params, cursor=True)
 
     def get_trade_fee(self):
         return self._request_without_params(GET, OPTION_TRADE_FEE)
@@ -141,7 +141,7 @@ class OptionAPI(Client):
             params['before'] = before
         if limit:
             params['limit'] = limit
-        return self._request_with_params(GET, OPTION_INSTRUMENTS + str(instrument_id) + '/trades', params)
+        return self._request_with_params(GET, OPTION_INSTRUMENTS + str(instrument_id) + '/trades', params, cursor=True)
 
     def get_specific_ticker(self, instrument_id):
         return self._request_without_params(GET, OPTION_INSTRUMENTS + str(instrument_id) + '/ticker')
