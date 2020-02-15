@@ -506,5 +506,15 @@ namespace OKExSDK
                 return contentStr;
             }
         }
+        public async Task<string> mark_price(string instrument_id)
+        {
+            var url = $"{this.BASEURL}{this.MARGIN_SEGMENT}/instruments/{instrument_id}/mark_price";
+            using(var client = new HttpClient(new HttpInterceptor(this._apiKey, this._secret, this._passPhrase, null)))
+            {
+                var res = await client.GetAsync(url);
+                var content = await res.Content.ReadAsStringAsync();
+                return content;
+            }
+        }
     }
 }

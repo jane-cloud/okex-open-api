@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ProgramData\\Project\\open-api-v3-sdk\\okex-cs-sdk-api\\OKExSDK\\OKExSDK.csproj": {}
+    "D:\\ProgramData\\Project\\ok-open-api\\okex-cs-sdk-api\\OKExSDK\\OKExSDK.csproj": {}
   },
   "projects": {
-    "D:\\ProgramData\\Project\\open-api-v3-sdk\\okex-cs-sdk-api\\OKExSDK\\OKExSDK.csproj": {
+    "D:\\ProgramData\\Project\\ok-open-api\\okex-cs-sdk-api\\OKExSDK\\OKExSDK.csproj": {
       "version": "1.0.1",
       "restore": {
-        "projectUniqueName": "D:\\ProgramData\\Project\\open-api-v3-sdk\\okex-cs-sdk-api\\OKExSDK\\OKExSDK.csproj",
+        "projectUniqueName": "D:\\ProgramData\\Project\\ok-open-api\\okex-cs-sdk-api\\OKExSDK\\OKExSDK.csproj",
         "projectName": "OKExSDKTest",
-        "projectPath": "D:\\ProgramData\\Project\\open-api-v3-sdk\\okex-cs-sdk-api\\OKExSDK\\OKExSDK.csproj",
+        "projectPath": "D:\\ProgramData\\Project\\ok-open-api\\okex-cs-sdk-api\\OKExSDK\\OKExSDK.csproj",
         "packagesPath": "C:\\Users\\oker\\.nuget\\packages\\",
-        "outputPath": "D:\\ProgramData\\Project\\open-api-v3-sdk\\okex-cs-sdk-api\\OKExSDK\\obj\\",
+        "outputPath": "D:\\ProgramData\\Project\\ok-open-api\\okex-cs-sdk-api\\OKExSDK\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oker\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -3705,5 +3705,18 @@ namespace SampleCS
                 Console.WriteLine("错误信息" + ex.Message + "堆栈信息" + ex.StackTrace.ToString());
             }
         }
+        private async void btnMargin_Mark_price(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string instrument_id = "BTC-USDT";
+                string content = await this.marginApi.mark_price(instrument_id);
+                Console.WriteLine(content);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("错误信息" + ex.Message + "堆栈信息" + ex.StackTrace.ToString());
+            }
+        }
     }
 }

@@ -447,6 +447,7 @@
 
                             <Button Content="查询杠杆倍数" HorizontalAlignment="Left" Margin="255,32,0,0" VerticalAlignment="Top" Width="124" Click="btnMargin_GetLeverage"/>
                             <Button Content="设置杠杆倍数" HorizontalAlignment="Left" Margin="385,32,0,0" VerticalAlignment="Top" Width="124" Click="btnMargin_SetLeverage"/>
+                            <Button Content="获取标记价格" HorizontalAlignment="Left" Margin="514,32,0,0" VerticalAlignment="Top" Width="124" Click="btnMargin_Mark_price"/>
 
                         </Grid>
                         <GroupBox Header="借币" Width="811">
@@ -869,6 +870,7 @@
                                                         <ComboBoxItem>spot/trade(公共交易频道)</ComboBoxItem>
                                                         <ComboBoxItem>spot/depth(公共200档深度频道)</ComboBoxItem>
                                                         <ComboBoxItem>spot/depth5(公共5档深度频道)</ComboBoxItem>
+                                                        <ComboBoxItem>spot/depth_l2_tbt(全量深度数据频道，首次全部深度数据，后续有更改的数据。)</ComboBoxItem>
                                                         <ComboBoxItem>spot/candle(公共k线频道)</ComboBoxItem>
                                                         <ComboBoxItem>spot/account(用户币币账户频道【需登录】)</ComboBoxItem>
                                                         <ComboBoxItem>spot/margin_account(用户杠杆账户频道【需登录】)</ComboBoxItem>
@@ -1244,6 +1246,7 @@
                                                         <ComboBoxItem>swap/depth_l2_tbt(全量深度数据频道，首次全部深度数据，后续有更改的数据。)</ComboBoxItem>
                                                         <ComboBoxItem>swap/depth(深度数据频道，首次200档，后续有更改的数据。)</ComboBoxItem>
                                                         <ComboBoxItem>swap/depth5(深度数据频道，每次返回前5档。)</ComboBoxItem>
+                                                        <ComboBoxItem>swap/depth_l2_tbt(全量深度数据频道，首次全部深度数据，后续有更改的数据。)</ComboBoxItem>
                                                         <ComboBoxItem>swap/mark_price(标记价格频道)</ComboBoxItem>
                                                         <ComboBoxItem>swap/order_algo(用户委托策略频道)</ComboBoxItem>
                                                         <ComboBoxItem>swap/funding_rate(公共-资金费率频道)</ComboBoxItem>
@@ -1338,6 +1341,7 @@
                                                         <ComboBoxItem>option/summary(期权详细定价频道)</ComboBoxItem>
                                                         <ComboBoxItem>option/trade(最新成交频道)</ComboBoxItem>
                                                         <ComboBoxItem>option/depth5(深度数据频道，每次返回前5档)</ComboBoxItem>
+                                                        <ComboBoxItem>option/depth_l2_tbt(全量深度数据频道，首次全部深度数据，后续有更改的数据。)</ComboBoxItem>
                                                         <ComboBoxItem>option/depth(深度数据频道)</ComboBoxItem>
                                                         <ComboBoxItem>option/account(用户账户频道)</ComboBoxItem>
                                                         <ComboBoxItem>option/position(用户持仓频道)</ComboBoxItem>

@@ -170,14 +170,42 @@ namespace OKExSDK
             Task.Factory.StartNew(
               async () =>
               {
+                  byte[] buffer = new byte[102400];
+                  byte[] buffer_part = new byte[81920];
+                  int length = 0;
                   while (ws.State == WebSocketState.Open)
                   {
-                      byte[] buffer = new byte[1024*1024];
-                      var result = await ws.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+                      var result = await ws.ReceiveAsync(new ArraySegment<byte>(buffer_part), CancellationToken.None);
                       if (result.MessageType == WebSocketMessageType.Binary)
                       {
                           closeCheckTimer.Interval = 31000;
-                          var resultStr = Decompress(buffer);
+                          string resultStr = "";
+                          if (result.EndOfMessage)
+                          {
+                              if (length == 0)
+                              {
+                                  resultStr = Decompress(buffer_part);
+                              }
+                              else
+                              {
+                                  Array.Copy(buffer_part, 0, buffer, length, result.Count);
+                                  resultStr = Decompress(buffer);
+                                  length = 0;
+                              }
+                          }
+                          else
+                          {
+                              try
+                              {
+                                  Array.Copy(buffer_part, buffer, result.Count);
+                                  length += result.Count;
+                              }
+                              catch (Exception ex)
+                              {
+                                  Console.WriteLine(ex.Message);
+                              }
+
+                          }
                           //If is depth
                           try
                           {
